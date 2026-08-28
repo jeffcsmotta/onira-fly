@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial | {{NOME_ESTABELECIMENTO}} & Onira Labs</title>
+    <meta name="description" content="Proposta comercial de canal próprio para {{NOME_ESTABELECIMENTO}}: cardápio interativo de alta velocidade, pedidos diretos no WhatsApp oficial e domínio próprio sem taxas por pedido.">
+
+    <!-- Página de proposta restrita a link direto -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --bg-page: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --text-dark: #0F172A;
+            --text-main: #334155;
+            --text-muted: #64748B;
+
+            --primary: #0F172A;
+            --primary-hover: #1E293B;
+
+            --accent: #F59E0B;
+            --accent-light: #FEF3C7;
+
+            --emerald: #059669;
+            --emerald-light: #ECFDF5;
+            --emerald-border: rgba(5, 150, 105, 0.35);
+
+            --border: #E2E8F0;
+            --border-light: #F1F5F9;
+
+            --font-heading: 'Outfit', -apple-system, sans-serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 18px;
+        }
+
+        /* Nav */
+        .proposal-nav {
+            background: #FFFFFF;
+            border-bottom: 1px solid var(--border);
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: #F1F5F9;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-dark);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .back-link:hover {
+            background: var(--primary);
+            color: #FFFFFF;
+            border-color: var(--primary);
+        }
+
+        /* Main Hero Hook */
+        .offer-hero { padding: 28px 0 20px 0; }
+
+        .offer-card-main {
+            background: linear-gradient(135deg, #0F172A 0%, #020617 100%);
+            color: #FFFFFF;
+            border-radius: 20px;
+            padding: 42px 32px;
+            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.25);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .offer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            border-radius: 9999px;
+            color: #FBBF24;
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 16px;
+        }
+
+        .offer-title {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 900;
+            line-height: 1.2;
+            color: #FFFFFF;
+            margin-bottom: 14px;
+            letter-spacing: -0.02em;
+        }
+
+        .offer-title span { color: #F59E0B; }
+
+        .offer-desc {
+            font-size: 1.05rem;
+            color: #CBD5E1;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Domain Strip */
+        .domain-strip {
+            background: var(--emerald-light);
+            border: 1.5px solid var(--emerald-border);
+            border-radius: 14px;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .domain-tag {
+            font-size: 0.76rem;
+            color: #047857;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .domain-name {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: #064E3B;
+            letter-spacing: -0.01em;
+        }
+
+        .domain-price {
+            text-align: right;
+        }
+
+        .domain-price strong {
+            font-size: 1.05rem;
+            color: #047857;
+            display: block;
+            font-weight: 800;
+        }
+
+        .domain-price span {
+            font-size: 0.78rem;
+            color: #065F46;
+        }
+
+        /* Section Card */
+        .section-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.01em;
+        }
+
+        .section-title i { color: #2563EB; }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .feature-box {
+            background: #F8FAFC;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            transition: all 0.2s ease;
+        }
+
+        .feature-box:hover {
+            border-color: #CBD5E1;
+            background: #F1F5F9;
+        }
+
+        .feature-box h4 {
+            font-family: var(--font-heading);
+            font-size: 1.02rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature-box h4 i { color: #059669; }
+
+        .feature-box p {
+            font-size: 0.88rem;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        /* Tamanho da Oportunidade */
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .num-card {
+            background: #F8FAFC;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .num-big {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #0F172A;
+            line-height: 1.1;
+            margin-bottom: 6px;
+            letter-spacing: -0.02em;
+        }
+
+        .num-title {
+            font-size: 0.98rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .num-text {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Benchmark Card */
+        .benchmark-box {
+            background: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 100%);
+            border: 1.5px solid var(--emerald-border);
+            border-radius: 14px;
+            padding: 24px;
+            margin-top: 20px;
+        }
+
+        .benchmark-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #064E3B;
+            margin-bottom: 10px;
+        }
+
+        .benchmark-desc {
+            font-size: 0.9rem;
+            color: #1E293B;
+            line-height: 1.55;
+            margin-bottom: 16px;
+        }
+
+        .benchmark-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            text-align: center;
+        }
+
+        .benchmark-mini-card {
+            background: #FFFFFF;
+            border: 1px solid rgba(5, 150, 105, 0.2);
+            border-radius: 10px;
+            padding: 16px 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .benchmark-mini-card small {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 6px;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        .benchmark-mini-card strong {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 900;
+            display: block;
+        }
+
+        /* Financial Split */
+        .financial-split {
+            display: grid;
+            grid-template-columns: 1.25fr 1fr;
+            gap: 18px;
+        }
+
+        .fin-box-main {
+            background: #FFFFFF;
+            border: 2px solid #0F172A;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+        }
+
+        .fin-label {
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: block;
+        }
+
+        .fin-total {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin: 4px 0 14px 0;
+            letter-spacing: -0.02em;
+        }
+
+        .fin-item {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        .fin-box-upsell {
+            background: #FAF5FF;
+            border: 2px solid #9333EA;
+            border-radius: 14px;
+            padding: 24px;
+            position: relative;
+            box-shadow: 0 4px 14px rgba(147, 51, 234, 0.06);
+        }
+
+        .upsell-tag {
+            position: absolute;
+            top: -12px;
+            right: 16px;
+            background: #9333EA;
+            color: #FFFFFF;
+            font-size: 0.72rem;
+            font-weight: 900;
+            padding: 4px 12px;
+            border-radius: 999px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .upsell-total {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #7E22CE;
+            margin: 4px 0 10px 0;
+        }
+
+        .upsell-list {
+            list-style: none;
+            padding-top: 10px;
+            border-top: 1px solid rgba(147, 51, 234, 0.2);
+            margin-top: 10px;
+        }
+
+        .upsell-list li {
+            font-size: 0.86rem;
+            color: #4C1D95;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.4;
+        }
+
+        .upsell-list li i {
+            color: #9333EA;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Consultative Diagnostic CTA */
+        .cta-box {
+            background: linear-gradient(135deg, #0F172A 0%, #020617 100%);
+            color: #FFFFFF;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            margin-bottom: 36px;
+            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .cta-hook-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 14px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: #94A3B8;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 14px;
+        }
+
+        .cta-box h3 {
+            font-size: 1.6rem;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+            font-family: var(--font-heading);
+            font-weight: 900;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        .cta-box p {
+            font-size: 0.98rem;
+            color: #CBD5E1;
+            margin-bottom: 26px;
+            max-width: 580px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .btn-wa-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: #25D366;
+            color: #FFFFFF;
+            border-radius: 12px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-wa-action:hover {
+            background: #20BA5A;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.55);
+        }
+
+        /* Developer & Studio Profile Container (Onira Labs Master Standard) */
+        .dev-profile-card {
+            background: #0F172A;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            color: #FFFFFF;
+            text-align: left;
+        }
+
+        .dev-profile-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .dev-profile-avatar-wrap {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .dev-profile-avatar {
+            width: 84px;
+            height: 84px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid #059669;
+            box-shadow: 0 0 20px rgba(5, 150, 105, 0.35);
+            display: block;
+        }
+
+        .dev-profile-main-info {
+            flex: 1;
+        }
+
+        .dev-profile-tag {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: #10B981;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+
+        .dev-profile-name {
+            font-family: var(--font-heading);
+            font-size: 1.45rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            margin-bottom: 3px;
+            letter-spacing: -0.01em;
+        }
+
+        .dev-profile-role {
+            font-size: 0.88rem;
+            color: #E2E8F0;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .dev-profile-city {
+            font-size: 0.78rem;
+            color: #94A3B8;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .dev-profile-bio {
+            font-size: 0.93rem;
+            color: #E2E8F0;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            border-left: 3px solid #059669;
+            padding: 14px 18px;
+            font-style: italic;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .dev-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .dev-link-pill {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            color: #E2E8F0;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .dev-link-pill:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #10B981;
+            color: #FFFFFF;
+            transform: translateY(-2px);
+        }
+
+        .dev-link-icon-box {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .dev-link-ext {
+            margin-left: auto;
+            width: 14px !important;
+            height: 14px !important;
+            color: #64748B;
+        }
+
+        /* Studio Signature Box Ampliado */
+        .studio-signature-box {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 22px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .studio-logo-img {
+            height: 44px;
+            width: auto;
+            max-width: 240px;
+            object-fit: contain;
+            opacity: 1;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+        }
+
+        .studio-motto {
+            font-size: 0.82rem;
+            color: #CBD5E1;
+            letter-spacing: 1.2px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .studio-location {
+            font-size: 0.75rem;
+            color: #64748B;
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            color: #FFFFFF;
+            padding: 12px 22px;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+            font-size: 0.92rem;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+            z-index: 9999;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            animation: waPulse 2.5s infinite ease-in-out;
+        }
+
+        .floating-whatsapp-btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+            background: #20BA5A;
+            color: #FFFFFF;
+        }
+
+        @keyframes waPulse {
+            0%, 100% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45); }
+            50% { box-shadow: 0 8px 35px rgba(37, 211, 102, 0.75); }
+        }
+
+        @media (max-width: 640px) {
+            .offer-title { font-size: 1.75rem; }
+            .domain-strip { flex-direction: column; align-items: flex-start; }
+            .domain-price { text-align: left; }
+            .feature-grid, .financial-split, .numbers-grid, .benchmark-grid { grid-template-columns: 1fr; }
+            .dev-profile-header { flex-direction: column; text-align: center; }
+            .dev-profile-city { justify-content: center; }
+            .floating-whatsapp-btn {
+                bottom: 16px;
+                right: 16px;
+                padding: 10px 16px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Nav -->
+    <nav class="proposal-nav">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand-logo-link" aria-label="Voltar para a demonstração do site">
+                <img src="assets/logo.png" alt="{{NOME_ESTABELECIMENTO}} Logo" style="height: 38px; width: auto;" onerror="this.style.display='none'">
+            </a>
+            <a href="index.html" class="back-link">
+                <i data-lucide="arrow-left"></i> Ver Site de Demonstração
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- Main Hero Hook -->
+        <section class="offer-hero">
+            <div class="offer-card-main">
+                <span class="offer-badge"><i data-lucide="sparkles" style="width: 14px; height: 14px;"></i> Proposta Estratégica Onira.fly</span>
+                <h1 class="offer-title">O Novo Canal Digital Oficial da <span>{{NOME_ESTABELECIMENTO}}</span></h1>
+                <p class="offer-desc">Um cardápio de alta velocidade, exclusivo da sua marca, feito para transformar seguidores e clientes recorrentes em vendas diretas pelo WhatsApp oficial: <strong>{{WHATSAPP_FORMATADO}}</strong> — sem intermediários e sem taxas sobre os seus pedidos.</p>
+            </div>
+        </section>
+
+        <!-- Domínio Próprio Oficial -->
+        <div class="domain-strip">
+            <div>
+                <span class="domain-tag">Domínio Próprio & Ativo Digital da Sua Marca</span>
+                <div class="domain-name">{{DOMINIO_CLIENTE}}</div>
+            </div>
+            <div class="domain-price">
+                <strong>Incluso no Projeto</strong>
+                <span>Registro + Hospedagem Dedicada + SSL HTTPS</span>
+            </div>
+        </div>
+
+        <!-- O Tamanho da Oportunidade & Audiência -->
+        <section class="section-card">
+            <h2 class="section-title"><i data-lucide="trending-up"></i> O Tamanho da Oportunidade</h2>
+
+            <div class="numbers-grid">
+                <div class="num-card">
+                    <div class="num-big">100% Próprio</div>
+                    <div class="num-title">Posse da Sua Audiência</div>
+                    <div class="num-text">Sua marca, seu domínio e seu contato direto. Nenhum cliente seu é distraído por anúncios de concorrentes enquanto escolhe o pedido.</div>
+                </div>
+
+                <div class="num-card">
+                    <div class="num-big">0% de Taxas</div>
+                    <div class="num-title">Lucro Integral no Caixa</div>
+                    <div class="num-text">No seu canal oficial, 100% do valor de cada venda fica com o seu estabelecimento — sem comissões de 18% a 27% de marketplaces.</div>
+                </div>
+
+                <div class="num-card">
+                    <div class="num-big">{{TOTAL_AVALIACOES}} Avaliações</div>
+                    <div class="num-title">Público Que Já Consome</div>
+                    <div class="num-text">Sua casa já possui demanda e clientes fiéis consolidados no Google e redes sociais, prontos para pedir por um canal direto e veloz.</div>
+                </div>
+
+                <div class="num-card">
+                    <div class="num-big">2 Toques</div>
+                    <div class="num-title">Montagem Instantânea</div>
+                    <div class="num-text">Sem formulários longos ou downloads pesados: o cliente monta o pedido com os opcionais e envia formatado direto no WhatsApp.</div>
+                </div>
+            </div>
+
+            <!-- Simulação / Benchmark de Mercado -->
+            <div class="benchmark-box">
+                <div class="benchmark-header">
+                    <i data-lucide="calculator" style="color: #059669; width: 22px; height: 22px;"></i>
+                    <span>Referência de Mercado: Retenção de Margem & Lucro</span>
+                </div>
+                <p class="benchmark-desc">
+                    No setor de gastronomia, a comissão média de apps de delivery gira entre <strong>20% e 23%</strong>. Em uma operação com ticket médio de <strong>R$ {{TICKET_MEDIO}}</strong>, a cada <strong>100 pedidos</strong> migrados para o seu canal direto, o lucro preservado paga o investimento e gera retorno contínuo:
+                </p>
+                <div class="benchmark-grid">
+                    <div class="benchmark-mini-card">
+                        <small>Fica no caixa em app de terceiro (a cada 100 pedidos)</small>
+                        <strong style="color: #EF4444;">R$ {{VALOR_COM_TAXA_TERCEIROS}}</strong>
+                    </div>
+                    <div class="benchmark-mini-card">
+                        <small>Fica no caixa no canal próprio Onira.fly</small>
+                        <strong style="color: #059669;">R$ {{VALOR_CANAL_PROPRIO}}</strong>
+                    </div>
+                    <div class="benchmark-mini-card">
+                        <small>Margem extra preservada todo mês</small>
+                        <strong style="color: #0F172A;">+ R$ {{VALOR_ECONOMIA_MENSAL}}</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- O Que Está Incluído -->
+        <section class="section-card">
+            <h2 class="section-title"><i data-lucide="layers"></i> O Que Está Incluído</h2>
+
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <h4><i data-lucide="utensils"></i> Cardápio Interativo Completo</h4>
+                    <p>Categorias organizadas, fotos reais, montagem de combos e opções de personalização cadastrados com os produtos da sua casa.</p>
+                </div>
+                <div class="feature-box">
+                    <h4><i data-lucide="globe"></i> Domínio Próprio da Marca</h4>
+                    <p>Registro oficial <code>{{DOMINIO_CLIENTE}}</code>, garantindo autoridade máxima e indexação prioritária nas buscas locais.</p>
+                </div>
+                <div class="feature-box">
+                    <h4><i data-lucide="message-square"></i> Disparo Direto via WhatsApp</h4>
+                    <p>Pedidos chegam 100% organizados no WhatsApp oficial da empresa, prontos para a cozinha e entrega.</p>
+                </div>
+                <div class="feature-box">
+                    <h4><i data-lucide="truck"></i> Tele-Entrega & Retirada no Balcão</h4>
+                    <p>Escolha de modalidade facilitada para o cliente com preenchimento limpo de endereço e forma de pagamento.</p>
+                </div>
+                <div class="feature-box">
+                    <h4><i data-lucide="zap"></i> Carregamento em 0.5s</h4>
+                    <p>Infraestrutura em nuvem de alta performance que abre instantaneamente em qualquer smartphone sem travar.</p>
+                </div>
+                <div class="feature-box">
+                    <h4><i data-lucide="refresh-cw"></i> Acompanhamento & Suporte</h4>
+                    <p>Hospedagem dedicada, certificado SSL e suporte contínuo para atualização de itens, preços e promoções.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investimento & Condições -->
+        <section class="section-card">
+            <h2 class="section-title"><i data-lucide="badge-dollar-sign"></i> Investimento & Condições</h2>
+
+            <div class="financial-split">
+                <!-- Oferta Principal -->
+                <div class="fin-box-main">
+                    <span class="fin-label">⭐ Oferta Principal • Canal Onira.fly</span>
+                    <div class="fin-total">{{VALOR_PARCELADO}}</div>
+                    <div class="fin-item">
+                        💵 <strong>Implementação & Setup:</strong> {{VALOR_SETUP_DETALHADO}}
+                    </div>
+                    <div class="fin-item">
+                        ⚡ <strong>Acompanhamento Mensal:</strong> {{VALOR_MENSALIDADE}}/mês — inclui servidor em nuvem, SSL, domínio e suporte contínuo para alteração de cardápio e preços.
+                    </div>
+                </div>
+
+                <!-- Upsell Enxuto -->
+                <div class="fin-box-upsell">
+                    <span class="upsell-tag">🚀 Acelerador Local</span>
+                    <span class="fin-label" style="color: #7E22CE;">Google Meu Negócio & SEO</span>
+                    <div class="upsell-total">+ R$ 100/mês <small style="font-size:0.75rem; color:#6B21A8; display:block; font-weight:600;">(nos 3 primeiros meses)</small></div>
+                    <ul class="upsell-list">
+                        <li><i data-lucide="check-circle-2" style="width:16px; height:16px;"></i> Otimização completa do perfil no Google Maps.</li>
+                        <li><i data-lucide="check-circle-2" style="width:16px; height:16px;"></i> Estruturação de fotos oficiais e categorias de busca.</li>
+                        <li><i data-lucide="check-circle-2" style="width:16px; height:16px;"></i> Palavras-chave locais para captar clientes na região.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Novo CTA: Diagnóstico e Co-Criação Convidativa -->
+        <section class="cta-box">
+            <span class="cta-hook-badge"><i data-lucide="sparkles" style="width: 14px; height: 14px;"></i> Co-Criação & Diagnóstico</span>
+            <h3>Desenhamos essa primeira versão olhando o seu negócio de fora para dentro. Agora, queremos entender sua rotina por dentro.</h3>
+            <p>Ninguém conhece os pratos mais pedidos, os horários de pico e as particularidades da sua cozinha melhor do que você. Esta demonstração é uma base pronta para ser calibrada. Vamos conversar 10 minutos no WhatsApp para alinharmos os detalhes da sua operação?</p>
+            <a href="https://wa.me/5554996862169?text={{MENSAGEM_WHATSAPP_ENCODED}}" target="_blank" rel="noopener noreferrer" class="btn-wa-action">
+                <i data-lucide="message-circle"></i>
+                <span>Conversar com o Jefferson no WhatsApp</span>
+            </a>
+        </section>
+
+        <!-- Developer & Studio Profile Container (Onira Labs Master Standard) -->
+        <div class="dev-profile-card">
+            <div class="dev-profile-header">
+                <div class="dev-profile-avatar-wrap">
+                    <img src="assets/jeff-avatar.webp" alt="Jefferson Motta" class="dev-profile-avatar" onerror="this.src='../../assets/jeff-avatar.webp'">
+                </div>
+                <div class="dev-profile-main-info">
+                    <div class="dev-profile-tag">FUNDADOR & PRODUCT DESIGNER</div>
+                    <h3 class="dev-profile-name">Jefferson Motta</h3>
+                    <p class="dev-profile-role">Lead Product Designer & Software Architect • Founder Onira Labs</p>
+                    <p class="dev-profile-city">
+                        <i data-lucide="map-pin" style="width: 14px; height: 14px; color: #10B981;"></i>
+                        Caxias do Sul - RS • Serra Gaúcha
+                    </p>
+                </div>
+            </div>
+
+            <!-- Citação do Manifesto Onira.fly -->
+            <div class="dev-profile-bio">
+                "Nosso propósito com o Onira.fly é devolver a autonomia para os negócios gastronômicos locais: o cliente visualiza o cardápio em menos de 1 segundo, monta o pedido em 2 toques e envia direto no WhatsApp oficial. Zero burocracia para quem compra e lucro total no caixa de quem produz."
+            </div>
+
+            <!-- Botões Sociais com Ícones Oficiais -->
+            <div class="dev-links-grid">
+                <a href="https://www.linkedin.com/in/jeff-motta" target="_blank" rel="noopener noreferrer" class="dev-link-pill">
+                    <div class="dev-link-icon-box">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.65 1.65 0 0 0-1.66 1.66 1.66 1.66 0 0 0 1.66 1.66 1.67 1.67 0 0 0 1.67-1.66A1.66 1.66 0 0 0 7.83 6.2Z"/>
+                        </svg>
+                    </div>
+                    <span>LinkedIn: <strong>/in/jeff-motta</strong></span>
+                    <i data-lucide="external-link" class="dev-link-ext"></i>
+                </a>
+                <a href="https://jeffmotta.framer.website" target="_blank" rel="noopener noreferrer" class="dev-link-pill">
+                    <div class="dev-link-icon-box">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F43F5E">
+                            <path d="M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z"/>
+                        </svg>
+                    </div>
+                    <span>Portfólio: <strong>jeffmotta.framer.website</strong></span>
+                    <i data-lucide="external-link" class="dev-link-ext"></i>
+                </a>
+            </div>
+
+            <!-- Assinatura Onira Labs Ampliada com Alta Legibilidade -->
+            <div class="studio-signature-box">
+                <img src="assets/logo_onira_branco.png" alt="Onira Labs" class="studio-logo-img" onerror="this.src='../../logo_onira_branco.png'">
+                <div class="studio-motto">ONIRA.FLY • HIGH CONVERSION DIGITAL CHANNELS</div>
+                <div class="studio-location">Caxias do Sul - RS • Brasil</div>
+            </div>
+        </div>
+
+        <!-- Developer Signature -->
+        <div style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 32px; margin-bottom: 24px;">
+            <p>Proposta comercial elaborada por <strong>Onira Labs</strong> • Soluções Web & Inteligência de Negócios</p>
+        </div>
+
+    </main>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/5554996862169?text={{MENSAGEM_WHATSAPP_ENCODED}}" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" id="floating-whatsapp-btn" aria-label="Falar com Jefferson no WhatsApp">
+        <i data-lucide="message-circle"></i>
+        <span>Falar com o Jefferson</span>
+    </a>
+
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>
