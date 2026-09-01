@@ -360,7 +360,7 @@ function initMarginCalculator() {
 
         // Update WhatsApp CTA dynamic payload
         if (ctaWhatsapp) {
-            const rawMsg = `Olá! Fiz uma simulação na calculadora do Onira.fly com ${orders} pedidos/mês (Ticket Médio de ${formatCurrency(ticket)}) e gostaria de resgatar os ${formatCurrency(feeMonthly)}/mês que hoje pago de comissão.`;
+            const rawMsg = `Olá! Fiz uma simulação na calculadora do Onira.fly com ${orders} pedidos/mês (Ticket Médio de ${formatCurrency(ticket)}). Gostaria de solicitar um protótipo navegável da minha loja e resgatar os ${formatCurrency(feeMonthly)}/mês que hoje pago de comissão.`;
             ctaWhatsapp.href = `https://wa.me/5554991039867?text=${encodeURIComponent(rawMsg)}`;
         }
     }
