@@ -1,6 +1,6 @@
 /**
  * ONIRA.FLY — High-Conversion Digital Channels for Gastronomy
- * Interactive Application Core (Vanilla JS - Real Screenshots & Light Theme)
+ * Interactive Application Core (Live Iframe Scrolling & 100% Anonymized Cases)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.lucide.createIcons();
     }
 
-    // 2. Initialize Case Studies & Screenshot Viewport
+    // 2. Initialize Case Studies & Interactive Live Viewport
     initCaseStudySimulator();
 
     // 3. Initialize Interactive ROI Margin Calculator
@@ -17,19 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. 6 REAL CASE STUDIES DATASET (WITH REAL HD SCREENSHOTS)
+   1. 6 REAL CASE STUDIES DATASET (100% ANONYMIZED ARTIFACTS)
    ========================================================================== */
 
 const REAL_CASES = {
-    montecristo: {
-        id: 'montecristo',
-        brandName: 'Monte Cristo — Bistrô & Bebidas Nobres',
+    case_bistro: {
+        id: 'case_bistro',
+        brandName: 'Bistrô & Bebidas Nobres',
         brandDesc: 'Carta selecionada de cafés especiais, bebidas nobres e pratos executivos',
         emoji: '☕',
         tag: 'CAFETERIA & BISTRÔ PREMIUM',
-        domain: 'bistrocafeimperial.com.br',
-        screenshotMobile: 'montecristo_mobile.jpg',
-        screenshotDesktop: 'montecristo_desktop.jpg',
+        domain: 'bistrobebidasnobres.com.br',
+        iframeUrl: '../../clientes/monte-cristo/index.html',
         context: 'Operação conceituada de cafeteria bistrô com grande volume de bebidas nobres e combos executivos. Eliminou o confisco de 23% em taxas sobre clientes recorrentes ao migrar encomendas para o canal próprio.',
         metrics: {
             m1: '+290 pedidos',
@@ -48,15 +47,14 @@ const REAL_CASES = {
         ]
     },
 
-    fafa: {
-        id: 'fafa',
-        brandName: 'Fafá — Doceria Gourmet & Confeitaria',
+    case_doceria: {
+        id: 'case_doceria',
+        brandName: 'Doceria & Confeitaria Gourmet',
         brandDesc: 'Tortas artesanais finas, doces gourmet e presentes para celebrações',
         emoji: '🍰',
         tag: 'DOCERIA & CONFEITARIA GOURMET',
         domain: 'atelierdoceriafina.com.br',
-        screenshotMobile: 'fafa_mobile.jpg',
-        screenshotDesktop: 'fafa_desktop.jpg',
+        iframeUrl: '../../clientes/fafa-doces/index.html',
         context: 'Confeitaria fina que sofria com cancelamentos em apps genéricos por fotos cortadas e falta de agendamento de presentes. O canal próprio elevou o ticket médio em +38% com fotos de alta qualidade.',
         metrics: {
             m1: '+38% Ticket',
@@ -75,15 +73,14 @@ const REAL_CASES = {
         ]
     },
 
-    claem: {
-        id: 'claem',
-        brandName: 'Claem — Pastelaria Tradicional',
+    case_pastelaria: {
+        id: 'case_pastelaria',
+        brandName: 'Pastelaria Tradicional & Lanches',
         brandDesc: 'Pastéis artesanais crocantes, sucos naturais e lanches de alto giro',
         emoji: '🥟',
         tag: 'PASTELARIA DE ALTO GIRO',
         domain: 'pastelariatradicao.com.br',
-        screenshotMobile: 'claem_mobile.jpg',
-        screenshotDesktop: 'claem_desktop.jpg',
+        iframeUrl: '../../clientes/pastelaria-claem/index.html',
         context: 'Ponto tradicional com grande fluxo de balcão e delivery. Migrou a base de clientes do almoço e lanche da tarde para o canal próprio, garantindo velocidade de 0.4s e zero comissões.',
         metrics: {
             m1: '+410 pedidos',
@@ -102,15 +99,14 @@ const REAL_CASES = {
         ]
     },
 
-    botequim: {
-        id: 'botequim',
-        brandName: 'Botequim — Petiscos & Chopes',
+    case_botequim: {
+        id: 'case_botequim',
+        brandName: 'Petiscaria & Choperia Artesanal',
         brandDesc: 'Estufa de petiscos tradicionais, burgers artesanais e chopp gelado',
         emoji: '🍺',
-        tag: 'BOTEQUIM & BAR NOTURNO',
-        domain: 'botequimdepetiscos.com.br',
-        screenshotMobile: 'botequim_mobile.jpg',
-        screenshotDesktop: 'botequim_desktop.jpg',
+        tag: 'BAR NOTURNO & PETISCOS',
+        domain: 'petiscariaechoperia.com.br',
+        iframeUrl: '../../clientes/botequim-pantera/index.html',
         context: 'Bar noturno com picos concentrados de quinta a domingo. Resolveu o gargalo de atendimento com despacho automático de chopps e porções direto no WhatsApp da copa.',
         metrics: {
             m1: '-65% Abandono',
@@ -129,16 +125,15 @@ const REAL_CASES = {
         ]
     },
 
-    panazzolo: {
-        id: 'panazzolo',
-        brandName: 'Panazzolo — Pastéis & Combos',
+    case_combos: {
+        id: 'case_combos',
+        brandName: 'Pastéis Artesanais & Combos Família',
         brandDesc: 'Pastéis gigantes artesanais, recheios especiais e combos família',
         emoji: '🥟',
         tag: 'PASTÉIS GOURMET & COMBOS',
-        domain: 'pastelariapanazzolo.com.br',
-        screenshotMobile: 'panazzolo_mobile.jpg',
-        screenshotDesktop: 'panazzolo_desktop.jpg',
-        context: 'Casa especializada em pastéis gigantes e rodízio. Criou canal próprio com montagem de combos com múltiplos sabores sem cobrança abusiva de taxas por recheio extra.',
+        domain: 'pasteisgourmetcombos.com.br',
+        iframeUrl: '../../clientes/pastelaria-panazzolo/index.html',
+        context: 'Casa especializada em pastéis gigantes e combos família. Criou canal próprio com montagem de combos com múltiplos sabores sem cobrança abusiva de taxas por recheio extra.',
         metrics: {
             m1: '+360 pedidos',
             m1Sub: 'pedidos mensais no canal',
@@ -156,15 +151,14 @@ const REAL_CASES = {
         ]
     },
 
-    baitakao: {
-        id: 'baitakao',
-        brandName: 'Baita-Kão — Xis & Lanches Tradicionais',
+    case_xis: {
+        id: 'case_xis',
+        brandName: 'Xis Gaúcho & Lanches de Chapa',
         brandDesc: 'O autêntico Xis Gaúcho prensado na chapa, baurus e pratos tradicionais',
         emoji: '🍔',
         tag: 'XIS GAÚCHO & LANCHES TRADICIONAIS',
-        domain: 'baitakao.com.br',
-        screenshotMobile: 'baitakao_mobile.jpg',
-        screenshotDesktop: 'baitakao_desktop.jpg',
+        domain: 'xisgauchotradicional.com.br',
+        iframeUrl: '../../clientes/baitakao/index.html',
         context: 'Ícone tradicional da gastronomia regional com alto fluxo diário de xis prensados e baurus. Reduziu custos massivos de comissão concentrando os pedidos regulares no link próprio.',
         metrics: {
             m1: '+580 pedidos',
@@ -185,7 +179,7 @@ const REAL_CASES = {
 };
 
 // State
-let currentCase = 'montecristo';
+let currentCase = 'case_bistro';
 
 function initCaseStudySimulator() {
     // Tab switching for 6 cases
@@ -239,25 +233,16 @@ function renderScreenshotsView() {
     const data = REAL_CASES[currentCase];
     if (!data) return;
 
-    const imgMobile = document.getElementById('img-case-mobile');
-    const imgDesktop = document.getElementById('img-case-desktop');
-    const heroDynamicImg = document.getElementById('hero-dynamic-img');
+    const iframeMobile = document.getElementById('iframe-case-mobile');
+    const iframeDesktop = document.getElementById('iframe-case-desktop');
     const elDeskUrl = document.getElementById('desk-address-url');
 
-    if (imgMobile) {
-        imgMobile.style.opacity = '0.4';
-        imgMobile.src = `assets/screenshots/${data.screenshotMobile}`;
-        setTimeout(() => { imgMobile.style.opacity = '1'; }, 150);
+    if (iframeMobile && iframeMobile.src !== data.iframeUrl) {
+        iframeMobile.src = data.iframeUrl;
     }
 
-    if (imgDesktop) {
-        imgDesktop.style.opacity = '0.4';
-        imgDesktop.src = `assets/screenshots/${data.screenshotDesktop}`;
-        setTimeout(() => { imgDesktop.style.opacity = '1'; }, 150);
-    }
-
-    if (heroDynamicImg) {
-        heroDynamicImg.src = `assets/screenshots/${data.screenshotMobile}`;
+    if (iframeDesktop && iframeDesktop.src !== data.iframeUrl) {
+        iframeDesktop.src = data.iframeUrl;
     }
 
     if (elDeskUrl) {
