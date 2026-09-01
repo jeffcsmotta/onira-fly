@@ -694,6 +694,12 @@ img, svg {
     gap: 32px;
 }
 
+.white-glove-grid.two-cols-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
 .wg-card {
     background: var(--bg-card-subtle);
     border: 1px solid var(--border-subtle);
@@ -1990,6 +1996,176 @@ img, svg {
     color: #34D399;
     display: inline-block;
     vertical-align: middle;
+}
+
+/* --------------------------------------------------------------------------
+   17.1 DEVELOPER & STUDIO PROFILE (MASTER STANDARD)
+   -------------------------------------------------------------------------- */
+.dev-profile-section {
+    padding: 0 0 80px;
+}
+
+.dev-profile-card {
+    background: #0F172A;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-xl);
+    padding: 44px 40px;
+    box-shadow: var(--shadow-card-hover);
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.dev-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.dev-profile-avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.dev-profile-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 2.5px solid var(--accent-emerald);
+    box-shadow: 0 0 24px rgba(5, 150, 105, 0.4);
+    display: block;
+}
+
+.dev-profile-main-info {
+    flex: 1;
+}
+
+.dev-profile-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #34D399;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.dev-profile-name {
+    font-family: var(--font-heading);
+    font-size: 1.65rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+}
+
+.dev-profile-role {
+    font-size: 0.9375rem;
+    color: #E2E8F0;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.dev-profile-city {
+    font-size: 0.8125rem;
+    color: #94A3B8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pin-icon {
+    width: 14px;
+    height: 14px;
+    color: var(--accent-emerald);
+}
+
+.dev-profile-bio {
+    font-size: 0.96rem;
+    color: #E2E8F0;
+    line-height: 1.65;
+    margin-bottom: 28px;
+    border-left: 3px solid var(--accent-emerald);
+    padding: 16px 20px;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.dev-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.dev-link-pill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    color: #E2E8F0;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: var(--transition-smooth);
+}
+
+.dev-link-pill:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--accent-emerald);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.dev-link-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ext-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+    color: #94A3B8;
+}
+
+.studio-signature-box {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.studio-logo-img {
+    height: 32px;
+    width: auto;
+    max-width: 190px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.95;
+    margin-bottom: 4px;
+}
+
+.studio-motto {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: #34D399;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.studio-location {
+    font-size: 0.78rem;
+    color: #94A3B8;
 }
 
 /* --------------------------------------------------------------------------
