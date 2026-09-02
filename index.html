@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onira.fly — Canais Digitais Próprios de Alta Conversão para Gastronomia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Onira.fly — Canais Digitais Próprios de Alta Performance para Gastronomia</title>
     <meta name="description"
-        content="Transforme o tráfego do seu restaurante em lucro real com canal próprio, 0% de comissões, carregamento ultra-rápido (< 0.5s) e fidelização direta da sua carteira no WhatsApp. Serviço White-Glove 100% chave na mão.">
+        content="Pare de pagar 23% de taxa por quem já conhece e ama a sua comida. O Onira.fly entrega canais próprios ultra-rápidos (< 0.5s), no seu domínio oficial e com pedidos diretos no seu WhatsApp.">
     <meta name="keywords"
         content="cardápio digital, canal próprio restaurante, delivery sem taxa, fidelização gastronomia, pedidos whatsapp, onira fly, onira labs">
 
@@ -14,21 +14,22 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Onira.fly — Canais Digitais Próprios de Alta Conversão">
     <meta property="og:description"
-        content="0% de comissão por pedido, carregamento em 0.4s e fidelização da sua carteira no seu domínio oficial. Solicite um protótipo navegável da sua loja.">
+        content="0% de comissão por venda, abertura em menos de 0.5s e retenção da sua carteira no seu domínio oficial. Solicite seu protótipo navegável.">
     <meta property="og:locale" content="pt_BR">
+    <meta name="theme-color" content="#0A0A0A">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Plus Jakarta Sans (Headings), Inter (Body), JetBrains Mono (Badges) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css?v=2.7.0">
+    <link rel="stylesheet" href="style.css?v=3.0.0">
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -46,7 +47,7 @@
       "creator": {
         "@type": "Organization",
         "name": "Onira Labs",
-        "url": "https://oniralabs.framer.website"
+        "url": "https://jeffcsmotta.github.io/onira-fly/"
       },
       "description": "Infraestrutura de canal próprio digital para gastronomia e fidelização de carteira com 0% de comissão e integração direta no WhatsApp."
     }
@@ -54,37 +55,38 @@
 </head>
 
 <body>
-    <!-- Background Ambient Highlights -->
-    <div class="glow-orb glow-top-left" aria-hidden="true"></div>
-    <div class="glow-orb glow-center-right" aria-hidden="true"></div>
-    <div class="glow-orb glow-bottom" aria-hidden="true"></div>
+    <!-- Background Ambient Glows -->
+    <div class="ambient-glow glow-orange-top" aria-hidden="true"></div>
+    <div class="ambient-glow glow-amber-center" aria-hidden="true"></div>
 
-    <!-- Navigation Header (Clean, Light & Minimal) -->
+    <!-- ==========================================
+         NAVIGATION HEADER
+    =========================================== -->
     <header class="site-header" id="top">
         <div class="nav-container">
             <a href="#top" class="brand-logo" aria-label="Onira.fly Início">
-                <svg class="onirafly-vector-mark" viewBox="0 0 32 32" width="28" height="28" fill="none"
+                <svg class="onirafly-logo-mark" viewBox="0 0 32 32" width="30" height="30" fill="none"
                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <rect width="32" height="32" rx="8" fill="#0F172A" />
-                    <path d="M7 16.5L25 8.5L18 24.5L14.5 18L7 16.5Z" fill="#10B981" />
+                    <rect width="32" height="32" rx="8" fill="#141414" stroke="rgba(255, 122, 0, 0.4)" stroke-width="1.5" />
+                    <path d="M7 16.5L25 8.5L18 24.5L14.5 18L7 16.5Z" fill="#FF7A00" />
                     <path d="M14.5 18L25 8.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
                 </svg>
-                <div class="brand-text-wrap">
-                    <span class="brand-prefix">ONIRA</span><span class="brand-accent">.FLY</span>
+                <div class="brand-name-wrap">
+                    <span class="brand-prefix">ONIRA</span><span class="brand-suffix">.FLY</span>
                 </div>
-                <span class="badge-zero-tax">0% COMISSÃO</span>
+                <span class="status-badge-header">0% COMISSÃO</span>
             </a>
 
-            <!-- Simplified Nav (Removed heavy items as requested) -->
             <nav class="main-nav" aria-label="Navegação Principal">
+                <a href="#tese" class="nav-link">A Tese</a>
                 <a href="#white-glove" class="nav-link">Método White-Glove</a>
-                <a href="#cases" class="nav-link">Cases Reais</a>
-                <a href="#calculadora" class="nav-link">Simulador de Lucro</a>
+                <a href="#cases" class="nav-link">Casos Reais</a>
+                <a href="#simulador" class="nav-link">Simulador</a>
             </nav>
 
             <div class="nav-actions">
                 <a href="https://wa.me/5554991039867?text=Ol%C3%A1%21+Gostaria+de+solicitar+um+prot%C3%B3tipo+naveg%C3%A1vel+da+minha+loja+no+Onira.fly."
-                    target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-header">
                     <i data-lucide="sparkles" class="btn-icon"></i>
                     <span>Solicitar Protótipo</span>
                 </a>
@@ -94,87 +96,86 @@
 
     <main>
         <!-- ==========================================
-             HERO SECTION (INTERACTIVE LIVE SCROLL PREVIEW)
+             SEÇÃO 1: HERO SECTION
         =========================================== -->
-        <section class="hero-section">
-            <div class="section-container hero-grid">
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-overlay" aria-hidden="true"></div>
+            <div class="section-container hero-layout">
+                <!-- Coluna Esquerda: Textos & Conversão -->
                 <div class="hero-content">
-                    <div class="status-pill">
-                        <span class="pulsing-dot"></span>
-                        <span class="status-text">FIDELIZAÇÃO DE CARTEIRA COM MARGEM INTEGRAL</span>
+                    <div class="eyebrow-pill">
+                        <span class="pulse-dot"></span>
+                        <span>FIDELIZAÇÃO DIRETA COM MARGEM INTEGRAL</span>
                     </div>
 
                     <h1 class="hero-headline">
-                        Fidelize seus clientes com <span class="gradient-text">canal próprio</span> e pare de pagar
-                        23% de taxas por quem já conhece sua comida.
+                        Pare de pagar <span class="text-orange">23% de taxa</span> por quem já conhece e ama a sua comida.
                     </h1>
 
                     <p class="hero-subheadline">
-                        O marketplace é excelente para trazer clientes novos, mas quando seu cliente fiel volta a
-                        pedir na sexta-feira, o lucro deve ser <strong>100% do seu caixa</strong>. O
-                        <strong>Onira.fly</strong> entrega um canal ultra-rápido (<strong>&lt; 0.5s</strong>), no seu
-                        <strong>domínio próprio</strong> e com pedidos diretos no seu <strong>WhatsApp oficial</strong>.
+                        O marketplace traz novos clientes. Quando eles voltam na sexta-feira, o lucro deve ser <strong>100% do seu caixa</strong>. O <strong>Onira.fly</strong> entrega um canal próprio de altíssima performance (<strong>&lt; 0.5s</strong>), no seu domínio oficial e com pedidos organizados direto no seu <strong>WhatsApp</strong>.
                     </p>
 
                     <div class="hero-cta-group">
-                        <a href="https://wa.me/5554991039867?text=Ol%C3%A1%21+Gostaria+de+solicitar+um+prot%C3%B3tipo+naveg%C3%A1vel+da+minha+loja+no+Onira.fly."
-                            target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-                            <i data-lucide="sparkles" class="btn-icon"></i>
-                            <span>Solicite um Protótipo Navegável da Sua Loja ➔</span>
+                        <a href="https://wa.me/5554991039867?text=Ol%C3%A1%21+Quero+solicitar+um+prot%C3%B3tipo+naveg%C3%A1vel+do+meu+card%C3%A1pio+no+Onira.fly."
+                            target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xl">
+                            <span>Solicitar Protótipo da Minha Loja ➔</span>
                         </a>
-                        <a href="#cases" class="btn btn-secondary btn-lg">
+                        <a href="#cases" class="btn btn-secondary btn-xl">
                             <i data-lucide="eye" class="btn-icon"></i>
-                            <span>Ver 6 Modelos Reais</span>
+                            <span>Ver Demonstração Real</span>
                         </a>
                     </div>
 
-                    <!-- Metrics Strip -->
+                    <!-- Grid de Métricas de Apoio -->
                     <div class="hero-metrics-strip">
-                        <div class="metric-item">
-                            <span class="metric-value">0%</span>
-                            <span class="metric-label">Comissão por Venda</span>
+                        <div class="metric-pill">
+                            <span class="metric-num">0%</span>
+                            <span class="metric-txt">Comissão por venda</span>
                         </div>
-                        <div class="metric-divider"></div>
-                        <div class="metric-item">
-                            <span class="metric-value">&lt; 0.5s</span>
-                            <span class="metric-label">Abertura no Celular</span>
+                        <div class="metric-pill">
+                            <span class="metric-num">&lt; 0.5s</span>
+                            <span class="metric-txt">Abertura no celular</span>
                         </div>
-                        <div class="metric-divider"></div>
-                        <div class="metric-item">
-                            <span class="metric-value">100%</span>
-                            <span class="metric-label">Domínio Oficial</span>
+                        <div class="metric-pill">
+                            <span class="metric-num">100%</span>
+                            <span class="metric-txt">Domínio próprio (.com.br)</span>
                         </div>
-                        <div class="metric-divider"></div>
-                        <div class="metric-item">
-                            <span class="metric-value">+35%</span>
-                            <span class="metric-label">Margem Preservada</span>
+                        <div class="metric-pill">
+                            <span class="metric-num">+35%</span>
+                            <span class="metric-txt">Margem líquida preservada</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hero Mockup with Real Scrollable Catalogue -->
+                <!-- Coluna Direita: Mockup Flutuante com Scroll Real -->
                 <div class="hero-visual">
-                    <div class="hero-preview-box tall-preview-box">
-                        <div class="preview-badge-header">
-                            <div class="preview-header-left">
-                                <span class="badge-dot-green"></span>
-                                <span class="preview-url-text">canalproprio.com.br</span>
+                    <div class="phone-frame-mockup">
+                        <div class="phone-glass-bezel">
+                            <div class="phone-top-speaker"></div>
+                            
+                            <!-- Barra de endereço do navegador móvel -->
+                            <div class="phone-browser-bar">
+                                <span class="browser-secure-dot"></span>
+                                <span class="browser-url">canalproprio.com.br</span>
+                                <span class="browser-speed-badge">⚡ 0.38s TTFB</span>
                             </div>
-                            <span class="preview-speed">⚡ 0.38s TTFB</span>
-                        </div>
-                        <div class="preview-hero-inner">
-                            <div class="preview-hero-screen-wrap tall-screen-wrap" id="hero-scrollable-container">
-                                <!-- Real High-Res Scrollable View -->
-                                <img src="assets/screenshots/montecristo_mobile.jpg" alt="Demonstração Real de Cardápio Onira.fly" class="real-screenshot-img" id="hero-dynamic-img" loading="eager">
-                                <div class="scroll-hint-pill">
-                                    <i data-lucide="chevrons-up-down" class="hint-icon"></i>
-                                    <span>Role para navegar nas garrafas</span>
+
+                            <!-- Viewport da tela real com scroll interno nativo -->
+                            <div class="phone-screen-viewport" id="hero-phone-viewport">
+                                <img src="assets/screenshots/montecristo_mobile.jpg"
+                                     alt="Cardápio Digital Oficial Onira.fly"
+                                     id="hero-dynamic-img"
+                                     class="viewport-screenshot-img"
+                                     fetchpriority="high"
+                                     loading="eager">
+
+                                <div class="floating-scroll-hint" id="hero-scroll-hint">
+                                    <span>👆 Role para navegar nas garrafas</span>
                                 </div>
                             </div>
-                            <div class="preview-hero-caption">
-                                <span class="caption-tag">🍾 CATÁLOGO DE GARRAFAS &amp; COMBOS</span>
-                                <span class="caption-title">Cardápio Oficial sem Intermediários</span>
-                            </div>
+
+                            <div class="phone-bottom-bar"></div>
                         </div>
                     </div>
                 </div>
@@ -182,86 +183,148 @@
         </section>
 
         <!-- ==========================================
-             O CONCEITO ESTRATÉGICO (A TESE DE VALOR)
+             SEÇÃO 2: A TESE CENTRAL (AQUISIÇÃO VS. RETENÇÃO)
         =========================================== -->
-        <section class="concept-section" id="conceito">
-            <div class="section-container">
-                <div class="concept-banner-card">
-                    <div class="concept-content">
-                        <span class="concept-eyebrow">A TESE CENTRAL DO ONIRA.FLY</span>
-                        <h2 class="concept-headline">Marketplace para descobrir. Canal próprio para lucrar.</h2>
-                        <p class="concept-desc">
-                            Existe um erro comum na gastronomia: tratar o iFood como canal de vendas vitalício.
-                            O papel do marketplace é apenas a <strong>aquisição inicial</strong>. Uma vez que o cliente
-                            provou e aprovou a sua comida, continuar pagando 23% de taxa é uma sangria desnecessária.
-                        </p>
-                        <div class="concept-pillars-row">
-                            <div class="c-pillar">
-                                <div class="c-pillar-icon">🎯</div>
-                                <div class="c-pillar-text">
-                                    <strong>Aquisição (iFood):</strong>
-                                    <span>Pague comissão apenas para conquistar clientes novos e frios.</span>
-                                </div>
-                            </div>
-                            <div class="c-pillar highlight-pillar">
-                                <div class="c-pillar-icon">💎</div>
-                                <div class="c-pillar-text">
-                                    <strong>Fidelização (Onira.fly):</strong>
-                                    <span>Retenha o cliente no seu domínio com 0% de comissão e lucro integral.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==========================================
-             O MÉTODO WHITE-GLOVE (CHAVE NA MÃO TOTAL)
-        =========================================== -->
-        <section class="white-glove-section" id="white-glove">
+        <section class="thesis-section" id="tese">
             <div class="section-container">
                 <div class="section-header text-center">
-                    <span class="section-eyebrow">EXPERIÊNCIA WHITE-GLOVE (100% CHAVE NA MÃO)</span>
-                    <h2 class="section-title">Você cuida da cozinha. Nós cuidamos de toda a engenharia.</h2>
-                    <p class="section-subtitle">
-                        Não entregamos um sistema vazio para você preencher. Nossa equipe configura o seu domínio, migra
-                        todo o seu cardápio com fotos e monta a estratégia completa para direcionar seus clientes do
-                        marketplace para o canal próprio.
+                    <div class="eyebrow-tag">A DINÂMICA DO DELIVERY MODERNO</div>
+                    <h2 class="section-title">Marketplace para descobrir. <span class="text-orange">Canal próprio para lucrar.</span></h2>
+                    <p class="section-description">
+                        Existe um erro comum na gastronomia: tratar aplicativos de terceiros como canais de venda perpétuos. O papel das grandes plataformas se encerra na primeira compra. Continuar pagando comissão sobre clientes habituais é uma sangria desnecessária no fluxo de caixa.
                     </p>
                 </div>
 
-                <div class="white-glove-grid two-cols-grid">
-                    <!-- Pilar 1: Engenharia & Infraestrutura -->
-                    <div class="wg-card">
-                        <div class="wg-icon-box">
-                            <i data-lucide="server" class="wg-icon"></i>
+                <div class="thesis-grid">
+                    <!-- Bloco 1: Aquisição (Aplicativos de Terceiros) -->
+                    <div class="thesis-card thesis-card-marketplace">
+                        <div class="thesis-card-badge badge-gray">
+                            <i data-lucide="target" class="badge-icon"></i>
+                            <span>O Custo da Descoberta</span>
                         </div>
-                        <h3 class="wg-title">Setup, Domínio &amp; Hospedagem Completa</h3>
-                        <p class="wg-desc">
-                            Compramos, configuramos e hospedamos o seu domínio oficial (<code>suamarca.com.br</code>) registrado diretamente no seu
-                            CNPJ, com certificado SSL e rede CDN de altíssima velocidade (<strong>&lt; 0.5s</strong>).
+                        <h3 class="thesis-card-title">Aquisição em Marketplaces</h3>
+                        
+                        <div class="thesis-rate-box">
+                            <span class="rate-label">Taxa Operacional:</span>
+                            <span class="rate-value rate-bad">23% a 27% por pedido</span>
+                        </div>
+
+                        <div class="thesis-info-block">
+                            <div class="info-item">
+                                <span class="info-title">Propriedade da Base:</span>
+                                <p class="info-desc">Os dados pertencem à plataforma. Você não tem o telefone, histórico ou permissão de contato direto com o cliente.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-title">Diretriz Operacional:</span>
+                                <p class="info-desc">Use marketplaces exclusivamente para atrair clientes frios que nunca ouviram falar da sua marca.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bloco 2: Retenção (Onira.fly - Destaque Laranja) -->
+                    <div class="thesis-card thesis-card-onirafly">
+                        <div class="thesis-card-badge badge-orange">
+                            <i data-lucide="gem" class="badge-icon"></i>
+                            <span>O Lucro da Recorrência</span>
+                        </div>
+                        <h3 class="thesis-card-title">Retenção no Canal Onira.fly</h3>
+                        
+                        <div class="thesis-rate-box">
+                            <span class="rate-label">Taxa Operacional:</span>
+                            <span class="rate-value rate-good">0% de comissão vitalícia</span>
+                        </div>
+
+                        <div class="thesis-info-block">
+                            <div class="info-item">
+                                <span class="info-title">Propriedade da Base:</span>
+                                <p class="info-desc">O cliente é seu patrimônio. Canal direto, histórico limpo, lista própria de transmissão e WhatsApp oficial.</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-title">Diretriz Operacional:</span>
+                                <p class="info-desc">Canalize a segunda compra para o seu domínio oficial, garantindo margem cheia e atendimento sem ruídos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 3: MÉTODO WHITE-GLOVE (BENTO GRID)
+        =========================================== -->
+        <section class="whiteglove-section" id="white-glove">
+            <div class="whiteglove-bg-overlay" aria-hidden="true"></div>
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="eyebrow-tag">SERVIÇO 100% CHAVE NA MÃO</div>
+                    <h2 class="section-title">Você cuida da cozinha. <span class="text-orange">Nós cuidamos de toda a engenharia.</span></h2>
+                    <p class="section-description">
+                        Não entregamos plataformas vazias para você perder noites cadastrando produtos. Aplicamos engenharia visual, design de serviço e tecnologia para entregar seu canal pronto para faturar.
+                    </p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Card 1: Destaque Largo (Domínio & Infra) -->
+                    <div class="bento-card bento-wide">
+                        <div class="bento-icon-wrap">
+                            <i data-lucide="globe" class="bento-icon"></i>
+                        </div>
+                        <h3 class="bento-title">Domínio Próprio & Infraestrutura de Alta Performance</h3>
+                        <p class="bento-desc">
+                            Registramos e hospedamos o endereço oficial da sua marca (<code>suamarca.com.br</code>) diretamente no seu CNPJ. Servidores com distribuição em rede global (CDN) e certificado de segurança ativo. O cardápio abre em menos de 0.5 segundo, mesmo no 4G oscilante.
                         </p>
-                        <ul class="wg-features-list">
-                            <li><i data-lucide="check" class="mini-check"></i> Domínio .com.br registrado no seu CNPJ</li>
-                            <li><i data-lucide="check" class="mini-check"></i> Hospedagem CDN com 99.9% de disponibilidade</li>
-                            <li><i data-lucide="check" class="mini-check"></i> Zero esforço técnico da sua equipe</li>
+                        <ul class="bento-bullets">
+                            <li><i data-lucide="check-circle-2"></i> Domínio registrado no seu nome</li>
+                            <li><i data-lucide="check-circle-2"></i> CDN com 99.9% de uptime</li>
+                            <li><i data-lucide="check-circle-2"></i> Zero esforço técnico da sua equipe</li>
                         </ul>
                     </div>
 
-                    <!-- Pilar 2: Curadoria de Cardápio & Margem -->
-                    <div class="wg-card highlight-wg-card">
-                        <div class="wg-icon-box highlight-box">
-                            <i data-lucide="layout-grid" class="wg-icon"></i>
+                    <!-- Card 2: Quadrado (Curadoria Visual & Cardápio) -->
+                    <div class="bento-card bento-square">
+                        <div class="bento-icon-wrap">
+                            <i data-lucide="layers" class="bento-icon"></i>
                         </div>
-                        <h3 class="wg-title">Migração &amp; Curadoria do Cardápio</h3>
-                        <p class="wg-desc">
-                            Cadastramos e tratamos todas as fotos dos seus pratos em alta resolução WebP, categorizamos os itens e estruturamos os combos e adicionais de alta margem prontos para vender.
+                        <h3 class="bento-title">Curadoria Visual & Engenharia de Cardápio</h3>
+                        <p class="bento-desc">
+                            Tratamos todas as fotos dos pratos em formato WebP de alta definição e baixíssimo peso. Criamos combos inteligentes e adicionais estratégicos para elevar o ticket médio de forma orgânica.
                         </p>
-                        <ul class="wg-features-list">
-                            <li><i data-lucide="check" class="mini-check"></i> Otimização visual em WebP HD</li>
-                            <li><i data-lucide="check" class="mini-check"></i> Engenharia de combos e adicionais</li>
-                            <li><i data-lucide="check" class="mini-check"></i> Atualizações contínuas de fotos e preços</li>
+                        <ul class="bento-bullets">
+                            <li><i data-lucide="check-circle-2"></i> Imagens otimizadas em HD</li>
+                            <li><i data-lucide="check-circle-2"></i> Upsell de alta margem</li>
+                            <li><i data-lucide="check-circle-2"></i> Revisões periódicas de catálogo</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3: Quadrado (Entrada de Pedidos WhatsApp) -->
+                    <div class="bento-card bento-square">
+                        <div class="bento-icon-wrap">
+                            <i data-lucide="message-square-code" class="bento-icon"></i>
+                        </div>
+                        <h3 class="bento-title">Entrada de Pedidos Estruturada</h3>
+                        <p class="bento-desc">
+                            Acabe com mensagens confusas e áudios longos no WhatsApp. O cliente seleciona opções, personaliza o pedido e a comanda chega padronizada, formatada e pronta para a linha de produção.
+                        </p>
+                        <ul class="bento-bullets">
+                            <li><i data-lucide="check-circle-2"></i> Sem erros de montagem</li>
+                            <li><i data-lucide="check-circle-2"></i> Resumo pronto para impressão</li>
+                            <li><i data-lucide="check-circle-2"></i> Menos tempo de atendimento</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 4: Largo (Estratégia Tática de Migração) -->
+                    <div class="bento-card bento-wide">
+                        <div class="bento-icon-wrap">
+                            <i data-lucide="send" class="bento-icon"></i>
+                        </div>
+                        <h3 class="bento-title">Estratégia Tática de Migração de Base</h3>
+                        <p class="bento-desc">
+                            Estruturamos os materiais físicos e digitais para sua operação converter pedidos de marketplaces em clientes do canal direto logo na entrega da primeira embalagem.
+                        </p>
+                        <ul class="bento-bullets">
+                            <li><i data-lucide="check-circle-2"></i> Roteiro de transição gradual</li>
+                            <li><i data-lucide="check-circle-2"></i> Materiais de sacola (flyers & QR codes)</li>
+                            <li><i data-lucide="check-circle-2"></i> Incentivos inteligentes de retenção</li>
                         </ul>
                     </div>
                 </div>
@@ -269,185 +332,153 @@
         </section>
 
         <!-- ==========================================
-             VITRINE DE CASES REAIS (SCROLL REAL & INTERATIVO)
+             SEÇÃO 4: SHOWROOM INTERATIVO (CASOS REAIS)
         =========================================== -->
-        <section class="showcase-section" id="cases">
+        <section class="showroom-section" id="cases">
             <div class="section-container">
                 <div class="section-header text-center">
-                    <span class="section-eyebrow">DEMONSTRAÇÃO REAL INTERATIVA</span>
-                    <h2 class="section-title">Navegue nos 6 modelos de cardápio desenvolvidos</h2>
-                    <p class="section-subtitle">
-                        Role a tela dentro do aparelho para testar a experiência de navegação com o widget de compras
-                        fechado, visualizando produtos, categorias e fotos em tempo real.
+                    <div class="eyebrow-tag">PROVA DE CONVERSÃO & PERFORMANCE</div>
+                    <h2 class="section-title">Navegue e comprove a <span class="text-orange">fluidez na prática.</span></h2>
+                    <p class="section-description">
+                        Teste o que seu cliente vivencia: sem downloads de aplicativo, sem cadastros exaustivos. Escolha rápida, navegação limpa e fechamento em poucos toques.
                     </p>
                 </div>
 
-                <!-- 6 Anonymous Case Tabs (100% anonymized as instructed) -->
-                <div class="case-tabs-wrapper" role="tablist" aria-label="Seletor de Modelos de Cardápio">
-                    <button class="case-tab active" data-case="case_bistro" role="tab" aria-selected="true"
-                        id="tab-bistro">
-                        <span class="tab-emoji">☕</span>
-                        <span class="tab-title">Bistrô &amp; Bebidas Nobres</span>
-                    </button>
-
-                    <button class="case-tab" data-case="case_doceria" role="tab" aria-selected="false"
-                        id="tab-doceria">
-                        <span class="tab-emoji">🍰</span>
-                        <span class="tab-title">Doceria &amp; Confeitaria Fina</span>
-                    </button>
-
-                    <button class="case-tab" data-case="case_pastelaria" role="tab" aria-selected="false"
-                        id="tab-pastelaria">
-                        <span class="tab-emoji">🥟</span>
-                        <span class="tab-title">Pastelaria Tradicional &amp; Lanches</span>
-                    </button>
-
-                    <button class="case-tab" data-case="case_botequim" role="tab" aria-selected="false"
-                        id="tab-botequim">
-                        <span class="tab-emoji">🍺</span>
-                        <span class="tab-title">Petiscaria &amp; Choperia</span>
-                    </button>
-
-                    <button class="case-tab" data-case="case_combos" role="tab" aria-selected="false"
-                        id="tab-combos">
-                        <span class="tab-emoji">🥟</span>
-                        <span class="tab-title">Pastéis &amp; Combos Família</span>
-                    </button>
-
-                    <button class="case-tab" data-case="case_xis" role="tab" aria-selected="false"
-                        id="tab-xis">
-                        <span class="tab-emoji">🍔</span>
-                        <span class="tab-title">Xis &amp; Grelhados de Chapa</span>
-                    </button>
+                <!-- Abas de Nicho (Touch-Friendly Horizontal Scroll) -->
+                <div class="case-tabs-wrapper">
+                    <div class="case-tabs" role="tablist" aria-label="Nicho de Demonstração">
+                        <button class="case-tab active" data-case="montecristo" role="tab" aria-selected="true">
+                            <span>☕ Cafeteria & Bistrô Premium</span>
+                        </button>
+                        <button class="case-tab" data-case="baitakao" role="tab" aria-selected="false">
+                            <span>🍔 Hamburgueria Artesanal</span>
+                        </button>
+                        <button class="case-tab" data-case="panazzolo" role="tab" aria-selected="false">
+                            <span>🍕 Forneria & Pizzaria</span>
+                        </button>
+                        <button class="case-tab" data-case="fafa" role="tab" aria-selected="false">
+                            <span>🍣 Culinária Japonesa & Contemporânea</span>
+                        </button>
+                        <button class="case-tab" data-case="claem" role="tab" aria-selected="false">
+                            <span>🥐 Brunch & Pâtisserie</span>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Device Viewport Mode Toggle (Mobile / Desktop) -->
-                <div class="viewport-mode-bar">
-                    <div class="mode-toggle-group" role="group" aria-label="Modo de Visualização">
-                        <button class="mode-btn active" id="btn-mode-mobile" data-mode="mobile">
-                            <i data-lucide="smartphone" class="mode-icon"></i>
+                <!-- Seletor de Viewport: Mobile vs Desktop -->
+                <div class="device-switch-wrap">
+                    <div class="device-switch">
+                        <button class="device-btn active" id="btn-showcase-mobile" onclick="window.setShowcaseDevice('mobile')">
+                            <i data-lucide="smartphone"></i>
                             <span>Navegação Mobile (Smartphone)</span>
                         </button>
-                        <button class="mode-btn" id="btn-mode-desktop" data-mode="desktop">
-                            <i data-lucide="monitor" class="mode-icon"></i>
+                        <button class="device-btn" id="btn-showcase-desktop" onclick="window.setShowcaseDevice('desktop')">
+                            <i data-lucide="monitor"></i>
                             <span>Navegação Desktop (Computador)</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Showcase Main Content Grid -->
-                <div class="showcase-content-grid">
-                    <!-- Left: Real Interactive Scrollable Viewport Frame -->
-                    <div class="device-display-area" id="device-display-area">
-                        <!-- Smartphone Container with Real Scrollable Viewport -->
-                        <div class="phone-device-container" id="phone-container">
-                            <div class="phone-outer-frame">
-                                <div class="phone-notch">
-                                    <div class="camera-lens"></div>
-                                    <div class="speaker-grill"></div>
-                                </div>
-                                <div class="phone-screenshot-viewport" id="phone-scroll-wrap">
-                                    <img src="assets/screenshots/montecristo_mobile.jpg" class="real-screenshot-img"
-                                        id="img-case-mobile" alt="Cardápio Mobile Real" loading="lazy">
-                                    <div class="screenshot-overlay-badge">
-                                        <span>👆 Role para explorar os pratos e garrafas</span>
+                <!-- Container do Showroom (Sticky / Grid) -->
+                <div class="showroom-layout">
+                    <!-- Coluna Esquerda: Mockup Interativo com Imagens HD e Scroll Real -->
+                    <div class="showroom-mockup-wrap">
+                        <!-- Mockup Smartphone -->
+                        <div class="mockup-phone-view active" id="showcase-phone-container">
+                            <div class="phone-frame-mockup phone-frame-showcase">
+                                <div class="phone-glass-bezel">
+                                    <div class="phone-top-speaker"></div>
+                                    <div class="phone-browser-bar">
+                                        <span class="browser-secure-dot"></span>
+                                        <span class="browser-url" id="phone-case-url">bistrobebidasnobres.com.br</span>
+                                        <span class="browser-speed-badge">⚡ 0.38s</span>
                                     </div>
+                                    <div class="phone-screenshot-viewport" id="phone-case-scroll-viewport">
+                                        <img src="assets/screenshots/montecristo_mobile.jpg"
+                                             alt="Screenshot do Cardápio Mobile"
+                                             id="img-case-mobile"
+                                             class="viewport-screenshot-img"
+                                             loading="lazy">
+                                        <div class="floating-scroll-hint">
+                                            <span>👇 Role para explorar os pratos e garrafas</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-bottom-bar"></div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Desktop Browser Container with Real Scrollable Desktop View -->
-                        <div class="desktop-device-container" id="desktop-container" style="display: none;">
-                            <div class="desktop-browser-frame">
-                                <div class="browser-titlebar">
-                                    <div class="browser-dots">
-                                        <span class="dot dot-red"></span>
-                                        <span class="dot dot-yellow"></span>
-                                        <span class="dot dot-green"></span>
+                        <!-- Mockup Desktop -->
+                        <div class="mockup-desktop-view" id="showcase-desktop-container">
+                            <div class="desktop-frame-mockup">
+                                <div class="desktop-frame-header">
+                                    <div class="window-controls">
+                                        <span class="control-dot dot-red"></span>
+                                        <span class="control-dot dot-yellow"></span>
+                                        <span class="control-dot dot-green"></span>
                                     </div>
-                                    <div class="browser-address-bar">
-                                        <i data-lucide="lock" class="lock-icon"></i>
-                                        <span id="desk-address-url">https://bistrobebidasnobres.com.br</span>
+                                    <div class="desktop-url-bar">
+                                        <span class="desktop-url" id="desktop-case-url">https://bistrobebidasnobres.com.br</span>
                                     </div>
-                                    <div class="browser-speed-badge">⚡ 0.38s TTFB</div>
+                                    <span class="browser-speed-badge">⚡ 0.38s TTFB</span>
                                 </div>
-
-                                <div class="desktop-screenshot-viewport" id="desk-scroll-wrap">
-                                    <img src="assets/screenshots/montecristo_desktop.jpg" class="real-screenshot-img-desk"
-                                        id="img-case-desktop" alt="Cardápio Desktop Real" loading="lazy">
+                                <div class="desktop-screenshot-viewport" id="desktop-case-scroll-viewport">
+                                    <img src="assets/screenshots/montecristo_desktop.jpg"
+                                         alt="Screenshot do Cardápio Desktop"
+                                         id="img-case-desktop"
+                                         class="viewport-screenshot-img"
+                                         loading="lazy">
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right: Anonymous Case Study Intel & Metrics -->
-                    <div class="case-intel-card">
-                        <div class="intel-header">
-                            <div class="intel-badge-group">
-                                <span class="case-archetype-tag" id="intel-tag">CAFETERIA &amp; BISTRÔ PREMIUM</span>
-                                <span class="case-domain-tag" id="intel-domain">canalproprio.com.br</span>
+                    <!-- Coluna Direita: Métricas Colossais e Intel do Nicho -->
+                    <div class="showroom-intel-wrap">
+                        <div class="intel-card">
+                            <div class="intel-header">
+                                <span class="niche-badge" id="case-niche-badge">CAFETERIA & BISTRÔ PREMIUM</span>
+                                <span class="domain-tag" id="case-domain-tag">bistrobebidasnobres.com.br</span>
                             </div>
-                            <h3 class="intel-title" id="intel-title">Bistrô &amp; Bebidas Nobres</h3>
-                            <p class="intel-context" id="intel-context">
-                                Estabelecimento com ampla carta de cafés especiais, bebidas nobres e pratos executivos.
-                                Eliminou a sangria de taxas sobre clientes frequentes migrando pedidos de almoço e garrafas
-                                para o canal próprio.
+
+                            <h3 class="intel-title" id="case-intel-title">Bistrô & Bebidas Nobres</h3>
+                            <p class="intel-desc" id="case-intel-desc">
+                                Operação conceituada de cafeteria bistrô com grande volume de bebidas nobres e combos executivos. Eliminou o confisco de 23% em taxas sobre clientes recorrentes ao migrar encomendas para o canal próprio.
                             </p>
-                        </div>
 
-                        <!-- Real Proven Metrics Grid -->
-                        <div class="intel-metrics-grid">
-                            <div class="intel-metric-box">
-                                <span class="intel-metric-label">Pedidos Mensais no Canal</span>
-                                <span class="intel-metric-value text-emerald" id="intel-m1">+290 pedidos</span>
-                                <span class="intel-metric-sub">direto no domínio oficial</span>
+                            <!-- Grid de Métricas XL -->
+                            <div class="metrics-xl-grid">
+                                <div class="metric-xl-card">
+                                    <span class="metric-xl-value text-orange" id="metric-orders">+290</span>
+                                    <span class="metric-xl-label">pedidos mensais no canal</span>
+                                    <span class="metric-xl-sub">direto no domínio oficial</span>
+                                </div>
+
+                                <div class="metric-xl-card">
+                                    <span class="metric-xl-value text-amber" id="metric-savings">R$ 4.820</span>
+                                    <span class="metric-xl-label">margem resgatada/mês</span>
+                                    <span class="metric-xl-sub">sem comissões de 23%</span>
+                                </div>
+
+                                <div class="metric-xl-card">
+                                    <span class="metric-xl-value" id="metric-speed">32s</span>
+                                    <span class="metric-xl-label">tempo médio de pedido</span>
+                                    <span class="metric-xl-sub">da escolha ao WhatsApp</span>
+                                </div>
+
+                                <div class="metric-xl-card">
+                                    <span class="metric-xl-value" id="metric-ticket">R$ 85,00</span>
+                                    <span class="metric-xl-label">ticket médio consolidado</span>
+                                    <span class="metric-xl-sub">combos de alta margem</span>
+                                </div>
                             </div>
 
-                            <div class="intel-metric-box">
-                                <span class="intel-metric-label">Margem Mensal Resgatada</span>
-                                <span class="intel-metric-value text-amber" id="intel-m2">R$ 4.820,00</span>
-                                <span class="intel-metric-sub">sem comissões de 23%</span>
+                            <div class="intel-cta-block">
+                                <a href="https://wa.me/5554991039867?text=Ol%C3%A1%21+Gostei+do+case+de+demonstra%C3%A7%C3%A3o+e+quero+um+prot%C3%B3tipo+para+meu+restaurante."
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                                    <span>Solicitar Protótipo Deste Modelo ➔</span>
+                                </a>
                             </div>
-
-                            <div class="intel-metric-box">
-                                <span class="intel-metric-label">Tempo Médio de Pedido</span>
-                                <span class="intel-metric-value" id="intel-m3">32 segundos</span>
-                                <span class="intel-metric-sub">da escolha ao WhatsApp</span>
-                            </div>
-
-                            <div class="intel-metric-box">
-                                <span class="intel-metric-label">Ticket Médio</span>
-                                <span class="intel-metric-value" id="intel-m4">R$ 85,00</span>
-                                <span class="intel-metric-sub">com combos e adicionais</span>
-                            </div>
-                        </div>
-
-                        <!-- UX Solutions Implemented -->
-                        <div class="intel-solution-box">
-                            <h4 class="solution-heading">Engenharia Visual &amp; UX Aplicada:</h4>
-                            <ul class="solution-list" id="intel-solutions">
-                                <li>
-                                    <i data-lucide="check" class="check-icon"></i>
-                                    <span>Fotos nítidas de produtos com carregamento instantâneo WebP.</span>
-                                </li>
-                                <li>
-                                    <i data-lucide="check" class="check-icon"></i>
-                                    <span>Carrinho ergonômico com botão "Continuar Escolhendo".</span>
-                                </li>
-                                <li>
-                                    <i data-lucide="check" class="check-icon"></i>
-                                    <span>Comanda estruturada pronta para impressora térmica do balcão.</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="intel-cta-row">
-                            <a href="https://wa.me/5554991039867?text=Ol%C3%A1%21+Gostaria+de+solicitar+um+prot%C3%B3tipo+naveg%C3%A1vel+do+modelo+Onira.fly+para+o+meu+restaurante."
-                                target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block"
-                                id="intel-cta-btn">
-                                <i data-lucide="sparkles" class="btn-icon"></i>
-                                <span>Solicitar Protótipo Deste Modelo ➔</span>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -455,107 +486,72 @@
         </section>
 
         <!-- ==========================================
-             CALCULADORA DE RETENÇÃO DE MARGEM (ROI)
+             SEÇÃO 5: SIMULADOR DE IMPACTO FINANCEIRO
         =========================================== -->
-        <section class="calculator-section" id="calculadora">
+        <section class="simulator-section" id="simulador">
             <div class="section-container">
                 <div class="section-header text-center">
-                    <span class="section-eyebrow">SIMULADOR FINANCEIRO INTERATIVO</span>
-                    <h2 class="section-title">Calcule quanto dinheiro você está deixando na mesa</h2>
-                    <p class="section-subtitle">
-                        Ajuste os parâmetros da sua operação atual e veja quanto a sua casa economiza ao migrar os clientes
-                        recorrentes para o canal próprio Onira.fly.
+                    <div class="eyebrow-tag">SIMULADOR DE MARGEM</div>
+                    <h2 class="section-title">Descubra quanto dinheiro sua operação <span class="text-orange">recupera todo mês.</span></h2>
+                    <p class="section-description">
+                        Calcule o valor que hoje fica retido nas comissões de aplicativos e que voltará diretamente para o fluxo de caixa do seu restaurante ao migrar a recompra para o Onira.fly.
                     </p>
                 </div>
 
-                <div class="calculator-card">
-                    <div class="calc-inputs-col">
-                        <!-- Input 1: Ticket Médio -->
-                        <div class="calc-field-group">
-                            <div class="calc-label-row">
-                                <label for="range-ticket" class="calc-label">Ticket Médio por Pedido:</label>
-                                <span class="calc-badge-val" id="val-ticket-display">R$ 65,00</span>
+                <div class="simulator-card">
+                    <div class="simulator-inputs-col">
+                        <!-- Input 1: Faturamento Delivery -->
+                        <div class="sim-input-group">
+                            <div class="sim-label-row">
+                                <label for="sim-revenue-range" class="sim-label">Faturamento bruto mensal em delivery:</label>
+                                <span class="sim-value-display" id="sim-revenue-display">R$ 30.000</span>
                             </div>
-                            <input type="range" id="range-ticket" min="25" max="250" step="5" value="65"
-                                class="calc-slider" aria-label="Ticket Médio">
-                            <div class="slider-limits">
-                                <span>R$ 25</span>
-                                <span>R$ 250</span>
-                            </div>
-                        </div>
-
-                        <!-- Input 2: Volume de Pedidos/Mês -->
-                        <div class="calc-field-group">
-                            <div class="calc-label-row">
-                                <label for="range-orders" class="calc-label">Volume de Pedidos Recorrentes no Mês:</label>
-                                <span class="calc-badge-val" id="val-orders-display">350 pedidos</span>
-                            </div>
-                            <input type="range" id="range-orders" min="50" max="2000" step="25" value="350"
-                                class="calc-slider" aria-label="Pedidos por mês">
-                            <div class="slider-limits">
-                                <span>50 ped/mês</span>
-                                <span>2.000 ped/mês</span>
+                            <input type="range" id="sim-revenue-range" min="5000" max="150000" step="1000" value="30000" class="sim-slider">
+                            <div class="sim-range-markers">
+                                <span>R$ 5.000</span>
+                                <span>R$ 75.000</span>
+                                <span>R$ 150.000</span>
                             </div>
                         </div>
 
-                        <!-- Input 3: Taxa de Marketplace -->
-                        <div class="calc-field-group">
-                            <div class="calc-label-row">
-                                <label for="range-rate" class="calc-label">Taxa Média do Marketplace (iFood):</label>
-                                <span class="calc-badge-val" id="val-rate-display">23%</span>
+                        <!-- Input 2: % Clientes Recorrentes -->
+                        <div class="sim-input-group">
+                            <div class="sim-label-row">
+                                <label for="sim-retention-range" class="sim-label">Percentual estimado de clientes recorrentes:</label>
+                                <span class="sim-value-display" id="sim-retention-display">40%</span>
                             </div>
-                            <input type="range" id="range-rate" min="15" max="30" step="1" value="23"
-                                class="calc-slider" aria-label="Taxa do marketplace">
-                            <div class="slider-limits">
-                                <span>15%</span>
-                                <span>30%</span>
+                            <input type="range" id="sim-retention-range" min="10" max="80" step="5" value="40" class="sim-slider">
+                            <div class="sim-range-markers">
+                                <span>10% (Iniciante)</span>
+                                <span>40% (Média de Mercado)</span>
+                                <span>80% (Marca Consolidada)</span>
                             </div>
                         </div>
 
-                        <div class="calc-tip-box">
-                            <i data-lucide="info" class="tip-icon"></i>
-                            <span>Considere apenas clientes que <strong>já compram com frequência</strong> da sua marca e poderiam pedir direto no seu link oficial.</span>
+                        <div class="sim-info-note">
+                            <i data-lucide="info" class="sim-info-icon"></i>
+                            <span>Cálculo baseado na alíquota padrão de 23% praticada pelos principais marketplaces sobre pedidos da base fidelizada.</span>
                         </div>
                     </div>
 
-                    <!-- Output Results Col -->
-                    <div class="calc-results-col">
-                        <div class="results-card-inner">
-                            <span class="results-header-tag">ECONOMIA ESTIMADA DIRETA NO CAIXA</span>
-
-                            <div class="result-main-highlight">
-                                <div class="result-currency-label">Dinheiro Resgatado / Ano:</div>
-                                <div class="result-big-value" id="calc-res-annual">R$ 62.790,00</div>
-                                <div class="result-sub-badge text-emerald" id="calc-res-monthly">
-                                    + R$ 5.232,50 a mais no seu caixa todo mês
-                                </div>
+                    <!-- Card de Resultado com Borda Laranja Glow -->
+                    <div class="simulator-result-col">
+                        <div class="result-highlight-card">
+                            <span class="result-eyebrow">ECONOMIA ESTIMADA PRESERVADA</span>
+                            <div class="result-annual-wrap">
+                                <span class="result-currency">R$</span>
+                                <span class="result-annual-value" id="result-annual-value">33.120</span>
+                                <span class="result-annual-period">/ano</span>
                             </div>
-
-                            <div class="result-breakdown-list">
-                                <div class="breakdown-row">
-                                    <span class="breakdown-label">Faturamento Bruto Simulado:</span>
-                                    <span class="breakdown-val" id="calc-gross-monthly">R$ 22.750,00 / mês</span>
-                                </div>
-                                <div class="breakdown-row">
-                                    <span class="breakdown-label">Comissão do Marketplace (Perdida):</span>
-                                    <span class="breakdown-val text-danger" id="calc-fee-monthly">- R$ 5.232,50 / mês</span>
-                                </div>
-                                <div class="breakdown-row highlight-row">
-                                    <span class="breakdown-label">Comissão no Onira.fly (Taxa Zero):</span>
-                                    <span class="breakdown-val text-emerald">R$ 0,00 (0%)</span>
-                                </div>
+                            <div class="result-monthly-badge">
+                                <span>Equivalente a <strong id="result-monthly-value">R$ 2.760,00</strong> a mais no caixa todo mês</span>
                             </div>
-
-                            <div class="payback-indicator">
-                                <i data-lucide="trending-up" class="payback-icon"></i>
-                                <span id="calc-payback-text">O investimento do seu Onira.fly se paga em menos de <strong>20 dias</strong> com a economia de taxas.</span>
-                            </div>
-
-                            <a href="https://wa.me/5554991039867?text=Ol%C3%A1%21+Gostaria+de+solicitar+um+prot%C3%B3tipo+naveg%C3%A1vel+da+minha+loja+no+Onira.fly."
-                                target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block btn-lg"
-                                id="calc-cta-whatsapp">
-                                <i data-lucide="sparkles" class="btn-icon"></i>
-                                <span>Solicitar Protótipo Navegável da Sua Loja</span>
+                            <p class="result-explanation">
+                                Valor preservado no seu caixa apenas migrando a recompra para o canal próprio <strong>Onira.fly</strong>, com 0% de comissão e controle pleno dos seus clientes.
+                            </p>
+                            <a href="https://wa.me/5554991039867?text=Ol%C3%A1%21+Simulei+minha+economia+no+Onira.fly+e+quero+solicitar+um+prot%C3%B3tipo+para+minha+loja."
+                                target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block btn-lg">
+                                <span>Resgatar Esta Margem no Meu Caixa ➔</span>
                             </a>
                         </div>
                     </div>
@@ -564,153 +560,144 @@
         </section>
 
         <!-- ==========================================
-             FINAL CTA SECTION (SOLICITE UM PROTÓTIPO NAVEGÁVEL)
+             SEÇÃO 6: CTA FINAL (FECHAMENTO)
         =========================================== -->
-        <section class="final-cta-section">
+        <section class="final-cta-section" id="cta-final">
+            <div class="final-cta-bg-overlay" aria-hidden="true"></div>
             <div class="section-container">
-                <div class="cta-box-card">
-                    <span class="cta-eyebrow">DEMONSTRAÇÃO PERSONALIZADA</span>
-                    <h2 class="cta-headline">
-                        Solicite um Protótipo Navegável da Sua Loja.
-                    </h2>
-                    <p class="cta-desc">
-                        Montamos uma versão de demonstração com os pratos, fotos e a identidade visual do seu
-                        estabelecimento para você testar a velocidade e a ergonomia direto no seu celular.
+                <div class="final-cta-content text-center">
+                    <div class="eyebrow-tag">SEJA DONO DAS SUAS VENDAS</div>
+                    <h2 class="final-cta-title">Pare de alugar a sua <span class="text-orange">base de clientes.</span></h2>
+                    <p class="final-cta-description">
+                        Dividir mais de 20% do faturamento por quem já consome na sua casa toda semana compromete a sobrevivência do negócio. Vamos desenhar o canal próprio que consolida a sua marca e blinda seu lucro.
                     </p>
 
-                    <div class="cta-actions-group">
-                        <a href="https://wa.me/5554991039867?text=Ol%C3%A1%21+Gostaria+de+solicitar+um+prot%C3%B3tipo+naveg%C3%A1vel+da+minha+loja+no+Onira.fly."
-                            target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xl">
+                    <div class="final-cta-action">
+                        <a href="https://wa.me/5554991039867?text=Ol%C3%A1%21+Quero+solicitar+meu+prot%C3%B3tipo+naveg%C3%A1vel+do+Onira.fly+sem+custo."
+                            target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xl btn-pulsing">
                             <i data-lucide="sparkles" class="btn-icon"></i>
-                            <span>Solicitar Protótipo Gratuito no WhatsApp</span>
-                        </a>
-                        <a href="#cases" class="btn btn-secondary btn-xl">
-                            <span>Ver Modelos Novamente</span>
+                            <span>Solicitar Protótipo da Minha Loja ➔</span>
                         </a>
                     </div>
 
-                    <div class="cta-guarantees">
-                        <span><i data-lucide="check" class="mini-check"></i> Sem compromisso</span>
-                        <span><i data-lucide="check" class="mini-check"></i> Domínio 100% no seu CNPJ</span>
-                        <span><i data-lucide="check" class="mini-check"></i> Implementação White-Glove</span>
+                    <div class="final-cta-guarantee">
+                        <i data-lucide="shield-check" class="guarantee-icon"></i>
+                        <span>Demonstração navegável personalizada para o seu cardápio em até 24 horas. Sem compromisso e sem custo inicial.</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ==========================================
-             DEVELOPER & STUDIO PROFILE (ONIRA LABS MASTER STANDARD)
+             ASSINATURA MASTER INSTITUCIONAL
         =========================================== -->
-        <section class="dev-profile-section">
+        <section class="master-signature-section">
             <div class="section-container">
                 <div class="dev-profile-card">
                     <div class="dev-profile-header">
-                        <div class="dev-profile-avatar-wrap">
-                            <img src="assets/jeff-avatar.webp" alt="Jefferson Motta" class="dev-profile-avatar">
-                        </div>
-                        <div class="dev-profile-main-info">
-                            <div class="dev-profile-tag">SERVICE DESIGN &amp; AI BUSINESS INTELLIGENCE</div>
-                            <h3 class="dev-profile-name">Jefferson Motta</h3>
-                            <p class="dev-profile-role">Service Designer e A.I Business Intelligence na Onira Labs</p>
-                            <p class="dev-profile-city">
-                                <i data-lucide="map-pin" class="pin-icon"></i>
-                                Caxias do Sul - Serra Gaúcha
-                            </p>
+                        <img src="assets/jeff-avatar.webp" alt="Jefferson Motta" class="dev-avatar-img" width="76" height="76" loading="lazy">
+                        <div class="dev-profile-title-block">
+                            <span class="dev-badge-tag">SERVICE DESIGN & AI BUSINESS INTELLIGENCE</span>
+                            <h3 class="dev-author-name">Jefferson Motta</h3>
+                            <p class="dev-author-role">Service Designer e A.I Business Intelligence na <strong>Onira Labs</strong> • Caxias do Sul - Serra Gaúcha</p>
                         </div>
                     </div>
 
-                    <!-- Citação do Manifesto Onira.fly -->
-                    <div class="dev-profile-bio">
-                        "Nosso propósito com o Onira.fly é devolver a autonomia para os negócios gastronômicos locais: o cliente visualiza o cardápio em menos de 1 segundo, monta o pedido em 2 toques e envia direto no WhatsApp oficial. Zero burocracia para quem compra e lucro total no caixa de quem produz."
-                    </div>
+                    <blockquote class="dev-quote">
+                        “Nosso propósito com o <strong>Onira.fly</strong> é devolver a autonomia para os negócios gastronômicos locais: o cliente visualiza o cardápio em menos de 1 segundo, monta o pedido em 2 toques e envia direto no WhatsApp oficial. Zero burocracia para quem compra e lucro total no caixa de quem produz.”
+                    </blockquote>
 
-                    <div class="dev-links-grid">
-                        <a href="https://www.linkedin.com/in/jeff-motta" target="_blank" rel="noopener noreferrer" class="dev-link-pill">
-                            <div class="dev-link-icon-box">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2">
-                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.65 1.65 0 0 0-1.66 1.66 1.66 1.66 0 0 0 1.66 1.66 1.67 1.67 0 0 0 1.67-1.66A1.66 1.66 0 0 0 7.83 6.2Z"/>
-                                </svg>
-                            </div>
-                            <span>LinkedIn: <strong>/in/jeff-motta</strong></span>
-                            <i data-lucide="external-link" class="ext-icon"></i>
-                        </a>
-                        <a href="https://jeff-motta.framer.website" target="_blank" rel="noopener noreferrer" class="dev-link-pill">
-                            <div class="dev-link-icon-box">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                </svg>
-                            </div>
-                            <span>Portfólio: <strong>jeff-motta.framer.website</strong></span>
-                            <i data-lucide="external-link" class="ext-icon"></i>
-                        </a>
-                    </div>
-
-                    <div class="studio-signature-box">
-                        <img src="assets/logo_onira_preto.svg" alt="Onira Labs" class="studio-logo-img">
-                        <div class="studio-motto">ONIRA.FLY • HIGH CONVERSION DIGITAL CHANNELS</div>
-                        <div class="studio-location">Caxias do Sul - Serra Gaúcha • Brasil</div>
+                    <div class="dev-profile-footer">
+                        <div class="dev-social-links">
+                            <a href="https://linkedin.com/in/jeff-motta" target="_blank" rel="noopener noreferrer" class="dev-link">
+                                <i data-lucide="linkedin"></i>
+                                <span>LinkedIn Oficial</span>
+                            </a>
+                            <a href="https://jeff-motta.framer.website" target="_blank" rel="noopener noreferrer" class="dev-link">
+                                <i data-lucide="globe"></i>
+                                <span>Portfólio & Metodologia</span>
+                            </a>
+                        </div>
+                        <div class="dev-agency-brand">
+                            <span class="agency-label">Desenvolvido por</span>
+                            <span class="agency-title">ONIRA LABS</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Site Footer (Houses Onira Labs Official Brand & Credentials) -->
+    <!-- ==========================================
+         RODAPÉ (FOOTER)
+    =========================================== -->
     <footer class="site-footer">
         <div class="section-container footer-grid">
-            <div class="footer-brand-col">
-                <div class="footer-brand-header">
-                    <img src="assets/logo_onira_preto.svg" alt="Onira Labs" class="onira-logo-footer">
-                    <div class="footer-badge-sub">SOFTWARE STUDIO &amp; LAB</div>
+            <div class="footer-col footer-col-brand">
+                <div class="footer-logo-wrap">
+                    <span class="brand-prefix">ONIRA</span><span class="brand-suffix">.FLY</span>
                 </div>
-                <p class="footer-tagline">
-                    O <strong>Onira.fly</strong> é o produto oficial da Onira Labs para canais digitais de alta conversão,
-                    propriedade de dados e fidelização com margem integral para a gastronomia.
+                <p class="footer-brand-desc">
+                    Engenharia de canais próprios e retenção para gastronomia. Um produto <strong>Onira Labs</strong>.
                 </p>
-                <div class="footer-copyright">
-                    © 2026 Onira Labs • Criado por Jefferson Motta.
+                <div class="footer-status-indicator">
+                    <span class="pulse-dot"></span>
+                    <span>Sistemas Operacionais & Redes Globais Ativas</span>
                 </div>
             </div>
 
-            <div class="footer-links-col">
-                <h4 class="footer-col-title">Ecossistema Onira</h4>
-                <ul class="footer-links-list">
-                    <li><a href="https://oniralabs.framer.website" target="_blank" rel="noopener">Onira Labs (Laboratório)</a></li>
-                    <li><a href="https://jeff-motta.framer.website" target="_blank" rel="noopener">Jefferson Motta (Fundador)</a></li>
+            <div class="footer-col footer-col-links">
+                <h4 class="footer-col-title">Navegação Rápida</h4>
+                <ul class="footer-menu">
+                    <li><a href="#tese">A Tese</a></li>
                     <li><a href="#white-glove">Método White-Glove</a></li>
-                    <li><a href="#cases">Modelos Reais</a></li>
-                    <li><a href="#calculadora">Calculadora de Margem</a></li>
+                    <li><a href="#cases">Casos Reais & Demonstrações</a></li>
+                    <li><a href="#simulador">Simulador de Margem</a></li>
                 </ul>
             </div>
 
-            <div class="footer-contact-col">
-                <h4 class="footer-col-title">Solicitar Protótipo</h4>
-                <p class="footer-contact-text">
-                    Receba um protótipo navegável personalizado com os dados e fotos do seu restaurante.
-                </p>
-                <a href="https://wa.me/5554991039867?text=Ol%C3%A1%21+Vim+pelo+site+do+Onira.fly+e+gostaria+de+solicitar+um+prot%C3%B3tipo+naveg%C3%A1vel+da+minha+loja."
-                    target="_blank" rel="noopener noreferrer" class="footer-whatsapp-link">
-                    <i data-lucide="message-square" class="f-icon"></i>
-                    <span>WhatsApp: +55 (54) 99103-9867</span>
+            <div class="footer-col footer-col-legal">
+                <h4 class="footer-col-title">Institucional & Contato</h4>
+                <ul class="footer-menu">
+                    <li><span>Caxias do Sul — Serra Gaúcha, RS</span></li>
+                    <li><a href="https://wa.me/5554991039867" target="_blank" rel="noopener noreferrer" class="footer-wa-link">
+                        <i data-lucide="message-circle"></i>
+                        <span>WhatsApp: (54) 99103-9867</span>
+                    </a></li>
+                    <li><a href="https://oniralabs.framer.website" target="_blank" rel="noopener noreferrer">Onira Labs Oficial</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="section-container footer-bottom-content">
+                <p>© 2026 Onira Labs. Todos os direitos reservados. 0% de comissão por venda.</p>
+                <a href="#top" class="back-to-top" aria-label="Voltar ao topo da página">
+                    <span>Voltar ao topo</span>
+                    <i data-lucide="arrow-up"></i>
                 </a>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Quick WhatsApp Button -->
-    <aside class="floating-whatsapp-wrap" aria-label="Acesso rápido ao WhatsApp">
-        <a href="https://wa.me/5554991039867?text=Ol%C3%A1%21+Gostaria+de+solicitar+um+prot%C3%B3tipo+naveg%C3%A1vel+da+minha+loja+no+Onira.fly."
-            target="_blank" rel="noopener noreferrer" class="floating-wa-btn" id="floating-wa-btn"
-            title="Solicitar Protótipo no WhatsApp">
-            <i data-lucide="sparkles" class="wa-icon"></i>
-            <span class="wa-tooltip">Solicitar Protótipo Navegável</span>
-        </a>
-    </aside>
+    <!-- Botão WhatsApp Flutuante com Glow Laranja -->
+    <a href="https://wa.me/5554991039867?text=Ol%C3%A1%21+Vim+pelo+site+Onira.fly+e+gostaria+de+solicitar+um+prot%C3%B3tipo+naveg%C3%A1vel+para+meu+restaurante."
+       class="floating-whatsapp-btn"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Falar com a Onira Labs no WhatsApp">
+        <i data-lucide="message-circle" class="wa-icon"></i>
+        <span class="wa-tooltip">Solicite seu Protótipo</span>
+    </a>
 
-    <!-- App Logic Script -->
-    <script src="app.js?v=2.7.0"></script>
+    <!-- Scripts da Aplicação -->
+    <script src="app.js?v=3.0.0"></script>
+    <script>
+        // Inicializa ícones Lucide
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
 </body>
 
 </html>
