@@ -2438,6 +2438,17 @@ img, svg {
         font-size: 1.05rem;
     }
 
+    .status-pill {
+        font-size: 0.72rem;
+        padding: 6px 12px;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.35;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .hero-cta-group {
         flex-direction: column;
         width: 100%;
@@ -2446,15 +2457,30 @@ img, svg {
 
     .hero-cta-group .btn {
         width: 100%;
+        max-width: 100%;
+        padding: 14px 18px;
+        font-size: 0.9375rem;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.35;
         justify-content: center;
     }
 
+    .btn-lg, .btn-xl {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+        white-space: normal;
+        text-align: center;
+    }
+
     .hero-metrics-strip {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 16px;
+        padding: 18px 16px;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
     }
 
     .metric-divider {
