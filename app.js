@@ -143,68 +143,50 @@ function renderCase(caseKey) {
         const phoneViewport = document.getElementById('phone-case-scroll-viewport');
         if (phoneViewport) phoneViewport.scrollTop = 0;
     }
-
-    if (imgDesktop) {
-        imgDesktop.src = data.screenshotDesktop;
-        const deskViewport = document.getElementById('desktop-case-scroll-viewport');
-        if (deskViewport) deskViewport.scrollTop = 0;
-    }
 }
 
 /**
- * 2. Alterna a visualização entre Mobile (Smartphone) e Desktop
+ * 2. Visualização exclusiva Mobile-First
  */
 window.setShowcaseDevice = function (mode) {
-    const btnMobile = document.getElementById('btn-showcase-mobile');
-    const btnDesktop = document.getElementById('btn-showcase-desktop');
-    const phoneContainer = document.getElementById('showcase-phone-container');
-    const desktopContainer = document.getElementById('showcase-desktop-container');
-
-    if (mode === 'desktop') {
-        btnMobile.classList.remove('active');
-        btnDesktop.classList.add('active');
-        phoneContainer.classList.remove('active');
-        desktopContainer.classList.add('active');
-    } else {
-        btnDesktop.classList.remove('active');
-        btnMobile.classList.add('active');
-        desktopContainer.classList.remove('active');
-        phoneContainer.classList.add('active');
-    }
+    // Modo Mobile exclusivo conforme diretriz de produto
 };
 
 /**
- * 3. Simulador de Impacto Financeiro (ROI)
+ * 3. Simulador de Impacto Financeiro (Volume de Pedidos × Ticket Médio)
  */
 function initRoiSimulator() {
-    const revenueRange = document.getElementById('sim-revenue-range');
-    const retentionRange = document.getElementById('sim-retention-range');
+    const ordersRange = document.getElementById('sim-orders-range');
+    const ticketRange = document.getElementById('sim-ticket-range');
 
-    const revenueDisplay = document.getElementById('sim-revenue-display');
-    const retentionDisplay = document.getElementById('sim-retention-display');
+    const ordersDisplay = document.getElementById('sim-orders-display');
+    const ticketDisplay = document.getElementById('sim-ticket-display');
 
     const annualValueEl = document.getElementById('result-annual-value');
     const monthlyValueEl = document.getElementById('result-monthly-value');
 
     function calculate() {
-        if (!revenueRange || !retentionRange) return;
+        if (!ordersRange || !ticketRange) return;
 
-        const revenue = parseFloat(revenueRange.value) || 30000;
-        const retentionRate = (parseFloat(retentionRange.value) || 40) / 100;
+        const orders = parseFloat(ordersRange.value) || 600;
+        const ticket = parseFloat(ticketRange.value) || 75;
 
-        // Faturamento de clientes recorrentes
-        const recurringRevenue = revenue * retentionRate;
+        // Faturamento Total Delivery
+        const totalRevenue = orders * ticket;
 
-        // Economia de 23% em comissões que hoje vão para o iFood/Rappi
+        // Base de Recompra Habitual (estimativa padrão de 35% de pedidos recorrentes)
+        const recurringRevenue = totalRevenue * 0.35;
+
+        // Economia da alíquota padrão de 23% de comissão sobre a base fidelizada
         const monthlySavings = recurringRevenue * 0.23;
         const annualSavings = monthlySavings * 12;
 
-        if (revenueDisplay) {
-            revenueDisplay.textContent = formatCurrency(revenue);
+        if (ordersDisplay) {
+            ordersDisplay.textContent = `${orders.toLocaleString('pt-BR')} pedidos`;
         }
 
-        if (retentionDisplay) {
-            retentionDisplay.textContent = `${retentionRange.value}%`;
+        if (ticketDisplay) {
+            ticketDisplay.textContent = formatCurrency(ticket);
         }
 
         if (annualValueEl) {
@@ -216,8 +198,8 @@ function initRoiSimulator() {
         }
     }
 
-    if (revenueRange) revenueRange.addEventListener('input', calculate);
-    if (retentionRange) retentionRange.addEventListener('input', calculate);
+    if (ordersRange) ordersRange.addEventListener('input', calculate);
+    if (ticketRange) ticketRange.addEventListener('input', calculate);
 
     calculate();
 }
