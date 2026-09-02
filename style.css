@@ -8,9 +8,9 @@
    -------------------------------------------------------------------------- */
 :root {
     /* Paleta Cromática Principal */
-    --color-primary: #FF7A00;          /* Laranja de ação e destaque */
-    --color-primary-hover: #E66E00;    /* Estado hover dos botões */
-    --color-accent-amber: #FFA000;     /* Amarelo-alaranjado para badges e secundários */
+    --color-primary: #FFC700;          /* Laranja de ação e destaque */
+    --color-primary-hover: #E5B300;    /* Estado hover dos botões */
+    --color-accent-amber: #FFD600;     /* Amarelo-alaranjado para badges e secundários */
     --color-bg-base: #0A0A0A;          /* Preto profundo para background principal */
     --color-bg-surface: #141414;       /* Superfície de cards opacos */
     --color-bg-surface-elevated: #1F1F1F;
@@ -18,7 +18,7 @@
     /* Glassmorphism para sobreposição sobre imagens */
     --glass-bg: rgba(20, 20, 20, 0.65);
     --glass-border: 1px solid rgba(255, 255, 255, 0.08);
-    --glass-border-highlight: 1px solid rgba(255, 122, 0, 0.45);
+    --glass-border-highlight: 1px solid rgba(255, 199, 0, 0.45);
     --glass-blur: blur(20px);
 
     /* Tipografia */
@@ -59,6 +59,10 @@ html {
     color: var(--text-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    overflow-x: clip;
+    width: 100%;
+    max-width: 100vw;
 }
 
 body {
@@ -67,6 +71,7 @@ body {
     color: var(--text-white);
     line-height: 1.6;
     overflow-x: hidden;
+    overflow-x: clip;
     position: relative;
     min-height: 100vh;
     width: 100%;
@@ -93,8 +98,44 @@ img, svg {
 }
 
 /* Utilitários de Destaque */
-.text-orange {
+.text-orange,
+.text-yellow {
     color: var(--color-primary);
+}
+
+.brand-logo-img {
+    height: 34px;
+    width: auto;
+    max-width: 180px;
+    display: block;
+    object-fit: contain;
+}
+
+.agency-logo-link {
+    display: inline-flex;
+    align-items: center;
+    transition: var(--transition-smooth);
+}
+
+.agency-logo-link:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+.agency-logo-img {
+    height: 26px;
+    width: auto;
+    max-width: 150px;
+    display: block;
+    object-fit: contain;
+}
+
+.footer-logo-img {
+    height: 32px;
+    width: auto;
+    max-width: 175px;
+    display: block;
+    object-fit: contain;
 }
 
 .text-amber {
@@ -104,15 +145,28 @@ img, svg {
 /* --------------------------------------------------------------------------
    3. AMBIENT BACKGROUND GLOWS
    -------------------------------------------------------------------------- */
+.ambient-glow-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
 .ambient-glow {
     position: absolute;
     border-radius: 50%;
     filter: blur(140px);
     pointer-events: none;
     z-index: 0;
-    opacity: 0.18;
+    opacity: 0.16;
+    max-width: 100vw;
 }
 
+.glow-yellow-top,
 .glow-orange-top {
     width: 600px;
     height: 600px;
@@ -162,8 +216,8 @@ img, svg {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-primary);
-    background: rgba(255, 122, 0, 0.12);
-    border: 1px solid rgba(255, 122, 0, 0.3);
+    background: rgba(255, 199, 0, 0.12);
+    border: 1px solid rgba(255, 199, 0, 0.3);
     padding: 6px 14px;
     border-radius: var(--radius-pill);
     margin-bottom: 18px;
@@ -212,15 +266,15 @@ img, svg {
 .btn-primary {
     background: var(--color-primary);
     color: #0A0A0A !important;
-    border: 1px solid rgba(255, 122, 0, 0.6);
-    box-shadow: 0 4px 18px rgba(255, 122, 0, 0.28);
+    border: 1px solid rgba(255, 199, 0, 0.6);
+    box-shadow: 0 4px 18px rgba(255, 199, 0, 0.28);
 }
 
 .btn-primary:hover {
     background: var(--color-primary-hover);
     color: #0A0A0A !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 26px rgba(255, 122, 0, 0.42);
+    box-shadow: 0 8px 26px rgba(255, 199, 0, 0.42);
 }
 
 .btn-secondary {
@@ -232,7 +286,7 @@ img, svg {
 
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 122, 0, 0.4);
+    border-color: rgba(255, 199, 0, 0.4);
     transform: translateY(-2px);
     color: var(--text-white);
 }
@@ -264,11 +318,11 @@ img, svg {
 
 @keyframes btnPulse {
     0%, 100% {
-        box-shadow: 0 4px 18px rgba(255, 122, 0, 0.28);
+        box-shadow: 0 4px 18px rgba(255, 199, 0, 0.28);
         transform: scale(1);
     }
     50% {
-        box-shadow: 0 8px 32px rgba(255, 122, 0, 0.5);
+        box-shadow: 0 8px 32px rgba(255, 199, 0, 0.5);
         transform: scale(1.02);
     }
 }
@@ -324,7 +378,7 @@ img, svg {
     font-size: 0.6875rem;
     font-weight: 700;
     color: var(--color-primary);
-    background: rgba(255, 122, 0, 0.15);
+    background: rgba(255, 199, 0, 0.15);
     border: 1px solid var(--color-primary);
     padding: 3px 8px;
     border-radius: var(--radius-pill);
@@ -393,8 +447,8 @@ img, svg {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 122, 0, 0.12);
-    border: 1px solid rgba(255, 122, 0, 0.32);
+    background: rgba(255, 199, 0, 0.12);
+    border: 1px solid rgba(255, 199, 0, 0.32);
     padding: 6px 14px;
     border-radius: var(--radius-pill);
     font-family: var(--font-mono);
@@ -500,7 +554,7 @@ img, svg {
     border: 3px solid rgba(255, 255, 255, 0.12);
     border-radius: 44px;
     padding: 12px;
-    box-shadow: 0 25px 60px -15px rgba(255, 122, 0, 0.22), 0 0 50px rgba(255, 122, 0, 0.08);
+    box-shadow: 0 25px 60px -15px rgba(255, 199, 0, 0.22), 0 0 50px rgba(255, 199, 0, 0.08);
     position: relative;
     overflow: hidden;
 }
@@ -542,7 +596,7 @@ img, svg {
 }
 
 .browser-speed-badge {
-    background: rgba(255, 122, 0, 0.16);
+    background: rgba(255, 199, 0, 0.16);
     color: var(--color-primary);
     font-weight: 700;
     padding: 2px 6px;
@@ -559,7 +613,7 @@ img, svg {
     background: #FFFFFF;
     position: relative;
     scrollbar-width: thin;
-    scrollbar-color: rgba(255, 122, 0, 0.5) transparent;
+    scrollbar-color: rgba(255, 199, 0, 0.5) transparent;
 }
 
 .phone-screen-viewport::-webkit-scrollbar {
@@ -586,7 +640,7 @@ img, svg {
     transform: translateX(-50%);
     background: rgba(10, 10, 10, 0.88);
     color: #FFFFFF;
-    border: 1px solid rgba(255, 122, 0, 0.4);
+    border: 1px solid rgba(255, 199, 0, 0.4);
     backdrop-filter: blur(8px);
     padding: 6px 14px;
     border-radius: var(--radius-pill);
@@ -647,14 +701,14 @@ img, svg {
 }
 
 .thesis-card-onirafly {
-    background: radial-gradient(circle at top right, rgba(255, 122, 0, 0.14) 0%, var(--color-bg-surface) 72%);
-    border: 1px solid rgba(255, 122, 0, 0.45);
-    box-shadow: 0 16px 40px -10px rgba(255, 122, 0, 0.15);
+    background: radial-gradient(circle at top right, rgba(255, 199, 0, 0.14) 0%, var(--color-bg-surface) 72%);
+    border: 1px solid rgba(255, 199, 0, 0.45);
+    box-shadow: 0 16px 40px -10px rgba(255, 199, 0, 0.15);
 }
 
 .thesis-card-onirafly:hover {
     border-color: var(--color-primary);
-    box-shadow: 0 20px 50px -10px rgba(255, 122, 0, 0.28);
+    box-shadow: 0 20px 50px -10px rgba(255, 199, 0, 0.28);
     transform: translateY(-3px);
 }
 
@@ -684,9 +738,9 @@ img, svg {
 }
 
 .badge-orange {
-    background: rgba(255, 122, 0, 0.15);
+    background: rgba(255, 199, 0, 0.15);
     color: var(--color-primary);
-    border: 1px solid rgba(255, 122, 0, 0.4);
+    border: 1px solid rgba(255, 199, 0, 0.4);
 }
 
 .thesis-card-title {
@@ -795,7 +849,7 @@ img, svg {
 .bento-card:hover {
     border: var(--glass-border-highlight);
     transform: translateY(-4px);
-    box-shadow: 0 16px 36px -10px rgba(255, 122, 0, 0.12);
+    box-shadow: 0 16px 36px -10px rgba(255, 199, 0, 0.12);
 }
 
 .bento-wide {
@@ -806,8 +860,8 @@ img, svg {
     width: 48px;
     height: 48px;
     border-radius: var(--radius-md);
-    background: rgba(255, 122, 0, 0.12);
-    border: 1px solid rgba(255, 122, 0, 0.3);
+    background: rgba(255, 199, 0, 0.12);
+    border: 1px solid rgba(255, 199, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -838,7 +892,7 @@ img, svg {
 .bento-desc code {
     font-family: var(--font-mono);
     color: var(--color-primary);
-    background: rgba(255, 122, 0, 0.1);
+    background: rgba(255, 199, 0, 0.1);
     padding: 2px 6px;
     border-radius: 4px;
 }
@@ -918,7 +972,7 @@ img, svg {
     background: var(--color-primary);
     color: #0A0A0A;
     font-weight: 700;
-    box-shadow: 0 4px 14px rgba(255, 122, 0, 0.25);
+    box-shadow: 0 4px 14px rgba(255, 199, 0, 0.25);
 }
 
 /* Device Switcher */
@@ -1004,7 +1058,7 @@ img, svg {
     background: #FFFFFF;
     position: relative;
     scrollbar-width: thin;
-    scrollbar-color: rgba(255, 122, 0, 0.5) transparent;
+    scrollbar-color: rgba(255, 199, 0, 0.5) transparent;
 }
 
 .desktop-frame-mockup {
@@ -1012,7 +1066,7 @@ img, svg {
     border: 2px solid rgba(255, 255, 255, 0.12);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 122, 0, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 199, 0, 0.1);
 }
 
 .desktop-frame-header {
@@ -1060,7 +1114,7 @@ img, svg {
     overflow-y: auto;
     background: #FFFFFF;
     scrollbar-width: thin;
-    scrollbar-color: rgba(255, 122, 0, 0.5) transparent;
+    scrollbar-color: rgba(255, 199, 0, 0.5) transparent;
 }
 
 /* Intel Card Coluna Direita */
@@ -1089,8 +1143,8 @@ img, svg {
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--color-accent-amber);
-    background: rgba(255, 160, 0, 0.12);
-    border: 1px solid rgba(255, 160, 0, 0.3);
+    background: rgba(255, 214, 0, 0.12);
+    border: 1px solid rgba(255, 214, 0, 0.3);
     padding: 4px 10px;
     border-radius: var(--radius-pill);
 }
@@ -1205,8 +1259,8 @@ img, svg {
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--color-primary);
-    background: rgba(255, 122, 0, 0.1);
-    border: 1px solid rgba(255, 122, 0, 0.3);
+    background: rgba(255, 199, 0, 0.1);
+    border: 1px solid rgba(255, 199, 0, 0.3);
     padding: 4px 12px;
     border-radius: var(--radius-sm);
 }
@@ -1269,7 +1323,7 @@ img, svg {
 .result-highlight-card {
     background: #0A0A0A;
     border: 2px solid var(--color-primary);
-    box-shadow: 0 0 40px rgba(255, 122, 0, 0.22);
+    box-shadow: 0 0 40px rgba(255, 199, 0, 0.22);
     border-radius: var(--radius-md);
     padding: 36px 32px;
     display: flex;
@@ -1314,8 +1368,8 @@ img, svg {
 }
 
 .result-monthly-badge {
-    background: rgba(255, 122, 0, 0.12);
-    border: 1px solid rgba(255, 122, 0, 0.25);
+    background: rgba(255, 199, 0, 0.12);
+    border: 1px solid rgba(255, 199, 0, 0.25);
     padding: 8px 14px;
     border-radius: var(--radius-pill);
     font-size: 0.875rem;
@@ -1421,7 +1475,7 @@ img, svg {
 .dev-avatar-img {
     border-radius: 50%;
     border: 2px solid var(--color-primary);
-    box-shadow: 0 0 16px rgba(255, 122, 0, 0.3);
+    box-shadow: 0 0 16px rgba(255, 199, 0, 0.3);
     flex-shrink: 0;
 }
 
@@ -1629,19 +1683,27 @@ img, svg {
     width: 58px;
     height: 58px;
     border-radius: 50%;
-    background: var(--color-primary);
-    color: #0A0A0A;
+    background: #25D366;
+    color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 24px rgba(255, 122, 0, 0.4);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
     z-index: 9999;
     transition: var(--transition-smooth);
+    animation: waPulse 2.5s infinite ease-in-out;
 }
 
 .floating-whatsapp-btn:hover {
     transform: scale(1.08) translateY(-2px);
-    box-shadow: 0 12px 30px rgba(255, 122, 0, 0.55);
+    background: #20BA5A;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.65);
+    color: #FFFFFF;
+}
+
+@keyframes waPulse {
+    0%, 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45); }
+    50% { box-shadow: 0 8px 34px rgba(37, 211, 102, 0.75); }
 }
 
 .wa-icon {
@@ -1653,7 +1715,7 @@ img, svg {
     position: absolute;
     right: 68px;
     background: rgba(10, 10, 10, 0.9);
-    border: 1px solid rgba(255, 122, 0, 0.4);
+    border: 1px solid rgba(255, 199, 0, 0.4);
     color: #FFFFFF;
     font-family: var(--font-heading);
     font-size: 0.78125rem;
