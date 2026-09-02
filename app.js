@@ -247,8 +247,6 @@ function renderScreenshotsView() {
 
     const imgMobile = document.getElementById('img-case-mobile');
     const imgDesktop = document.getElementById('img-case-desktop');
-    const iframeMobile = document.getElementById('iframe-case-mobile');
-    const iframeDesktop = document.getElementById('iframe-case-desktop');
     const heroDynamicImg = document.getElementById('hero-dynamic-img');
     const elDeskUrl = document.getElementById('desk-address-url');
 
@@ -264,13 +262,11 @@ function renderScreenshotsView() {
         heroDynamicImg.src = `assets/screenshots/${data.screenshotMobile}`;
     }
 
-    if (iframeMobile && iframeMobile.src !== data.iframeUrl) {
-        iframeMobile.src = data.iframeUrl;
-    }
-
-    if (iframeDesktop && iframeDesktop.src !== data.iframeUrl) {
-        iframeDesktop.src = data.iframeUrl;
-    }
+    // Reset scroll positions to top on case switch
+    const phoneScrollWrap = document.getElementById('phone-scroll-wrap');
+    const deskScrollWrap = document.getElementById('desk-scroll-wrap');
+    if (phoneScrollWrap) phoneScrollWrap.scrollTop = 0;
+    if (deskScrollWrap) deskScrollWrap.scrollTop = 0;
 
     if (elDeskUrl) {
         elDeskUrl.textContent = `https://${data.domain}`;
