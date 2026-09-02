@@ -29,6 +29,8 @@ const REAL_CASES = {
         tag: 'CAFETERIA & BISTRÔ PREMIUM',
         domain: 'bistrobebidasnobres.com.br',
         iframeUrl: '../../clientes/monte-cristo/index.html',
+        screenshotMobile: 'montecristo_mobile.jpg',
+        screenshotDesktop: 'montecristo_desktop.jpg',
         context: 'Operação conceituada de cafeteria bistrô com grande volume de bebidas nobres e combos executivos. Eliminou o confisco de 23% em taxas sobre clientes recorrentes ao migrar encomendas para o canal próprio.',
         metrics: {
             m1: '+290 pedidos',
@@ -55,6 +57,8 @@ const REAL_CASES = {
         tag: 'DOCERIA & CONFEITARIA GOURMET',
         domain: 'atelierdoceriafina.com.br',
         iframeUrl: '../../clientes/fafa-doces/index.html',
+        screenshotMobile: 'fafa_mobile.jpg',
+        screenshotDesktop: 'fafa_desktop.jpg',
         context: 'Confeitaria fina que sofria com cancelamentos em apps genéricos por fotos cortadas e falta de agendamento de presentes. O canal próprio elevou o ticket médio em +38% com fotos de alta qualidade.',
         metrics: {
             m1: '+38% Ticket',
@@ -81,6 +85,8 @@ const REAL_CASES = {
         tag: 'PASTELARIA DE ALTO GIRO',
         domain: 'pastelariatradicao.com.br',
         iframeUrl: '../../clientes/pastelaria-claem/index.html',
+        screenshotMobile: 'claem_mobile.jpg',
+        screenshotDesktop: 'claem_desktop.jpg',
         context: 'Ponto tradicional com grande fluxo de balcão e delivery. Migrou a base de clientes do almoço e lanche da tarde para o canal próprio, garantindo velocidade de 0.4s e zero comissões.',
         metrics: {
             m1: '+410 pedidos',
@@ -107,6 +113,8 @@ const REAL_CASES = {
         tag: 'BAR NOTURNO & PETISCOS',
         domain: 'petiscariaechoperia.com.br',
         iframeUrl: '../../clientes/botequim-pantera/index.html',
+        screenshotMobile: 'botequim_mobile.jpg',
+        screenshotDesktop: 'botequim_desktop.jpg',
         context: 'Bar noturno com picos concentrados de quinta a domingo. Resolveu o gargalo de atendimento com despacho automático de chopps e porções direto no WhatsApp da copa.',
         metrics: {
             m1: '-65% Abandono',
@@ -133,6 +141,8 @@ const REAL_CASES = {
         tag: 'PASTÉIS GOURMET & COMBOS',
         domain: 'pasteisgourmetcombos.com.br',
         iframeUrl: '../../clientes/pastelaria-panazzolo/index.html',
+        screenshotMobile: 'panazzolo_mobile.jpg',
+        screenshotDesktop: 'panazzolo_desktop.jpg',
         context: 'Casa especializada em pastéis gigantes e combos família. Criou canal próprio com montagem de combos com múltiplos sabores sem cobrança abusiva de taxas por recheio extra.',
         metrics: {
             m1: '+360 pedidos',
@@ -159,6 +169,8 @@ const REAL_CASES = {
         tag: 'XIS GAÚCHO & LANCHES TRADICIONAIS',
         domain: 'xisgauchotradicional.com.br',
         iframeUrl: '../../clientes/baitakao/index.html',
+        screenshotMobile: 'baitakao_mobile.jpg',
+        screenshotDesktop: 'baitakao_desktop.jpg',
         context: 'Ícone tradicional da gastronomia regional com alto fluxo diário de xis prensados e baurus. Reduziu custos massivos de comissão concentrando os pedidos regulares no link próprio.',
         metrics: {
             m1: '+580 pedidos',
@@ -233,9 +245,24 @@ function renderScreenshotsView() {
     const data = REAL_CASES[currentCase];
     if (!data) return;
 
+    const imgMobile = document.getElementById('img-case-mobile');
+    const imgDesktop = document.getElementById('img-case-desktop');
     const iframeMobile = document.getElementById('iframe-case-mobile');
     const iframeDesktop = document.getElementById('iframe-case-desktop');
+    const heroDynamicImg = document.getElementById('hero-dynamic-img');
     const elDeskUrl = document.getElementById('desk-address-url');
+
+    if (imgMobile) {
+        imgMobile.src = `assets/screenshots/${data.screenshotMobile}`;
+    }
+
+    if (imgDesktop) {
+        imgDesktop.src = `assets/screenshots/${data.screenshotDesktop}`;
+    }
+
+    if (heroDynamicImg) {
+        heroDynamicImg.src = `assets/screenshots/${data.screenshotMobile}`;
+    }
 
     if (iframeMobile && iframeMobile.src !== data.iframeUrl) {
         iframeMobile.src = data.iframeUrl;
