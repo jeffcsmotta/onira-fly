@@ -145,27 +145,149 @@
                 <!-- Coluna Direita: Mockup Flutuante com Scroll Real -->
                 <div class="hero-visual">
                     <div class="phone-frame-mockup">
+                        <!-- Seletor de Nicho acima da tela do celular -->
+                        <div class="hero-niche-selector-wrap">
+                            <div class="interactive-sandbox-badge">
+                                <span class="sandbox-pulse-dot"></span>
+                                <span>TESTE INTERATIVO • ESCOLHA O NICHO</span>
+                            </div>
+                            <div class="hero-niche-tabs" id="hero-niche-tabs" role="tablist" aria-label="Nichos Gastronômicos">
+                                <button type="button" class="hero-niche-pill active" data-niche="montecristo" role="tab" aria-selected="true">☕ Bistrô</button>
+                                <button type="button" class="hero-niche-pill" data-niche="baitakao" role="tab" aria-selected="false">🍔 Burger</button>
+                                <button type="button" class="hero-niche-pill" data-niche="panazzolo" role="tab" aria-selected="false">🍕 Forneria</button>
+                                <button type="button" class="hero-niche-pill" data-niche="fafa" role="tab" aria-selected="false">🍣 Sushi</button>
+                                <button type="button" class="hero-niche-pill" data-niche="claem" role="tab" aria-selected="false">🥐 Pâtisserie</button>
+                            </div>
+                        </div>
+
                         <div class="phone-glass-bezel">
                             <div class="phone-top-speaker"></div>
                             
                             <!-- Barra de endereço do navegador móvel -->
                             <div class="phone-browser-bar">
                                 <span class="browser-secure-dot"></span>
-                                <span class="browser-url">canalproprio.com.br</span>
+                                <span class="browser-url" id="hero-browser-url">bistrobebidasnobres.com.br</span>
                                 <span class="browser-speed-badge">⚡ 0.38s TTFB</span>
                             </div>
 
                             <!-- Viewport da tela real com scroll interno nativo -->
                             <div class="phone-screen-viewport" id="hero-phone-viewport">
-                                <img src="assets/screenshots/montecristo_mobile.jpg"
-                                     alt="Cardápio Digital Oficial Onira.fly"
-                                     id="hero-dynamic-img"
-                                     class="viewport-screenshot-img"
-                                     fetchpriority="high"
-                                     loading="eager">
+                                <!-- View 1: Cardápio do Nicho -->
+                                <div class="hero-interactive-view active" id="hero-view-catalog">
+                                    <div class="app-store-header">
+                                        <div class="app-store-avatar" id="hero-store-avatar">☕</div>
+                                        <div class="app-store-meta">
+                                            <h4 class="app-store-title" id="hero-store-title">Bistrô & Bebidas Nobres</h4>
+                                            <div class="app-store-badges">
+                                                <span class="badge-status-open">🟢 Aberto agora</span>
+                                                <span class="badge-rating">⭐ 4.9 (480+)</span>
+                                                <span class="badge-delivery">⚡ 25-35 min</span>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                <div class="floating-scroll-hint" id="hero-scroll-hint">
-                                    <span>👆 Role para navegar nas garrafas</span>
+                                    <div class="app-catalog-heading">
+                                        <span class="catalog-heading-title">Destaques do Cardápio</span>
+                                        <span class="catalog-heading-hint">Toque em <strong>+ Adicionar</strong></span>
+                                    </div>
+
+                                    <div class="app-products-list" id="hero-products-list">
+                                        <!-- Produtos injetados dinamicamente via app.js -->
+                                    </div>
+                                </div>
+
+                                <!-- View 2: Drawer do Carrinho -->
+                                <div class="hero-cart-drawer" id="hero-cart-drawer">
+                                    <div class="drawer-header-bar">
+                                        <div class="drawer-title-wrap">
+                                            <span class="drawer-title">🛒 Seu Pedido</span>
+                                            <span class="drawer-badge-store" id="drawer-store-badge">Bistrô</span>
+                                        </div>
+                                        <button type="button" class="btn-drawer-close" id="btn-drawer-close" aria-label="Fechar Carrinho">✕</button>
+                                    </div>
+
+                                    <div class="drawer-items-scroll" id="drawer-items-scroll">
+                                        <!-- Itens do carrinho injetados via JS -->
+                                    </div>
+
+                                    <div class="drawer-breakdown-card">
+                                        <div class="breakdown-line">
+                                            <span>Subtotal dos itens:</span>
+                                            <strong id="drawer-subtotal-val">R$ 0,00</strong>
+                                        </div>
+                                        <div class="breakdown-line">
+                                            <span>Taxa de Entrega:</span>
+                                            <span class="text-green-tag">R$ 5,00</span>
+                                        </div>
+                                        <div class="breakdown-line line-total">
+                                            <span>Total do Pedido:</span>
+                                            <strong id="drawer-total-val" class="text-gold-highlight">R$ 0,00</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="drawer-info-preview">
+                                        <div class="preview-item">📍 <span><strong>Entrega:</strong> Rua das Flores, 120 - Centro</span></div>
+                                        <div class="preview-item">💳 <span><strong>Pagamento:</strong> Pix na Entrega (0% comissão)</span></div>
+                                    </div>
+
+                                    <button type="button" class="btn-drawer-whatsapp-trigger" id="btn-drawer-whatsapp-trigger">
+                                        <i data-lucide="send" class="btn-icon"></i>
+                                        <span>Ver Comanda que Chega no WhatsApp ➔</span>
+                                    </button>
+                                </div>
+
+                                <!-- View 3: Tela Simulada do WhatsApp -->
+                                <div class="hero-interactive-view" id="hero-view-whatsapp">
+                                    <div class="wa-screen-top">
+                                        <button type="button" class="wa-btn-back" id="wa-btn-back" title="Voltar ao Cardápio">
+                                            <i data-lucide="arrow-left" class="wa-icon"></i>
+                                        </button>
+                                        <div class="wa-contact-pic" id="wa-contact-pic">☕</div>
+                                        <div class="wa-contact-details">
+                                            <span class="wa-contact-title" id="wa-contact-title">Cozinha • Pedidos</span>
+                                            <span class="wa-status-text">online • comanda pronta</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="wa-chat-canvas">
+                                        <div class="wa-security-tag">
+                                            🔒 Comanda padronizada entregue sem ruído direto na cozinha
+                                        </div>
+
+                                        <div class="wa-chat-bubble">
+                                            <pre class="wa-bubble-content" id="wa-bubble-content">
+                                                <!-- Texto da comanda gerado dinamicamente -->
+                                            </pre>
+                                            <div class="wa-bubble-meta">
+                                                <span class="wa-bubble-timestamp" id="wa-bubble-timestamp">12:42</span>
+                                                <span class="wa-read-receipt">✓✓</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="wa-action-dock">
+                                        <a href="https://wa.me/5554996862169?text=Ol%C3%A1%21+Testei+o+mockup+interativo+do+Onira.fly+e+quero+um+canal+pr%C3%B3prio+para+o+meu+restaurante."
+                                           target="_blank" rel="noopener noreferrer" class="btn-wa-action-primary">
+                                            <span>🚀 Quero Este Sistema na Minha Loja</span>
+                                        </a>
+                                        <button type="button" class="btn-wa-action-secondary" id="btn-wa-reset">
+                                            <span>🔄 Testar Outro Nicho / Reiniciar</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Barra Inferior de Ação do Carrinho (Visible when cart > 0) -->
+                                <div class="hero-bottom-cart-bar" id="hero-bottom-cart-bar">
+                                    <div class="bottom-cart-details">
+                                        <span class="bottom-cart-counter" id="bottom-cart-count">0</span>
+                                        <div class="bottom-cart-values">
+                                            <span class="bottom-cart-label">Ver Pedido</span>
+                                            <span class="bottom-cart-price" id="bottom-cart-price">R$ 0,00</span>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="bottom-cart-cta" id="btn-open-cart-drawer">
+                                        <span>Conferir ➔</span>
+                                    </button>
                                 </div>
                             </div>
 
