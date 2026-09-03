@@ -14,8 +14,7 @@ const SHOWCASE_CASES = {
         savings: "R$ 4.820",
         speed: "32s",
         ticket: "R$ 85,00",
-        screenshotMobile: "assets/screenshots/montecristo_mobile.jpg",
-        screenshotDesktop: "assets/screenshots/montecristo_desktop.jpg"
+        screenshotMobile: "assets/screenshots/montecristo_mobile.jpg"
     },
     baitakao: {
         title: "Hamburgueria & Lanches da Serra",
@@ -26,8 +25,7 @@ const SHOWCASE_CASES = {
         savings: "R$ 6.380",
         speed: "28s",
         ticket: "R$ 68,00",
-        screenshotMobile: "assets/screenshots/baitakao_mobile.jpg",
-        screenshotDesktop: "assets/screenshots/baitakao_desktop.jpg"
+        screenshotMobile: "assets/screenshots/baitakao_mobile.jpg"
     },
     panazzolo: {
         title: "Casa do Pastel & Forneria",
@@ -38,8 +36,7 @@ const SHOWCASE_CASES = {
         savings: "R$ 5.120",
         speed: "35s",
         ticket: "R$ 72,00",
-        screenshotMobile: "assets/screenshots/panazzolo_mobile.jpg",
-        screenshotDesktop: "assets/screenshots/panazzolo_desktop.jpg"
+        screenshotMobile: "assets/screenshots/panazzolo_mobile.jpg"
     },
     fafa: {
         title: "Ateliê de Doces & Contemporâneo",
@@ -50,8 +47,7 @@ const SHOWCASE_CASES = {
         savings: "R$ 4.250",
         speed: "40s",
         ticket: "R$ 94,00",
-        screenshotMobile: "assets/screenshots/fafa_mobile.jpg",
-        screenshotDesktop: "assets/screenshots/fafa_desktop.jpg"
+        screenshotMobile: "assets/screenshots/fafa_mobile.jpg"
     },
     claem: {
         title: "Pastelaria & Pâtisserie Artesanal",
@@ -62,8 +58,7 @@ const SHOWCASE_CASES = {
         savings: "R$ 4.960",
         speed: "25s",
         ticket: "R$ 58,00",
-        screenshotMobile: "assets/screenshots/claem_mobile.jpg",
-        screenshotDesktop: "assets/screenshots/claem_desktop.jpg"
+        screenshotMobile: "assets/screenshots/claem_mobile.jpg"
     }
 };
 
@@ -136,7 +131,6 @@ function renderCase(caseKey) {
 
     // Atualiza Imagens dos Screenshots
     const imgMobile = document.getElementById('img-case-mobile');
-    const imgDesktop = document.getElementById('img-case-desktop');
 
     if (imgMobile) {
         imgMobile.src = data.screenshotMobile;
