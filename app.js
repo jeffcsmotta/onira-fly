@@ -66,10 +66,13 @@ let currentCaseKey = 'montecristo';
 
 // Inicialização após carregamento do DOM
 document.addEventListener('DOMContentLoaded', () => {
-    initHeroInteractiveApp();
+    initHeroNicheSwitcher();
     initCaseTabs();
     initRoiSimulator();
     initSmoothScroll();
+    if (window.lucide) {
+        lucide.createIcons();
+    }
 });
 
 /**
@@ -231,452 +234,37 @@ function initSmoothScroll() {
     });
 }
 
-
 /* ==========================================================================
-   MOCKUP NAVEGÁVEL HERO (OPÇÃO A) — MOTOR DO MICRO-APP
+   HERO CASE SWITCHER — INTERFACE REAL DESENHADA & ANONIMIZADA
    ========================================================================== */
 
-const HERO_NICHE_CATALOG = {
-    montecristo: {
-        storeName: "Bistrô & Bebidas Nobres",
-        avatar: "☕",
-        domain: "bistrobebidasnobres.com.br",
-        categoryTag: "Bistrô",
-        products: [
-            {
-                id: "m1",
-                name: "Whisky Ballantines Finest (1L)",
-                desc: "Original lacrado com dosador oficial da marca",
-                price: 42.00,
-                badge: "Mais Vendido",
-                thumb: "assets/screenshots/montecristo_mobile.jpg"
-            },
-            {
-                id: "m2",
-                name: "Risoto de Funghi Secchi & Queijo Brie",
-                desc: "Arroz arbóreo italiano finalizado com azeite trufado",
-                price: 54.00,
-                badge: "Chef Special",
-                thumb: "assets/hero-bg.jpg"
-            },
-            {
-                id: "m3",
-                name: "Whisky Chivas Regal 12 Anos (1L)",
-                desc: "Garrafa unitária de tabela oficial com dosador",
-                price: 170.43,
-                badge: "Alta Margem",
-                thumb: "assets/screenshots/montecristo_mobile.jpg"
-            }
-        ]
-    },
-    baitakao: {
-        storeName: "Hamburgueria da Serra",
-        avatar: "🍔",
-        domain: "hamburgueriaserra.com.br",
-        categoryTag: "Hamburgueria",
-        products: [
-            {
-                id: "b1",
-                name: "Smash Duplo Cheddar & Bacon",
-                desc: "Dois blends 100g, queijo cheddar inglês e bacon rústico",
-                price: 36.00,
-                badge: "Top 1 Vendas",
-                thumb: "assets/screenshots/baitakao_mobile.jpg"
-            },
-            {
-                id: "b2",
-                name: "X-Salada Tradicional da Serra",
-                desc: "Pão brioche tostado e maionese verde da casa",
-                price: 28.00,
-                badge: "Clássico",
-                thumb: "assets/screenshots/baitakao_mobile.jpg"
-            },
-            {
-                id: "b3",
-                name: "Batata Rústica com Alecrim & Páprica",
-                desc: "Crocante por fora, macia por dentro, serve 2 pessoas",
-                price: 18.00,
-                badge: "Acompanhamento",
-                thumb: "assets/screenshots/baitakao_mobile.jpg"
-            }
-        ]
-    },
-    panazzolo: {
-        storeName: "Forneria & Pizzas Artesanais",
-        avatar: "🍕",
-        domain: "forneriaepizzas.com.br",
-        categoryTag: "Forneria",
-        products: [
-            {
-                id: "p1",
-                name: "Pizza Burrata & Pesto de Manjericão",
-                desc: "Massa fermentação natural 48h, molho pelati e burrata",
-                price: 58.00,
-                badge: "Artesanal",
-                thumb: "assets/screenshots/panazzolo_mobile.jpg"
-            },
-            {
-                id: "p2",
-                name: "Pizza 4 Queijos com Borda Vulcão",
-                desc: "Mozzarella, gorgonzola doce, parmesão e catupiry legítimo",
-                price: 64.00,
-                badge: "Favorita",
-                thumb: "assets/screenshots/panazzolo_mobile.jpg"
-            },
-            {
-                id: "p3",
-                name: "Vinho Tinto Reserva Cabernet (750ml)",
-                desc: "Safra selecionada para harmonização da casa",
-                price: 48.00,
-                badge: "Bebida Nobre",
-                thumb: "assets/hero-bg.jpg"
-            }
-        ]
-    },
-    fafa: {
-        storeName: "Katsumi Sushi Contemporâneo",
-        avatar: "🍣",
-        domain: "katsumisushi.com.br",
-        categoryTag: "Japonês",
-        products: [
-            {
-                id: "s1",
-                name: "Combo Salmão Premium (20 peças)",
-                desc: "Sashimis maçaricados com azeite trufado, niguiris e uramakis",
-                price: 68.00,
-                badge: "Mais Pedido",
-                thumb: "assets/screenshots/fafa_mobile.jpg"
-            },
-            {
-                id: "s2",
-                name: "Temaki Especial Filadélfia em Dobro",
-                desc: "Alga nori ultra crocante, salmão fresco e cream cheese",
-                price: 34.00,
-                badge: "Destaque",
-                thumb: "assets/screenshots/fafa_mobile.jpg"
-            },
-            {
-                id: "s3",
-                name: "Hot Roll Crocante com Sweet Chilli (8 un)",
-                desc: "Empanado na farinha panko japonesa com raspas de limão",
-                price: 26.00,
-                badge: "Entrada",
-                thumb: "assets/screenshots/fafa_mobile.jpg"
-            }
-        ]
-    },
-    claem: {
-        storeName: "Ateliê de Doces & Brunch",
-        avatar: "🥐",
-        domain: "ateliedocesbrunch.com.br",
-        categoryTag: "Pâtisserie",
-        products: [
-            {
-                id: "d1",
-                name: "Torta Alemã Clássica (Fatia Generosa)",
-                desc: "Camadas crocantes de biscoito e creme de baunilha holandês",
-                price: 19.00,
-                badge: "Assinatura",
-                thumb: "assets/screenshots/claem_mobile.jpg"
-            },
-            {
-                id: "d2",
-                name: "Box Degustação 8 Brigadeiros Gourmet",
-                desc: "Pistache, cacau belga 70%, doce de leite e ninho com nutella",
-                price: 32.00,
-                badge: "Presente",
-                thumb: "assets/screenshots/claem_mobile.jpg"
-            },
-            {
-                id: "d3",
-                name: "Croissant Folhado com Amêndoas",
-                desc: "Massa folhada artesanal amanteigada com lâminas tostadas",
-                price: 22.00,
-                badge: "Brunch",
-                thumb: "assets/screenshots/claem_mobile.jpg"
-            }
-        ]
-    }
-};
+function initHeroNicheSwitcher() {
+    const pills = document.querySelectorAll('.hero-niche-pill');
+    const urlEl = document.getElementById('hero-browser-url');
+    const imgEl = document.getElementById('hero-phone-case-img');
+    const viewportEl = document.getElementById('hero-phone-scroll-viewport');
 
-let heroCart = {};
-let currentHeroNiche = 'montecristo';
+    pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            const nicheKey = pill.getAttribute('data-niche');
+            const data = SHOWCASE_CASES[nicheKey];
+            if (!data) return;
 
-function initHeroInteractiveApp() {
-    renderHeroNiche(currentHeroNiche);
+            pills.forEach(p => {
+                p.classList.remove('active');
+                p.setAttribute('aria-selected', 'false');
+            });
+            pill.classList.add('active');
+            pill.setAttribute('aria-selected', 'true');
 
-    // 1. Alternância de Nichos
-    const tabs = document.querySelectorAll('.hero-niche-pill');
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const niche = tab.getAttribute('data-niche');
-            if (niche && HERO_NICHE_CATALOG[niche]) {
-                tabs.forEach(t => {
-                    t.classList.remove('active');
-                    t.setAttribute('aria-selected', 'false');
-                });
-                tab.classList.add('active');
-                tab.setAttribute('aria-selected', 'true');
-                currentHeroNiche = niche;
-                heroCart = {}; // Reinicia o carrinho para um teste limpo do novo nicho
-                renderHeroNiche(niche);
-                updateBottomCartBar();
-                closeCartDrawer();
-                showHeroScreen('catalog');
+            if (urlEl) urlEl.textContent = data.domain;
+            if (imgEl) {
+                imgEl.src = data.screenshotMobile;
+                imgEl.alt = `Canal Próprio - ${data.title}`;
+            }
+            if (viewportEl) {
+                viewportEl.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
     });
-
-    // 2. Abertura e Fechamento do Drawer
-    const btnOpenDrawer = document.getElementById('btn-open-cart-drawer');
-    const btnCloseDrawer = document.getElementById('btn-drawer-close');
-    if (btnOpenDrawer) btnOpenDrawer.addEventListener('click', openCartDrawer);
-    if (btnCloseDrawer) btnCloseDrawer.addEventListener('click', closeCartDrawer);
-
-    // 3. Disparo da Visualização do WhatsApp
-    const btnWhatsappTrigger = document.getElementById('btn-drawer-whatsapp-trigger');
-    if (btnWhatsappTrigger) {
-        btnWhatsappTrigger.addEventListener('click', () => {
-            renderWhatsAppView();
-            closeCartDrawer();
-            showHeroScreen('whatsapp');
-        });
-    }
-
-    // 4. Botão Voltar ao Cardápio a partir do WhatsApp
-    const btnWaBack = document.getElementById('wa-btn-back');
-    if (btnWaBack) {
-        btnWaBack.addEventListener('click', () => {
-            showHeroScreen('catalog');
-        });
-    }
-
-    // 5. Botão Reiniciar Teste
-    const btnWaReset = document.getElementById('btn-wa-reset');
-    if (btnWaReset) {
-        btnWaReset.addEventListener('click', () => {
-            heroCart = {};
-            renderHeroNiche(currentHeroNiche);
-            updateBottomCartBar();
-            showHeroScreen('catalog');
-        });
-    }
-
-    if (window.lucide) lucide.createIcons();
-}
-
-function showHeroScreen(screenName) {
-    const catalogView = document.getElementById('hero-view-catalog');
-    const waView = document.getElementById('hero-view-whatsapp');
-    const cartBar = document.getElementById('hero-bottom-cart-bar');
-
-    if (screenName === 'catalog') {
-        if (catalogView) catalogView.classList.add('active');
-        if (waView) waView.classList.remove('active');
-        updateBottomCartBar();
-    } else if (screenName === 'whatsapp') {
-        if (catalogView) catalogView.classList.remove('active');
-        if (waView) waView.classList.add('active');
-        if (cartBar) cartBar.classList.remove('visible');
-    }
-}
-
-function renderHeroNiche(nicheKey) {
-    const data = HERO_NICHE_CATALOG[nicheKey];
-    if (!data) return;
-
-    // Atualiza URL no navegador do celular
-    const urlEl = document.getElementById('hero-browser-url');
-    if (urlEl) urlEl.textContent = data.domain;
-
-    // Atualiza Header do App
-    const avatarEl = document.getElementById('hero-store-avatar');
-    const titleEl = document.getElementById('hero-store-title');
-    const badgeStoreEl = document.getElementById('drawer-store-badge');
-    const waPicEl = document.getElementById('wa-contact-pic');
-    const waTitleEl = document.getElementById('wa-contact-title');
-
-    if (avatarEl) avatarEl.textContent = data.avatar;
-    if (titleEl) titleEl.textContent = data.storeName;
-    if (badgeStoreEl) badgeStoreEl.textContent = data.categoryTag;
-    if (waPicEl) waPicEl.textContent = data.avatar;
-    if (waTitleEl) waTitleEl.textContent = `Cozinha • ${data.storeName}`;
-
-    // Renderiza lista de produtos
-    const feedEl = document.getElementById('hero-products-list');
-    if (feedEl) {
-        feedEl.innerHTML = data.products.map(p => {
-            const inCart = heroCart[p.id];
-            const btnText = inCart ? `✓ Adicionado (${inCart.qty})` : `+ Adicionar`;
-            const btnClass = inCart ? `btn-card-add added` : `btn-card-add`;
-            return `
-                <div class="app-product-card" data-product-id="${p.id}">
-                    <div class="product-thumb-wrap">
-                        <img src="${p.thumb}" alt="${p.name}" loading="lazy">
-                    </div>
-                    <div class="product-card-body">
-                        <span class="product-card-badge">${p.badge}</span>
-                        <h5 class="product-card-title">${p.name}</h5>
-                        <p class="product-card-desc">${p.desc}</p>
-                        <div class="product-card-action-row">
-                            <span class="product-card-price">R$ ${p.price.toFixed(2).replace('.', ',')}</span>
-                            <button type="button" class="${btnClass}" onclick="addHeroProduct('${p.id}')">
-                                <span>${btnText}</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }).join('');
-    }
-}
-
-window.addHeroProduct = function(productId) {
-    const data = HERO_NICHE_CATALOG[currentHeroNiche];
-    if (!data) return;
-    const prod = data.products.find(p => p.id === productId);
-    if (!prod) return;
-
-    if (heroCart[productId]) {
-        heroCart[productId].qty += 1;
-    } else {
-        heroCart[productId] = {
-            ...prod,
-            qty: 1
-        };
-    }
-
-    renderHeroNiche(currentHeroNiche);
-    updateBottomCartBar();
-    renderDrawerItems();
-};
-
-window.changeHeroQty = function(productId, delta) {
-    if (!heroCart[productId]) return;
-    heroCart[productId].qty += delta;
-    if (heroCart[productId].qty <= 0) {
-        delete heroCart[productId];
-    }
-    renderHeroNiche(currentHeroNiche);
-    updateBottomCartBar();
-    renderDrawerItems();
-    if (Object.keys(heroCart).length === 0) {
-        closeCartDrawer();
-    }
-};
-
-function renderDrawerItems() {
-    const scrollEl = document.getElementById('drawer-items-scroll');
-    const subtotalEl = document.getElementById('drawer-subtotal-val');
-    const totalEl = document.getElementById('drawer-total-val');
-
-    const items = Object.values(heroCart);
-    let subtotal = 0;
-
-    if (items.length === 0) {
-        if (scrollEl) scrollEl.innerHTML = `<p style="text-align: center; color: #9CA3AF; font-size: 0.75rem; padding: 20px 0;">Seu carrinho está vazio.</p>`;
-        if (subtotalEl) subtotalEl.textContent = "R$ 0,00";
-        if (totalEl) totalEl.textContent = "R$ 0,00";
-        return;
-    }
-
-    if (scrollEl) {
-        scrollEl.innerHTML = items.map(it => {
-            const itemTotal = it.price * it.qty;
-            subtotal += itemTotal;
-            return `
-                <div class="drawer-item-row">
-                    <div class="drawer-item-details">
-                        <h6 class="drawer-item-name">${it.name}</h6>
-                        <span class="drawer-item-unit">R$ ${itemTotal.toFixed(2).replace('.', ',')}</span>
-                    </div>
-                    <div class="drawer-qty-stepper">
-                        <button type="button" class="btn-stepper" onclick="changeHeroQty('${it.id}', -1)">-</button>
-                        <span class="stepper-val">${it.qty}</span>
-                        <button type="button" class="btn-stepper" onclick="changeHeroQty('${it.id}', 1)">+</button>
-                    </div>
-                </div>
-            `;
-        }).join('');
-    }
-
-    const deliveryFee = 5.00;
-    const total = subtotal + deliveryFee;
-
-    if (subtotalEl) subtotalEl.textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
-    if (totalEl) totalEl.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
-}
-
-function updateBottomCartBar() {
-    const bar = document.getElementById('hero-bottom-cart-bar');
-    const countEl = document.getElementById('bottom-cart-count');
-    const priceEl = document.getElementById('bottom-cart-price');
-
-    const items = Object.values(heroCart);
-    const count = items.reduce((acc, it) => acc + it.qty, 0);
-    const subtotal = items.reduce((acc, it) => acc + (it.price * it.qty), 0);
-
-    if (count > 0) {
-        if (bar) bar.classList.add('visible');
-        if (countEl) countEl.textContent = count;
-        if (priceEl) priceEl.textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
-    } else {
-        if (bar) bar.classList.remove('visible');
-    }
-}
-
-function openCartDrawer() {
-    const drawer = document.getElementById('hero-cart-drawer');
-    if (drawer) {
-        renderDrawerItems();
-        drawer.classList.add('open');
-    }
-}
-
-function closeCartDrawer() {
-    const drawer = document.getElementById('hero-cart-drawer');
-    if (drawer) drawer.classList.remove('open');
-}
-
-function renderWhatsAppView() {
-    const data = HERO_NICHE_CATALOG[currentHeroNiche];
-    const bubbleEl = document.getElementById('wa-bubble-content');
-    const timeEl = document.getElementById('wa-bubble-timestamp');
-
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const mins = String(now.getMinutes()).padStart(2, '0');
-    if (timeEl) timeEl.textContent = `${hours}:${mins}`;
-
-    const orderNum = Math.floor(1020 + Math.random() * 800);
-    const items = Object.values(heroCart);
-    let subtotal = 0;
-
-    const itemsListText = items.map(it => {
-        const itemTotal = it.price * it.qty;
-        subtotal += itemTotal;
-        return `• ${it.qty}x ${it.name} (R$ ${itemTotal.toFixed(2).replace('.', ',')})`;
-    }).join('\n');
-
-    const deliveryFee = 5.00;
-    const total = subtotal + deliveryFee;
-
-    const ticketText = `*PEDIDO #${orderNum} • ONIRA.FLY*
-───────────────────
-👤 *Cliente:* Gabriel Castro
-📞 *Tel:* (54) 99841-2090
-📍 *Entrega:* Av. Independência, 1420
-💳 *Pag:* Pix na Entrega
-───────────────────
-🛒 *ITENS:*
-${itemsListText}
-───────────────────
-💰 *Subtotal:* R$ ${subtotal.toFixed(2).replace('.', ',')}
-🛵 *Entrega:* R$ ${deliveryFee.toFixed(2).replace('.', ',')}
-💵 *TOTAL:* R$ ${total.toFixed(2).replace('.', ',')}
-───────────────────
-⚡ *Tempo de pedido:* 24s
-✨ *Taxa de app:* R$ 0 (100% no caixa)`;
-
-    if (bubbleEl) bubbleEl.textContent = ticketText;
 }

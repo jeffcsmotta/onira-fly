@@ -143,125 +143,13 @@
                                 <span class="browser-speed-badge">⚡ 0.38s TTFB</span>
                             </div>
 
-                            <!-- Viewport da tela real com scroll interno nativo -->
-                            <div class="phone-screen-viewport" id="hero-phone-viewport">
-                                <!-- View 1: Cardápio do Nicho -->
-                                <div class="hero-interactive-view active" id="hero-view-catalog">
-                                    <div class="app-store-header">
-                                        <div class="app-store-avatar" id="hero-store-avatar">☕</div>
-                                        <div class="app-store-meta">
-                                            <h4 class="app-store-title" id="hero-store-title">Bistrô & Bebidas Nobres</h4>
-                                            <div class="app-store-badges">
-                                                <span class="badge-status-open">🟢 Aberto agora</span>
-                                                <span class="badge-rating">⭐ 4.9 (480+)</span>
-                                                <span class="badge-delivery">⚡ 25-35 min</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="app-catalog-heading">
-                                        <span class="catalog-heading-title">Destaques do Cardápio</span>
-                                        <span class="catalog-heading-hint">Toque em <strong>+ Adicionar</strong></span>
-                                    </div>
-
-                                    <div class="app-products-list" id="hero-products-list">
-                                        <!-- Produtos injetados dinamicamente via app.js -->
-                                    </div>
-                                </div>
-
-                                <!-- View 2: Drawer do Carrinho -->
-                                <div class="hero-cart-drawer" id="hero-cart-drawer">
-                                    <div class="drawer-header-bar">
-                                        <div class="drawer-title-wrap">
-                                            <span class="drawer-title">🛒 Seu Pedido</span>
-                                            <span class="drawer-badge-store" id="drawer-store-badge">Bistrô</span>
-                                        </div>
-                                        <button type="button" class="btn-drawer-close" id="btn-drawer-close" aria-label="Fechar Carrinho">✕</button>
-                                    </div>
-
-                                    <div class="drawer-items-scroll" id="drawer-items-scroll">
-                                        <!-- Itens do carrinho injetados via JS -->
-                                    </div>
-
-                                    <div class="drawer-breakdown-card">
-                                        <div class="breakdown-line">
-                                            <span>Subtotal dos itens:</span>
-                                            <strong id="drawer-subtotal-val">R$ 0,00</strong>
-                                        </div>
-                                        <div class="breakdown-line">
-                                            <span>Taxa de Entrega:</span>
-                                            <span class="text-green-tag">R$ 5,00</span>
-                                        </div>
-                                        <div class="breakdown-line line-total">
-                                            <span>Total do Pedido:</span>
-                                            <strong id="drawer-total-val" class="text-gold-highlight">R$ 0,00</strong>
-                                        </div>
-                                    </div>
-
-                                    <div class="drawer-info-preview">
-                                        <div class="preview-item">📍 <span><strong>Entrega:</strong> Rua das Flores, 120 - Centro</span></div>
-                                        <div class="preview-item">💳 <span><strong>Pagamento:</strong> Pix na Entrega (0% comissão)</span></div>
-                                    </div>
-
-                                    <button type="button" class="btn-drawer-whatsapp-trigger" id="btn-drawer-whatsapp-trigger">
-                                        <i data-lucide="send" class="btn-icon"></i>
-                                        <span>Ver Comanda que Chega no WhatsApp ➔</span>
-                                    </button>
-                                </div>
-
-                                <!-- View 3: Tela Simulada do WhatsApp -->
-                                <div class="hero-interactive-view" id="hero-view-whatsapp">
-                                    <div class="wa-screen-top">
-                                        <button type="button" class="wa-btn-back" id="wa-btn-back" title="Voltar ao Cardápio">
-                                            <i data-lucide="arrow-left" class="wa-icon"></i>
-                                        </button>
-                                        <div class="wa-contact-pic" id="wa-contact-pic">☕</div>
-                                        <div class="wa-contact-details">
-                                            <span class="wa-contact-title" id="wa-contact-title">Cozinha • Pedidos</span>
-                                            <span class="wa-status-text">online • comanda pronta</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="wa-chat-canvas">
-                                        <div class="wa-security-tag">
-                                            🔒 Comanda padronizada entregue sem ruído direto na cozinha
-                                        </div>
-
-                                        <div class="wa-chat-bubble">
-                                            <pre class="wa-bubble-content" id="wa-bubble-content">
-                                                <!-- Texto da comanda gerado dinamicamente -->
-                                            </pre>
-                                            <div class="wa-bubble-meta">
-                                                <span class="wa-bubble-timestamp" id="wa-bubble-timestamp">12:42</span>
-                                                <span class="wa-read-receipt">✓✓</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="wa-action-dock">
-                                        <a href="https://wa.me/5554996862169?text=Ol%C3%A1%21+Testei+o+mockup+interativo+do+Onira.fly+e+quero+um+canal+pr%C3%B3prio+para+o+meu+restaurante."
-                                           target="_blank" rel="noopener noreferrer" class="btn-wa-action-primary">
-                                            <span>🚀 Quero Este Sistema na Minha Loja</span>
-                                        </a>
-                                        <button type="button" class="btn-wa-action-secondary" id="btn-wa-reset">
-                                            <span>🔄 Testar Outro Nicho / Reiniciar</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- Barra Inferior de Ação do Carrinho (Visible when cart > 0) -->
-                                <div class="hero-bottom-cart-bar" id="hero-bottom-cart-bar">
-                                    <div class="bottom-cart-details">
-                                        <span class="bottom-cart-counter" id="bottom-cart-count">0</span>
-                                        <div class="bottom-cart-values">
-                                            <span class="bottom-cart-label">Ver Pedido</span>
-                                            <span class="bottom-cart-price" id="bottom-cart-price">R$ 0,00</span>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="bottom-cart-cta" id="btn-open-cart-drawer">
-                                        <span>Conferir ➔</span>
-                                    </button>
-                                </div>
+                            <!-- Viewport da tela real desenhada com scroll interno nativo -->
+                            <div class="phone-screen-viewport phone-screenshot-viewport" id="hero-phone-scroll-viewport">
+                                <img src="assets/screenshots/montecristo_mobile.jpg" 
+                                     alt="Canal Próprio - Bistrô & Bebidas Nobres" 
+                                     class="viewport-screenshot-img" 
+                                     id="hero-phone-case-img"
+                                     loading="eager" />
                             </div>
 
                             <div class="phone-bottom-bar"></div>
@@ -298,16 +186,14 @@
         =========================================== -->
         <section class="thesis-section" id="tese">
             <div class="section-container">
-                <div class="section-header section-header-split">
-                    <div class="header-title-wrap">
-                        <div class="eyebrow-tag">A TESE DO DELIVERY MODERNO</div>
-                        <h2 class="section-title">
-                            Marketplace para descobrir.<br>
-                            <span class="text-orange">Canal próprio para lucrar.</span>
-                        </h2>
-                    </div>
-                    <p class="section-description">
-                        Você conhece e lidera cada detalhe da sua operação: compra insumos, cozinha, vende e atende o balcão. Por que divulgar sua comida no Instagram para colocar o link do marketplace na bio? Na prática, você está dando cliente e comissão de presente para plataformas que cobram até 27% sobre quem já ama sua comida. O papel dos grandes aplicativos se encerra na primeira compra. Da segunda em diante, o cliente e o lucro devem ser 100% seus.
+                <div class="section-header-thesis">
+                    <div class="eyebrow-tag">A TESE DO DELIVERY MODERNO</div>
+                    <h2 class="section-title">
+                        Marketplace para descobrir.<br>
+                        <span class="text-orange">Canal próprio para lucrar.</span>
+                    </h2>
+                    <p class="section-lead-thesis">
+                        Você lidera toda a operação: compras, cozinha, balcão e entregas. Por que pagar 27% de taxa para um aplicativo sobre quem já conhece e ama a sua comida? O papel do marketplace se encerra na primeira compra. Na recompra, o cliente e o lucro devem ser 100% seus.
                     </p>
                 </div>
 
@@ -321,22 +207,38 @@
                         <h3 class="thesis-card-title">Venda em Marketplaces</h3>
                         
                         <div class="thesis-rate-box">
-                            <span class="rate-label">Taxa Operacional:</span>
-                            <span class="rate-value rate-bad">23% a 27% por pedido</span>
+                            <span class="rate-label">Taxa por pedido:</span>
+                            <span class="rate-value rate-bad">23% a 27% (iFood, Rappi)</span>
+                        </div>
+
+                        <!-- Instagram Bio Preview Erro -->
+                        <div class="insta-bio-mockup bio-bad">
+                            <div class="insta-bio-bar">
+                                <span class="insta-bio-avatar">🍔</span>
+                                <div class="insta-bio-account">
+                                    <span class="insta-handle">@suaoperacao</span>
+                                    <span class="insta-tag-bio">Link na bio do seu Instagram</span>
+                                </div>
+                            </div>
+                            <div class="insta-bio-link-pill">
+                                <i data-lucide="external-link" class="insta-link-icon"></i>
+                                <span class="insta-link-url">ifood.com.br/delivery/sua-loja</span>
+                                <span class="insta-pill-warning">Perde o cliente</span>
+                            </div>
                         </div>
 
                         <div class="thesis-info-block">
                             <div class="info-item">
                                 <span class="info-title">Na Bio do seu Instagram:</span>
-                                <p class="info-desc">Envia seus seguidores para um app cheio de distrações onde seus concorrentes estão a um clique de distância.</p>
+                                <p class="info-desc">Você investe em fotos e atrai seguidores para mandá-los direto para um aplicativo com centenas de concorrentes.</p>
                             </div>
                             <div class="info-item">
                                 <span class="info-title">Na Recompra Habitual:</span>
-                                <p class="info-desc">Você paga comissão cheia toda semana sobre um cliente que já conhece e prefere a sua comida.</p>
+                                <p class="info-desc">Você paga comissão semanal sobre o cliente fiel que já ama sua comida e pediria direto.</p>
                             </div>
                             <div class="info-item">
-                                <span class="info-title">Propriedade da Base:</span>
-                                <p class="info-desc">Os dados pertencem à plataforma. Você não tem o telefone, histórico ou permissão de contato direto.</p>
+                                <span class="info-title">Propriedade do Cliente:</span>
+                                <p class="info-desc">A base é da plataforma. Você não tem o WhatsApp, nem o histórico para vender novamente.</p>
                             </div>
                         </div>
                     </div>
@@ -350,22 +252,38 @@
                         <h3 class="thesis-card-title">Canal Próprio Onira.fly</h3>
                         
                         <div class="thesis-rate-box">
-                            <span class="rate-label">Taxa Operacional:</span>
+                            <span class="rate-label">Taxa por pedido:</span>
                             <span class="rate-value rate-good">0% de comissão vitalícia</span>
+                        </div>
+
+                        <!-- Instagram Bio Preview Acerto -->
+                        <div class="insta-bio-mockup bio-good">
+                            <div class="insta-bio-bar">
+                                <span class="insta-bio-avatar">✨</span>
+                                <div class="insta-bio-account">
+                                    <span class="insta-handle">@suaoperacao</span>
+                                    <span class="insta-tag-bio">Link na bio do seu Instagram</span>
+                                </div>
+                            </div>
+                            <div class="insta-bio-link-pill">
+                                <i data-lucide="shield-check" class="insta-link-icon"></i>
+                                <span class="insta-link-url">suamarca.com.br</span>
+                                <span class="insta-pill-success">Canal Oficial</span>
+                            </div>
                         </div>
 
                         <div class="thesis-info-block">
                             <div class="info-item">
                                 <span class="info-title">Na Bio do seu Instagram:</span>
-                                <p class="info-desc">Link do seu domínio oficial (<code>suamarca.com.br</code>), valorizando sua marca com design refinado e navegação fluida.</p>
+                                <p class="info-desc">Link do seu domínio oficial. Seu cliente acessa um ambiente exclusivo, sem distrações e sem outros restaurantes.</p>
                             </div>
                             <div class="info-item">
                                 <span class="info-title">Na Recompra Habitual:</span>
-                                <p class="info-desc">100% da margem líquida preservada no caixa. Sem taxas de intermediação sobre clientes fiéis.</p>
+                                <p class="info-desc">100% da margem líquida fica no seu caixa. Sem pagar porcentagem para intermediários.</p>
                             </div>
                             <div class="info-item">
-                                <span class="info-title">Propriedade da Base:</span>
-                                <p class="info-desc">O cliente é patrimônio do seu negócio. Pedidos limpos e organizados direto no WhatsApp oficial da sua casa.</p>
+                                <span class="info-title">Propriedade do Cliente:</span>
+                                <p class="info-desc">A base é sua. O pedido chega organizado e estruturado direto no WhatsApp da sua cozinha.</p>
                             </div>
                         </div>
                     </div>
@@ -379,14 +297,6 @@
         <section class="whiteglove-section" id="white-glove">
             <div class="whiteglove-bg-overlay" aria-hidden="true"></div>
             <div class="section-container">
-                <div class="section-header text-center">
-                    <div class="eyebrow-tag">SERVIÇO 100% CHAVE NA MÃO</div>
-                    <h2 class="section-title">Você cuida da cozinha. <span class="text-orange">Nós cuidamos de toda a engenharia.</span></h2>
-                    <p class="section-description">
-                        Não entregamos plataformas vazias para você perder noites cadastrando produtos. Aplicamos engenharia visual, design de serviço e tecnologia para entregar seu canal pronto para faturar.
-                    </p>
-                </div>
-
                 <div class="bento-grid">
                     <!-- Card 1: Destaque Largo (Domínio & Infra) -->
                     <div class="bento-card bento-wide">
@@ -395,28 +305,28 @@
                         </div>
                         <h3 class="bento-title">Domínio Próprio & Tecnologia Invisível</h3>
                         <p class="bento-desc">
-                            Tecnologia invisível: seu cliente não baixa aplicativo, não passa por cadastros demorados e não é exposto a anúncios de terceiros. Ele simplesmente acessa um site: <strong>o seu</strong> (não o do iFood, não o do Goomer... o seu). Registramos e configuramos seu domínio oficial (<code>suamarca.com.br</code>) diretamente no seu CNPJ, com carregamento instantâneo em menos de 0.5s mesmo no 4G oscilante.
+                            Seu cliente simplesmente acessa um site: <strong>o seu</strong> (não o do iFood, não o do Goomer). Sem baixar aplicativo, sem senhas e sem intermediários.
                         </p>
                         <ul class="bento-bullets">
                             <li><i data-lucide="check-circle-2"></i> Tecnologia invisível: sem app e sem cadastro</li>
                             <li><i data-lucide="check-circle-2"></i> Domínio registrado no CNPJ do seu negócio</li>
-                            <li><i data-lucide="check-circle-2"></i> Abertura instantânea sem intermediários</li>
+                            <li><i data-lucide="check-circle-2"></i> Abertura instantânea em menos de 0.5s no 4G</li>
                         </ul>
                     </div>
 
-                    <!-- Card 2: Quadrado (Curadoria Visual & Cardápio) -->
+                    <!-- Card 2: Quadrado (Curadoria Visual de Cardápio) -->
                     <div class="bento-card bento-square">
                         <div class="bento-icon-wrap">
                             <i data-lucide="layers" class="bento-icon"></i>
                         </div>
-                        <h3 class="bento-title">Curadoria Visual & Engenharia de Cardápio</h3>
+                        <h3 class="bento-title">Curadoria Visual de Cardápio</h3>
                         <p class="bento-desc">
-                            Tratamos todas as fotos dos pratos em formato WebP de alta definição e baixíssimo peso. Criamos combos inteligentes e adicionais estratégicos para elevar o ticket médio de forma orgânica.
+                            Tratamos todas as fotos dos seus pratos em formato WebP de alta definição e baixíssimo peso para valorizar seu produto.
                         </p>
                         <ul class="bento-bullets">
-                            <li><i data-lucide="check-circle-2"></i> Imagens otimizadas em HD</li>
-                            <li><i data-lucide="check-circle-2"></i> Upsell de alta margem</li>
-                            <li><i data-lucide="check-circle-2"></i> Revisões periódicas de catálogo</li>
+                            <li><i data-lucide="check-circle-2"></i> Fotos otimizadas em alta resolução (WebP leve)</li>
+                            <li><i data-lucide="check-circle-2"></i> Apresentação visual limpa que valoriza seu produto</li>
+                            <li><i data-lucide="check-circle-2"></i> Atualização simples de itens, fotos e preços</li>
                         </ul>
                     </div>
 
@@ -427,28 +337,28 @@
                         </div>
                         <h3 class="bento-title">Entrada de Pedidos Estruturada</h3>
                         <p class="bento-desc">
-                            Acabe com mensagens confusas e áudios longos no WhatsApp. O cliente seleciona opções, personaliza o pedido e a comanda chega padronizada, formatada e pronta para a linha de produção.
+                            Acabe com mensagens confusas e áudios longos no WhatsApp. O cliente seleciona os itens e a comanda chega padronizada e formatada.
                         </p>
                         <ul class="bento-bullets">
-                            <li><i data-lucide="check-circle-2"></i> Sem erros de montagem</li>
-                            <li><i data-lucide="check-circle-2"></i> Resumo pronto para impressão</li>
-                            <li><i data-lucide="check-circle-2"></i> Menos tempo de atendimento</li>
+                            <li><i data-lucide="check-circle-2"></i> Sem erros de montagem ou itens trocados</li>
+                            <li><i data-lucide="check-circle-2"></i> Resumo pronto para impressão imediata na cozinha</li>
+                            <li><i data-lucide="check-circle-2"></i> Atendimento instantâneo sem tempo de espera</li>
                         </ul>
                     </div>
 
-                    <!-- Card 4: Largo (Estratégia Tática de Migração) -->
+                    <!-- Card 4: Largo (Migração de Base do iFood) -->
                     <div class="bento-card bento-wide">
                         <div class="bento-icon-wrap">
                             <i data-lucide="send" class="bento-icon"></i>
                         </div>
-                        <h3 class="bento-title">Estratégia Tática de Migração de Base</h3>
+                        <h3 class="bento-title">Migração de Clientes do iFood para o Canal Próprio</h3>
                         <p class="bento-desc">
-                            Estruturamos os materiais físicos e digitais para sua operação converter pedidos de marketplaces em clientes do canal direto logo na entrega da primeira embalagem.
+                            Converta pedidos que chegam pelo iFood ou outros marketplaces em clientes diretos e recorrentes já na entrega da primeira embalagem.
                         </p>
                         <ul class="bento-bullets">
-                            <li><i data-lucide="check-circle-2"></i> Roteiro de transição gradual</li>
-                            <li><i data-lucide="check-circle-2"></i> Materiais de sacola (flyers & QR codes)</li>
-                            <li><i data-lucide="check-circle-2"></i> Incentivos inteligentes de retenção</li>
+                            <li><i data-lucide="check-circle-2"></i> Arte de sacola inclusa (flyers & QR Code com incentivo de 1ª recompra)</li>
+                            <li><i data-lucide="check-circle-2"></i> Manual completo em PDF para envio à sua gráfica e equipe</li>
+                            <li><i data-lucide="check-circle-2"></i> Retenha 100% da margem líquida nas compras seguintes</li>
                         </ul>
                     </div>
                 </div>
