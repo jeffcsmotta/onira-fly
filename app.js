@@ -150,53 +150,49 @@ window.setShowcaseDevice = function (mode) {
 };
 
 /**
- * 3. Simulador de Impacto Financeiro (Volume de Pedidos × Ticket Médio)
+ * 3. Simulador de Impacto Financeiro (Faturamento Total Delivery × % Migrado)
  */
 function initRoiSimulator() {
-    const ordersRange = document.getElementById('sim-orders-range');
-    const ticketRange = document.getElementById('sim-ticket-range');
+    const revenueRange = document.getElementById('sim-revenue-range');
+    const migrationRange = document.getElementById('sim-migration-range');
 
-    const ordersDisplay = document.getElementById('sim-orders-display');
-    const ticketDisplay = document.getElementById('sim-ticket-display');
+    const revenueDisplay = document.getElementById('sim-revenue-display');
+    const migrationDisplay = document.getElementById('sim-migration-display');
 
-    const annualValueEl = document.getElementById('result-annual-value');
-    const monthlyValueEl = document.getElementById('result-monthly-value');
+    const monthlyCalcEl = document.getElementById('result-monthly-calc');
+    const annualCalcEl = document.getElementById('result-annual-calc');
 
     function calculate() {
-        if (!ordersRange || !ticketRange) return;
+        if (!revenueRange || !migrationRange) return;
 
-        const orders = parseFloat(ordersRange.value) || 600;
-        const ticket = parseFloat(ticketRange.value) || 75;
+        const revenue = parseFloat(revenueRange.value) || 50000;
+        const migrationPercent = parseFloat(migrationRange.value) || 30;
 
-        // Faturamento Total Delivery
-        const totalRevenue = orders * ticket;
-
-        // Base de Recompra Habitual (estimativa padrão de 35% de pedidos recorrentes)
-        const recurringRevenue = totalRevenue * 0.35;
-
-        // Economia da alíquota padrão de 23% de comissão sobre a base fidelizada
-        const monthlySavings = recurringRevenue * 0.23;
+        // Fórmula no Front-End:
+        // Economia Mensal = Faturamento * (% Migrado) * 0.23
+        // Economia Anual = Economia Mensal * 12
+        const monthlySavings = revenue * (migrationPercent / 100) * 0.23;
         const annualSavings = monthlySavings * 12;
 
-        if (ordersDisplay) {
-            ordersDisplay.textContent = `${orders.toLocaleString('pt-BR')} pedidos`;
+        if (revenueDisplay) {
+            revenueDisplay.textContent = formatCurrency(revenue);
         }
 
-        if (ticketDisplay) {
-            ticketDisplay.textContent = formatCurrency(ticket);
+        if (migrationDisplay) {
+            migrationDisplay.textContent = `${migrationPercent}%`;
         }
 
-        if (annualValueEl) {
-            annualValueEl.textContent = formatNumber(Math.round(annualSavings));
+        if (monthlyCalcEl) {
+            monthlyCalcEl.textContent = formatCurrency(Math.round(monthlySavings));
         }
 
-        if (monthlyValueEl) {
-            monthlyValueEl.textContent = formatCurrency(monthlySavings) + '/mês';
+        if (annualCalcEl) {
+            annualCalcEl.textContent = formatCurrency(Math.round(annualSavings));
         }
     }
 
-    if (ordersRange) ordersRange.addEventListener('input', calculate);
-    if (ticketRange) ticketRange.addEventListener('input', calculate);
+    if (revenueRange) revenueRange.addEventListener('input', calculate);
+    if (migrationRange) migrationRange.addEventListener('input', calculate);
 
     calculate();
 }
