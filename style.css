@@ -2276,13 +2276,15 @@ img, svg {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: none;
 }
 
 .final-cta-bg-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, rgba(10, 10, 10, 0.82) 0%, #0A0A0A 95%);
+    background: 
+        linear-gradient(180deg, #0A0A0A 0%, rgba(10, 10, 10, 0.82) 15%, rgba(10, 10, 10, 0.82) 85%, #0A0A0A 100%),
+        radial-gradient(circle at center, rgba(10, 10, 10, 0.65) 0%, #0A0A0A 92%);
     z-index: 1;
 }
 
@@ -4652,23 +4654,27 @@ img, svg {
 }
 
 /* ==========================================================================
-   FAIXA DA TESE FULL-WIDTH EM BAIXO-RELEVO (INNER SHADOW & SEM CONTORNO)
+   FAIXA DA TESE FULL-WIDTH EM BAIXO-RELEVO (INNER SHADOW EM CINZA & SUPERFÍCIE PERCEBIDA)
    ========================================================================== */
 .thesis-fullwidth-recessed {
     width: 100%;
     position: relative;
     border: none;
     border-radius: 0;
-    /* Fundo escuro com iluminação âmbar difusa centrada */
+    /* Superfície grafite acetinada com iluminação âmbar difusa centrada */
     background: 
-        radial-gradient(ellipse 70% 65% at 50% 50%, rgba(255, 199, 0, 0.08) 0%, rgba(245, 158, 11, 0.02) 45%, transparent 75%),
-        linear-gradient(180deg, #050608 0%, #08090C 50%, #050608 100%);
-    /* Sombra interna profunda criando o efeito de baixo-relevo/fenda em relação ao restante da página */
+        radial-gradient(ellipse 75% 65% at 50% 50%, rgba(255, 199, 0, 0.05) 0%, rgba(245, 158, 11, 0.015) 45%, transparent 75%),
+        linear-gradient(180deg, #0C0F17 0%, #151926 50%, #0C0F17 100%);
+    /* Sombra interna em tons de cinza precisos (sem preto puro) e spread controlado */
     box-shadow: 
-        inset 0 24px 36px -10px rgba(0, 0, 0, 0.95),
-        inset 0 -24px 36px -10px rgba(0, 0, 0, 0.95),
-        inset 0 1px 0 rgba(255, 255, 255, 0.025),
-        inset 0 -1px 0 rgba(255, 255, 255, 0.025);
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 4px 8px -1px rgba(148, 163, 184, 0.18),
+        inset 0 -4px 8px -1px rgba(148, 163, 184, 0.18),
+        inset 0 12px 22px -4px rgba(71, 85, 105, 0.45),
+        inset 0 -12px 22px -4px rgba(71, 85, 105, 0.45),
+        inset 0 24px 32px -8px rgba(30, 41, 59, 0.65),
+        inset 0 -24px 32px -8px rgba(30, 41, 59, 0.65);
     padding: clamp(52px, 6.5vw, 78px) 0;
     margin: 0 0 clamp(48px, 6vw, 64px) 0;
     box-sizing: border-box;
@@ -4706,8 +4712,8 @@ img, svg {
     margin: 0;
     /* Leve e sutil sombra projetada sobre o fundo rebaixado */
     text-shadow: 
-        0 4px 18px rgba(0, 0, 0, 0.95),
-        0 2px 5px rgba(0, 0, 0, 0.8);
+        0 4px 16px rgba(0, 0, 0, 0.95),
+        0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .thesis-fullwidth-recessed .thesis-opening-text .text-orange {
@@ -4799,25 +4805,28 @@ img, svg {
 /* ==========================================================================
    ARQUITETURA DE CANAIS PARALELOS (TONS ÂMBAR / LARANJA — SEM VERMELHO, SEM VS)
    ========================================================================== */
-.parallel-channels-card {
-    background: #121316;
-    border: 1px solid rgba(255, 199, 0, 0.22);
+/* ==========================================================================
+   ARQUITETURA DE 3 CANAIS (BALCÃO, IFOOD & SITE PRÓPRIO) + JORNADA VISUAL
+   ========================================================================== */
+.channels-ecosystem-card {
+    background: #111215;
+    border: 1px solid rgba(255, 199, 0, 0.25);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    margin: 40px 0 28px 0;
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+    margin: 40px 0 32px 0;
+    box-shadow: 0 24px 52px rgba(0, 0, 0, 0.65), 0 0 36px rgba(255, 199, 0, 0.04);
 }
 
-.parallel-header-strip {
+.ecosystem-header-strip {
     background: rgba(255, 199, 0, 0.04);
-    border-bottom: 1px solid rgba(255, 199, 0, 0.12);
-    padding: 20px 28px;
+    border-bottom: 1px solid rgba(255, 199, 0, 0.14);
+    padding: 22px 28px;
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.parallel-header-badge {
+.ecosystem-badge {
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 800;
@@ -4826,234 +4835,311 @@ img, svg {
     text-transform: uppercase;
 }
 
-.parallel-header-title {
+.ecosystem-title {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #F3F4F6;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #F4F4F5;
+    margin: 0;
+    line-height: 1.25;
+}
+
+.ecosystem-channels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 20px;
+    background: #0A0B0E;
+}
+
+.channel-col {
+    background: #131418;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 22px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: var(--transition-smooth);
+}
+
+.channel-col:hover {
+    border-color: rgba(255, 199, 0, 0.35);
+    transform: translateY(-2px);
+}
+
+.channel-col-counter {
+    border-left: 3px solid #10B981;
+}
+
+.channel-col-marketplace {
+    border-left: 3px solid #F59E0B;
+}
+
+.channel-col-own {
+    border-left: 3px solid var(--color-primary);
+    background: linear-gradient(180deg, rgba(255, 199, 0, 0.04) 0%, #131418 100%);
+    box-shadow: inset 0 0 20px rgba(255, 199, 0, 0.03);
+}
+
+.channel-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.channel-icon-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #10B981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.channel-icon-badge svg {
+    width: 20px;
+    height: 20px;
+}
+
+.channel-icon-badge.icon-orange {
+    background: rgba(245, 158, 11, 0.14);
+    border-color: rgba(245, 158, 11, 0.35);
+    color: #F59E0B;
+}
+
+.channel-icon-badge.icon-gold {
+    background: rgba(255, 199, 0, 0.16);
+    border-color: rgba(255, 199, 0, 0.45);
+    color: var(--color-primary);
+}
+
+.channel-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.channel-tag {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    color: #9CA3AF;
+    letter-spacing: 0.06em;
+}
+
+.channel-tag.tag-gold {
+    color: var(--color-primary);
+}
+
+.channel-name {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #FFFFFF;
     margin: 0;
 }
 
-.parallel-grid {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: stretch;
-    padding: 16px;
-    gap: 12px;
-    background: #0E0F12;
-}
-
-.parallel-col {
-    padding: 28px 24px;
+.channel-stat-badge {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    position: relative;
-    border-radius: 14px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-.parallel-col-acquisition {
-    background: #171614;
-    border: 1px solid rgba(255, 199, 0, 0.2);
+.channel-stat-badge.stat-emerald {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.25);
 }
 
-.parallel-col-retention {
-    background: #191814;
-    border: 1.5px solid rgba(255, 199, 0, 0.35);
-    box-shadow: inset 0 0 24px rgba(255, 199, 0, 0.03);
+.channel-stat-badge.stat-amber {
+    background: rgba(245, 158, 11, 0.08);
+    border-color: rgba(245, 158, 11, 0.25);
 }
 
-.parallel-col-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
+.channel-stat-badge.stat-gold {
+    background: rgba(255, 199, 0, 0.12);
+    border-color: rgba(255, 199, 0, 0.4);
 }
 
-.parallel-badge-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.parallel-badge {
+.channel-stat-badge .stat-main {
     font-family: var(--font-heading);
-    font-size: 1.125rem;
+    font-size: 1.35rem;
     font-weight: 900;
-    letter-spacing: -0.01em;
-    color: var(--color-primary);
-}
-
-.parallel-badge-gold {
-    color: #FFD600;
-}
-
-.parallel-source {
-    font-family: var(--font-mono);
-    font-size: 0.8125rem;
-    color: #A1A1AA;
-}
-
-.parallel-stat-pill {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 8px 14px;
-    border-radius: var(--radius-md);
-    background: rgba(255, 199, 0, 0.08);
-    border: 1px solid rgba(255, 199, 0, 0.25);
-}
-
-.parallel-stat-gold {
-    background: rgba(255, 199, 0, 0.14);
-    border-color: rgba(255, 199, 0, 0.45);
-}
-
-.parallel-stat-num {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: var(--color-primary);
+    color: #FFFFFF;
     line-height: 1.1;
 }
 
-.parallel-stat-label {
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    color: #D4D4D8;
-    text-transform: uppercase;
-    font-weight: 700;
+.channel-stat-badge.stat-emerald .stat-main {
+    color: #10B981;
 }
 
-.parallel-flow-strip {
+.channel-stat-badge.stat-amber .stat-main {
+    color: #F59E0B;
+}
+
+.channel-stat-badge.stat-gold .stat-main {
+    color: var(--color-primary);
+}
+
+.channel-stat-badge .stat-sub {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: #A1A1AA;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.channel-role-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.role-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    color: #9CA3AF;
+    text-transform: uppercase;
+}
+
+.role-desc {
+    font-size: 0.84375rem;
+    line-height: 1.45;
+    color: #E4E4E7;
+    margin: 0;
+}
+
+.channel-contrib-pill {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.78125rem;
+    color: #D4D4D8;
+    line-height: 1.4;
+    padding-top: 6px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.channel-contrib-pill svg {
+    width: 14px;
+    height: 14px;
+    color: var(--color-primary);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* O Caminho da Rentabilidade (Flow Track) */
+.ecosystem-flow-track {
+    background: #0E1014;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 16px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
-    padding: 10px 14px;
-    border-radius: 10px;
-    font-size: 0.8125rem;
-    font-weight: 600;
-    background: #111215;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
-.parallel-flow-strip svg {
+.flow-track-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.78125rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.flow-track-title svg {
+    width: 16px;
+    height: 16px;
+}
+
+.flow-track-steps {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.flow-step {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #181920;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.78125rem;
+    color: #E4E4E7;
+    font-weight: 600;
+}
+
+.flow-step-num {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.flow-step-highlight {
+    background: rgba(255, 199, 0, 0.12);
+    border-color: rgba(255, 199, 0, 0.45);
+    color: var(--color-primary);
+}
+
+.flow-step-highlight .flow-step-num {
+    background: var(--color-primary);
+    color: #000000;
+}
+
+.flow-arrow {
     width: 14px;
     height: 14px;
     color: #71717A;
     flex-shrink: 0;
 }
 
-.parallel-flow-pill {
-    background: #1A1B20;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #E4E4E7;
-    padding: 5px 10px;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 700;
-}
-
-.parallel-flow-highlight {
-    background: rgba(255, 199, 0, 0.12);
-    border-color: rgba(255, 199, 0, 0.35);
-    color: var(--color-primary);
-}
-
-.parallel-flow-highlight-gold {
-    background: rgba(255, 199, 0, 0.2);
-    border-color: rgba(255, 199, 0, 0.5);
-    color: #FFD600;
-}
-
-.parallel-points-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.parallel-point-item {
-    background: #121316;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    padding: 12px 14px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    color: #D4D4D8;
-}
-
-.parallel-point-item strong {
-    color: #FFFFFF;
-    font-weight: 800;
-}
-
-.point-bullet-orange {
-    color: var(--color-primary);
-    font-size: 0.75rem;
-    margin-top: 3px;
-    flex-shrink: 0;
-}
-
-.point-bullet-gold {
-    color: #FFD600;
-    font-size: 0.75rem;
-    margin-top: 3px;
-    flex-shrink: 0;
-}
-
-.parallel-synergy-divider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #0E0F12;
-    padding: 0 8px;
-}
-
-.synergy-badge {
-    background: #1A1916;
-    border: 1px solid rgba(255, 199, 0, 0.35);
-    color: var(--color-primary);
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    font-weight: 800;
-    padding: 8px 10px;
-    border-radius: var(--radius-md);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    text-align: center;
-    letter-spacing: 0.05em;
-}
-
-.synergy-badge svg {
-    width: 16px;
-    height: 16px;
-}
-
-.parallel-footer-strip {
-    background: #0E0F12;
-    border-top: 1px solid rgba(255, 199, 0, 0.12);
-    padding: 18px 24px;
+/* Faixa de Convergência no Balcão */
+.ecosystem-convergence-bar {
+    background: #0A0B0E;
+    padding: 16px 24px;
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.parallel-footer-badge {
+.convergence-badge {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.71875rem;
     font-weight: 800;
     color: var(--color-primary);
-    background: rgba(255, 199, 0, 0.12);
+    background: rgba(255, 199, 0, 0.1);
     border: 1px solid rgba(255, 199, 0, 0.35);
     padding: 5px 12px;
     border-radius: var(--radius-pill);
@@ -5061,20 +5147,20 @@ img, svg {
     flex-shrink: 0;
 }
 
-.parallel-footer-badge svg {
-    width: 14px;
-    height: 14px;
+.convergence-badge svg {
+    width: 13px;
+    height: 13px;
 }
 
-.parallel-footer-text {
-    font-size: 0.875rem;
-    color: #E4E4E7;
-    line-height: 1.55;
+.convergence-text {
+    font-size: 0.84375rem;
+    color: #D4D4D8;
+    line-height: 1.5;
     margin: 0;
 }
 
-.parallel-footer-text strong {
-    color: var(--color-primary);
+.convergence-text strong {
+    color: #FFFFFF;
 }
 
 /* ==========================================================================
@@ -5272,6 +5358,24 @@ img, svg {
     
     .thesis-fullwidth-recessed .thesis-opening-statement {
         padding: 0 16px;
+    }
+
+    .ecosystem-channels-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 14px;
+    }
+
+    .ecosystem-flow-track {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .ecosystem-convergence-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 }
 
