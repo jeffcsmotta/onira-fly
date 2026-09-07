@@ -87,7 +87,7 @@
 
     <main>
         <!-- ==========================================
-             SEÇÃO 1: HERO & TOPO (A EVOLUÇÃO NATURAL DO DELIVERY)
+             SEÇÃO 1: HERO & TOPO (O CAMINHO NATURAL DE TODO DELIVERY)
         =========================================== -->
         <section class="hero-section" id="hero">
             <div class="hero-bg-overlay" aria-hidden="true"></div>
@@ -96,15 +96,15 @@
                 <div class="hero-content">
                     <div class="eyebrow-pill">
                         <span class="pulse-dot"></span>
-                        <span>TECNOLOGIA INVISÍVEL & SERVIÇO WHITE GLOVE</span>
+                        <span>OPERAÇÃO INTEGRADA & CANAL PRÓPRIO</span>
                     </div>
 
                     <h1 class="hero-headline">
-                        O caminho natural de todo delivery estruturado é ter o <span class="text-orange">canal próprio como centro da operação.</span>
+                        O caminho natural de <span class="text-orange">todo delivery.</span>
                     </h1>
 
                     <p class="hero-subheadline">
-                        Nossa tecnologia é invisível: você não aprende sistema novo e seu cliente não baixa aplicativo nenhum. Não somos uma plataforma impessoal de prateleira — desenhamos, configuramos o servidor e entregamos tudo na sua mão (<em>White Glove</em>). No momento de pico, a comanda cai pronta na frente do atendente, sem mudar nada para trás do balcão e com margem 100% no seu caixa.
+                        Seu canal próprio funcionando simultâneo com a estrutura que você já tem. O iFood traz cliente novo; o canal próprio fideliza e tem <strong>taxa zero</strong>. O Onira.fly usa a mesma operação que você já roda hoje para o iFood, entregando o pedido montado pelo seu <code>www.seunegocio.com.br</code> direto na mão do seu atendente.
                     </p>
 
                     <div class="hero-cta-group">
@@ -118,35 +118,24 @@
                     </div>
                 </div>
 
-                <!-- Coluna Direita: Mockup Flutuante com Scroll Real -->
+                <!-- Coluna Direita: Mockup Flutuante com Scroll Real & Ticker Automático -->
                 <div class="hero-visual">
                     <div class="phone-frame-mockup">
-                        <!-- Seletor de Nicho acima da tela do celular -->
-                        <div class="hero-niche-selector-wrap">
-                            <div class="hero-niche-tabs" id="hero-niche-tabs" role="tablist" aria-label="Nichos Gastronômicos">
-                                <button type="button" class="hero-niche-pill active" data-niche="montecristo" role="tab" aria-selected="true">☕ Bistrô</button>
-                                <button type="button" class="hero-niche-pill" data-niche="baitakao" role="tab" aria-selected="false">🍔 Burger</button>
-                                <button type="button" class="hero-niche-pill" data-niche="panazzolo" role="tab" aria-selected="false">🍕 Forneria</button>
-                                <button type="button" class="hero-niche-pill" data-niche="fafa" role="tab" aria-selected="false">🍣 Sushi</button>
-                                <button type="button" class="hero-niche-pill" data-niche="claem" role="tab" aria-selected="false">🥐 Pâtisserie</button>
-                            </div>
-                        </div>
-
                         <div class="phone-glass-bezel">
                             <div class="phone-top-speaker"></div>
                             
-                            <!-- Barra de endereço do navegador móvel -->
+                            <!-- Barra de endereço do navegador móvel com Ticker de Nicho -->
                             <div class="phone-browser-bar">
                                 <span class="browser-secure-dot"></span>
                                 <span class="browser-url" id="hero-browser-url">bistrobebidasnobres.com.br</span>
-                                <span class="browser-speed-badge">⚡ 0.38s TTFB</span>
+                                <span class="browser-speed-badge" id="hero-ticker-badge">☕ Bistrô • ⚡ 0.38s</span>
                             </div>
 
                             <!-- Viewport da tela real desenhada com scroll interno nativo -->
                             <div class="phone-screen-viewport phone-screenshot-viewport" id="hero-phone-scroll-viewport">
                                 <img src="assets/screenshots/montecristo_mobile.jpg" 
-                                     alt="Canal Próprio - Bistrô & Bebidas Nobres" 
-                                     class="viewport-screenshot-img" 
+                                     alt="Canal Próprio - Demonstração" 
+                                     class="viewport-screenshot-img hero-ticker-img" 
                                      id="hero-phone-case-img"
                                      loading="eager" />
                             </div>
@@ -157,9 +146,19 @@
                 </div>
             </div>
 
-            <!-- BARRA DE MICROMÉTRICAS (Travas de alívio operacional) -->
+            <!-- OS 4 CARDS DE ALÍVIO OPERACIONAL -->
             <div class="hero-transition-strip micrometrics-strip">
                 <div class="section-container micrometrics-grid">
+                    <div class="micrometric-card">
+                        <div class="micrometric-header">
+                            <div class="micrometric-icon-wrap">
+                                <i data-lucide="percent" class="micrometric-icon"></i>
+                            </div>
+                            <span class="micrometric-title">Margem 100% sua</span>
+                        </div>
+                        <p class="micrometric-desc">O cliente que te compra toda semana não tem que pagar taxa pro iFood. O lucro fica com quem cozinha.</p>
+                    </div>
+
                     <div class="micrometric-card">
                         <div class="micrometric-header">
                             <div class="micrometric-icon-wrap">
@@ -173,11 +172,11 @@
                     <div class="micrometric-card">
                         <div class="micrometric-header">
                             <div class="micrometric-icon-wrap">
-                                <i data-lucide="file-check-2" class="micrometric-icon"></i>
+                                <i data-lucide="shield-check" class="micrometric-icon"></i>
                             </div>
-                            <span class="micrometric-title">Comanda Pronta no Pico</span>
+                            <span class="micrometric-title">Tecnologia invisível</span>
                         </div>
-                        <p class="micrometric-desc">No ápice do movimento, o cliente já entrega o pedido mastigado na frente do seu atendente.</p>
+                        <p class="micrometric-desc">Sem login e sem sistema pro seu cliente, sem sistema pra você se preocupar. Seu cliente encontra o que quer em segundos.</p>
                     </div>
 
                     <div class="micrometric-card">
@@ -185,20 +184,23 @@
                             <div class="micrometric-icon-wrap">
                                 <i data-lucide="send" class="micrometric-icon"></i>
                             </div>
-                            <span class="micrometric-title">Despacho em 1 Copia e Cola</span>
+                            <span class="micrometric-title">Despacho Pronto</span>
                         </div>
-                        <p class="micrometric-desc">Pronto para mandar ao motoboy próprio, grupo de WhatsApp dos entregadores ou app.</p>
+                        <p class="micrometric-desc">Comanda formatada pronta pro seu sistema (ERP/PDV) ou num copia e cola pro motoboy e grupo de entrega.</p>
                     </div>
+                </div>
+            </div>
 
-                    <div class="micrometric-card">
-                        <div class="micrometric-header">
-                            <div class="micrometric-icon-wrap">
-                                <i data-lucide="sparkles" class="micrometric-icon"></i>
-                            </div>
-                            <span class="micrometric-title">Serviço White Glove</span>
-                        </div>
-                        <p class="micrometric-desc">Não é plataforma impessoal: desenhamos a loja, configuramos servidor e entregamos na mão.</p>
-                    </div>
+            <!-- CHAMADA ESTRATÉGICA EM TOM DE TÍTULO (H2) -->
+            <div class="section-container">
+                <div class="hero-strategic-title-card">
+                    <span class="strategic-title-badge">
+                        <i data-lucide="compass"></i>
+                        <span>DIRETRIZ ESTRATÉGICA</span>
+                    </span>
+                    <h2 class="hero-strategic-h2">
+                        “O delivery maduro não declara guerra às plataformas — <span class="text-orange">ele entende a função de cada canal.</span>”
+                    </h2>
                 </div>
             </div>
         </section>
@@ -217,6 +219,13 @@
                     <p class="section-lead-thesis">
                         O delivery maduro não declara guerra às plataformas — ele entende a função de cada canal. Pagar de 23% a 28% de taxa na primeira compra é um Custo de Aquisição (CAC) aceitável para ser descoberto por novos clientes. O erro estratégico está em continuar pagando aluguel contínuo toda semana por quem já conhece o seu cardápio e ama a sua comida.
                     </p>
+                </div>
+
+                <!-- CITAÇÃO ESTRATÉGICA 2 -->
+                <div class="quote-strip-callout">
+                    <blockquote>
+                        “Pagar de 23% a 28% de taxa na primeira compra é um <span class="highlight-quote">Custo de Aquisição (CAC) aceitável</span> para ser descoberto por novos clientes.”
+                    </blockquote>
                 </div>
 
                 <!-- ORGANOGRAMA VISUAL DO ECOSSISTEMA: O ESPAÇO VAZIO VS O CANAL PRÓPRIO -->
@@ -289,7 +298,7 @@
                                         <i data-lucide="compass"></i>
                                     </div>
                                     <div class="organo-node-info">
-                                        <span class="organo-node-title">1. Descoberta & Tráfego</span>
+                                        <span class="organo-node-title">1. Descoberta & Tráfego (CAC)</span>
                                         <span class="organo-node-desc">iFood atrai clientes novos (CAC). Google e Instagram direcionam direto para o seu domínio próprio oficial.</span>
                                     </div>
                                 </div>
@@ -303,8 +312,8 @@
                                         <i data-lucide="globe"></i>
                                     </div>
                                     <div class="organo-node-info">
-                                        <span class="organo-node-title">2. A Peça Central: suamarca.com.br (Onira.fly)</span>
-                                        <span class="organo-node-desc">Acesso instantâneo: zero download, zero login, zero senha esquecida. O cliente monta o pedido em 30s.</span>
+                                        <span class="organo-node-title">2. A Peça Central: seunegocio.com.br (Taxa Zero)</span>
+                                        <span class="organo-node-desc">70% a 80% dos pedidos de uma casa vêm de clientes recorrentes. No canal próprio, o pedido sai em 30s e a margem é 100% sua.</span>
                                     </div>
                                 </div>
 
@@ -318,11 +327,18 @@
                                     </div>
                                     <div class="organo-node-info">
                                         <span class="organo-node-title">3. Comanda Mastigada no Balcão</span>
-                                        <span class="organo-node-desc">Pedido pronto no WhatsApp da equipe. Copia e cola em 1 clique para motoboy próprio, grupo ou app.</span>
+                                        <span class="organo-node-desc">Pedido pronto no WhatsApp da equipe. Atendente confirma em 5s e copia para motoboy próprio, grupo ou app.</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- CITAÇÃO ESTRATÉGICA 3 -->
+                    <div class="quote-strip-callout">
+                        <blockquote>
+                            “Sem domínio próprio, o cliente fiel vai para o app e você paga 27% de novo, <span class="highlight-quote">ou vai para o WhatsApp sem comanda e gera caos no balcão.</span>”
+                        </blockquote>
                     </div>
 
                     <!-- CARD DE ATIVO RICO DE CRM (ID Primário: WhatsApp) -->
@@ -375,259 +391,150 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- DIAGRAMA VISUAL DAS DUAS ROTAS (LADO A LADO) -->
-                <div class="routes-diagram-wrapper">
-                    <div class="routes-diagram-grid">
-                        <!-- ROTA 1: CAPTAÇÃO DE NOVOS CLIENTES -->
-                        <div class="route-box route-rental">
-                            <div class="route-header">
-                                <div class="route-badge-wrap">
-                                    <span class="route-tag route-tag-rental">ROTA 1: CAPTAÇÃO DE NOVOS CLIENTES</span>
-                                    <span class="route-subtag">(Marketplace / Apps de Descoberta)</span>
-                                </div>
-                                <span class="route-status-alert">Custo de Aquisição (CAC)</span>
-                            </div>
-
-                            <div class="route-flow-bar route-flow-rental">
-                                <span class="flow-step">Cliente descobre</span>
-                                <i data-lucide="arrow-right" class="route-arrow"></i>
-                                <span class="flow-step">Primeiro pedido</span>
-                                <i data-lucide="arrow-right" class="route-arrow"></i>
-                                <span class="flow-step flow-tax text-danger">Você paga 23-28% (CAC)</span>
-                            </div>
-
-                            <ul class="route-points route-points-rental">
-                                <li>
-                                    <span class="route-point-marker marker-alert">⚠️</span>
-                                    <div class="route-point-content">
-                                        <strong>O cliente NÃO é seu ativo.</strong>
-                                        <p>A base cadastral e os hábitos de consumo ficam retidos na plataforma de terceiros.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="route-point-marker marker-alert">⚠️</span>
-                                    <div class="route-point-content">
-                                        <strong>Para reter, você paga de novo.</strong>
-                                        <p>Se não pagar anúncios contínuos dentro do app, o seu concorrente aparece acima da sua loja.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="route-point-marker marker-alert">⚠️</span>
-                                    <div class="route-point-content">
-                                        <strong>O erro: Pagar CAC na recompra.</strong>
-                                        <p>Aceitar pagar 27% toda sexta-feira pelo mesmo cliente habitual que já escolheu a sua comida.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- DIVISOR VISUAL VS -->
-                        <div class="routes-vs-divider">
-                            <span class="vs-glow-line"></span>
-                            <div class="routes-vs-pill">VS</div>
-                            <span class="vs-glow-line"></span>
-                        </div>
-
-                        <!-- ROTA 2: RETENÇÃO & SOBERANIA DA CARTEIRA -->
-                        <div class="route-box route-sovereign">
-                            <div class="route-header">
-                                <div class="route-badge-wrap">
-                                    <span class="route-tag route-tag-sovereign">ROTA 2: RETENÇÃO & SOBERANIA</span>
-                                    <span class="route-subtag">(Canal Próprio Onira.fly)</span>
-                                </div>
-                                <span class="route-status-success">Ativo Perpétuo (Zero Taxa)</span>
-                            </div>
-
-                            <div class="route-flow-bar route-flow-sovereign">
-                                <span class="flow-step">Cliente clica no seu link</span>
-                                <i data-lucide="arrow-right" class="route-arrow"></i>
-                                <span class="flow-step">Pede em &lt; 1 min</span>
-                                <i data-lucide="arrow-right" class="route-arrow"></i>
-                                <span class="flow-step flow-tax text-success">WhatsApp toca com comanda</span>
-                            </div>
-
-                            <ul class="route-points route-points-sovereign">
-                                <li>
-                                    <span class="route-point-marker marker-check">✅</span>
-                                    <div class="route-point-content">
-                                        <strong>Menos atrito e mais benefício para quem compra.</strong>
-                                        <p>Experiência direta sem distrações de concorrentes e liberdade para valorizar quem compra sempre.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="route-point-marker marker-check">✅</span>
-                                    <div class="route-point-content">
-                                        <strong>Margem 100% líquida na sua base fiel.</strong>
-                                        <p>Sem taxas percentuais sobre os 70% a 80% do faturamento gerado por clientes habituais.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="route-point-marker marker-check">✅</span>
-                                    <div class="route-point-content">
-                                        <strong>Você é dono do canal e dos dados.</strong>
-                                        <p>Nome, telefone e histórico salvos direto no seu WhatsApp para gerar novas vendas a custo zero.</p>
-                                    </div>
-                                </li>
-                            </ul>
+                        <!-- CITAÇÃO ESTRATÉGICA 4 -->
+                        <div class="quote-strip-callout" style="margin: 24px 0 0 0; background: rgba(0, 0, 0, 0.45);">
+                            <blockquote>
+                                “Você fica com o WhatsApp do seu cliente, <span class="highlight-quote">o nome e o endereço no seu próprio bolso.</span>”
+                            </blockquote>
                         </div>
                     </div>
                 </div>
 
-                <!-- CARDS DE APOIO (MANTIDOS E REFINADOS) -->
-                <div class="thesis-cards-support-grid">
-                    <div class="thesis-support-card">
-                        <div class="thesis-support-badge badge-gray">
-                            <i data-lucide="target" class="badge-icon"></i>
-                            <span>Card 1: Rota de Aquisição (Marketplaces)</span>
+                <!-- CARD EXECUTIVO: WHITE GLOVE (PADRÃO ASSINATURA NAVY) -->
+                <div class="white-glove-executive-card">
+                    <div class="dev-profile-header">
+                        <img src="assets/jeff-avatar.webp" alt="Jefferson Motta" class="dev-avatar-img" width="76" height="76" loading="lazy">
+                        <div class="dev-profile-title-block">
+                            <span class="dev-badge-tag">SERVIÇO WHITE GLOVE • PARCERIA DIRETA</span>
+                            <h3 class="dev-author-name">Jefferson Motta</h3>
+                            <p class="dev-author-role">Fundador & Head de Projetos na <strong>Onira Labs</strong> • Caxias do Sul - Serra Gaúcha</p>
                         </div>
-                        <div class="thesis-support-body">
-                            <div class="support-field">
-                                <span class="support-label">Função:</span>
-                                <p class="support-val">Atrair pessoas que nunca ouviram falar da sua comida.</p>
+                    </div>
+
+                    <blockquote class="white-glove-quote">
+                        “Você fala direto comigo, você não mexe em plataforma alguma. Eu entrego o canal próprio rodando redondo na mão do teu time.”
+                    </blockquote>
+
+                    <div class="white-glove-card-footer">
+                        <div class="white-glove-pill">
+                            <i data-lucide="shield-check"></i>
+                            <span>Zero plataforma para configurar • Implantação 100% conduzida por nós</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAINEL COMPARATIVO UNIFICADO: O EQUILÍBRIO DOS DOIS CANAIS (BACKGROUND SÓLIDO PREENCHIDO) -->
+                <div class="unified-matrix-card">
+                    <div class="matrix-grid">
+                        <!-- Coluna 1: Canal de Aquisição (Marketplace) -->
+                        <div class="matrix-col matrix-col-rental">
+                            <div class="matrix-head">
+                                <div class="matrix-badge-wrap">
+                                    <span class="matrix-badge badge-danger">1. Canal de Aquisição</span>
+                                    <span class="matrix-source">Marketplaces / Apps de Entrega</span>
+                                </div>
+                                <div class="matrix-stat-pill stat-danger">
+                                    <span class="stat-num">23% a 28%</span>
+                                    <span class="stat-label">Taxa por Pedido</span>
+                                </div>
                             </div>
-                            <div class="support-field">
-                                <span class="support-label">Regra de ouro:</span>
-                                <p class="support-val">Use para ser descoberto. Pagar 23% a 28% no primeiro pedido é um Custo de Aquisição (CAC) aceitável de marketing.</p>
+
+                            <div class="matrix-flow-strip flow-danger">
+                                <span class="flow-pill">Descoberta</span>
+                                <i data-lucide="arrow-right"></i>
+                                <span class="flow-pill">1º Pedido</span>
+                                <i data-lucide="arrow-right"></i>
+                                <span class="flow-pill flow-pill-alert">CAC Pago</span>
                             </div>
-                            <div class="support-field alert-box-danger">
-                                <span class="support-label text-danger">O erro fatal:</span>
-                                <p class="support-val">Continuar pagando essa mesma comissão todas as semanas para o cliente que já tem o seu ímã na geladeira e ama sua cozinha.</p>
+
+                            <div class="matrix-features-list">
+                                <div class="matrix-feature-item">
+                                    <span class="feat-icon text-danger">⚠️</span>
+                                    <div class="feat-text">
+                                        <strong>Função:</strong> Ser descoberto por quem nunca ouviu falar da sua casa.
+                                    </div>
+                                </div>
+                                <div class="matrix-feature-item">
+                                    <span class="feat-icon text-danger">⚠️</span>
+                                    <div class="feat-text">
+                                        <strong>Base de Clientes:</strong> Retida no app (você não tem WhatsApp ou histórico).
+                                    </div>
+                                </div>
+                                <div class="matrix-feature-item">
+                                    <span class="feat-icon text-danger">⚠️</span>
+                                    <div class="feat-text">
+                                        <strong>O Erro Fatal:</strong> Pagar comissão cheia toda semana pelo mesmo cliente fiel.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Divisor VS Central -->
+                        <div class="matrix-vs-divider">
+                            <div class="matrix-vs-circle">VS</div>
+                        </div>
+
+                        <!-- Coluna 2: Canal de Retenção (Onira.fly) -->
+                        <div class="matrix-col matrix-col-sovereign">
+                            <div class="matrix-head">
+                                <div class="matrix-badge-wrap">
+                                    <span class="matrix-badge badge-success">2. Canal de Retenção</span>
+                                    <span class="matrix-source">Domínio Próprio (Onira.fly)</span>
+                                </div>
+                                <div class="matrix-stat-pill stat-success">
+                                    <span class="stat-num">0% Taxa</span>
+                                    <span class="stat-label">Margem 100% Sua</span>
+                                </div>
+                            </div>
+
+                            <div class="matrix-flow-strip flow-success">
+                                <span class="flow-pill">Link Direto</span>
+                                <i data-lucide="arrow-right"></i>
+                                <span class="flow-pill">Pedido em 30s</span>
+                                <i data-lucide="arrow-right"></i>
+                                <span class="flow-pill flow-pill-success">WhatsApp Toca</span>
+                            </div>
+
+                            <div class="matrix-features-list">
+                                <div class="matrix-feature-item">
+                                    <span class="feat-icon text-success">✅</span>
+                                    <div class="feat-text">
+                                        <strong>Função:</strong> Reter e fidelizar os 70% a 80% da sua carteira de recompra.
+                                    </div>
+                                </div>
+                                <div class="matrix-feature-item">
+                                    <span class="feat-icon text-success">✅</span>
+                                    <div class="feat-text">
+                                        <strong>Base de Clientes:</strong> Nome, WhatsApp e hábitos salvos direto no seu bolso.
+                                    </div>
+                                </div>
+                                <div class="matrix-feature-item">
+                                    <span class="feat-icon text-success">✅</span>
+                                    <div class="feat-text">
+                                        <strong>Lucro Preservado:</strong> 100% da margem limpa no caixa da sua empresa.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="thesis-support-card card-sovereign-highlight">
-                        <div class="thesis-support-badge badge-orange">
-                            <i data-lucide="shield-check" class="badge-icon"></i>
-                            <span>Card 2: Rota de Retenção (Onira.fly)</span>
+                    <!-- Faixa Operacional do Balcão (5 segundos) -->
+                    <div class="matrix-footer-strip">
+                        <div class="matrix-footer-badge">
+                            <i data-lucide="zap"></i>
+                            <span>NO BALCÃO</span>
                         </div>
-                        <div class="thesis-support-body">
-                            <div class="support-field">
-                                <span class="support-label">Função:</span>
-                                <p class="support-val">Reter e fidelizar os <strong>70% a 80% da sua carteira</strong> com lucro integral e menos atrito.</p>
-                            </div>
-                            <div class="support-field highlight-box-success">
-                                <span class="support-label text-success">Propriedade real:</span>
-                                <p class="support-val">O cliente entra direto pelo seu link e fala com você no WhatsApp. Ele tem menos atrito para pedir e mais benefício ao comprar direto. Esse relacionamento é o ativo mais valioso da sua operação para reengajar na semana seguinte sem pagar pedágio para intermediários.</p>
-                            </div>
-                        </div>
+                        <p class="matrix-footer-text">
+                            “O cliente abre o link direto, monta o pedido em 30 segundos com fotos nítidas e adicionais claros. A comanda cai pronta na frente do atendente no WhatsApp: itens estruturados, taxa de entrega somada, troco e endereço completo. Seu atendente só digita <strong>'Confirmado!' em 5 segundos</strong>.”
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ==========================================
-             SEÇÃO 3: NARRATIVA DISTRIBUÍDA NO SCROLL (PENSAMENTO INTRUSIVO VS. ALÍVIO REAL)
-        =========================================== -->
-        <section class="contrast-narrative-section" id="contrastes">
-            <div class="section-container">
-                <div class="section-header text-center">
-                    <div class="eyebrow-tag">A REALIDADE NO CHÃO DA COZINHA</div>
-                    <h2 class="section-title">O Pensamento Intrusivo <span class="text-orange">vs. O Alívio Real</span></h2>
-                    <p class="section-description">
-                        Em vez de teorias, veja como a fricção operacional afeta a rotina do seu balcão na prática.
-                    </p>
-                </div>
-
-                <div class="contrast-blocks-stack">
-                    <!-- Bloco de Contraste 1: O Pico da Sexta-feira -->
-                    <div class="contrast-block-card">
-                        <div class="contrast-block-header">
-                            <span class="contrast-block-tag">CENÁRIO 01</span>
-                            <h3 class="contrast-block-title">O Pico da Sexta-feira</h3>
-                        </div>
-                        <div class="contrast-split-grid">
-                            <!-- O Incômodo -->
-                            <div class="contrast-side contrast-side-pain">
-                                <div class="contrast-badge-pain">
-                                    <i data-lucide="alert-circle" class="contrast-icon"></i>
-                                    <span>O Incômodo que você já conhece:</span>
-                                </div>
-                                <blockquote class="contrast-quote">
-                                    “Sexta-feira, 20h15. Oito áudios não ouvidos no WhatsApp, cliente perguntando 'tem cardápio?', atendente tentando decifrar o ponto da carne num papel de rascunho enquanto o motoboy cobra a comanda no balcão.”
-                                </blockquote>
-                            </div>
-                            <!-- O Alívio -->
-                            <div class="contrast-side contrast-side-relief">
-                                <div class="contrast-badge-relief">
-                                    <i data-lucide="check-circle-2" class="contrast-icon"></i>
-                                    <span>O Alívio Onira.fly:</span>
-                                </div>
-                                <blockquote class="contrast-quote">
-                                    “O cliente abre o link direto, monta o pedido em 30 segundos com fotos nítidas e adicionais claros. A comanda cai pronta na frente do atendente no WhatsApp: itens estruturados, taxa de entrega somada, troco e endereço completo. Seu atendente só digita 'Confirmado!' em 5 segundos.”
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bloco de Contraste 2: Para Trás do Balcão (Zero Mudança Operacional) -->
-                    <div class="contrast-block-card">
-                        <div class="contrast-block-header">
-                            <span class="contrast-block-tag">CENÁRIO 02</span>
-                            <h3 class="contrast-block-title">Para Trás do Balcão (Zero Mudança Operacional)</h3>
-                        </div>
-                        <div class="contrast-split-grid">
-                            <!-- O Incômodo -->
-                            <div class="contrast-side contrast-side-pain">
-                                <div class="contrast-badge-pain">
-                                    <i data-lucide="alert-circle" class="contrast-icon"></i>
-                                    <span>O Medo Operacional de Mudar:</span>
-                                </div>
-                                <blockquote class="contrast-quote">
-                                    “'Para ter canal próprio vou ter que retreinar meus cozinheiros, mudar a rotina da expedição, instalar telas na cozinha e complicar a chamada de motoboys.'”
-                                </blockquote>
-                            </div>
-                            <!-- O Alívio -->
-                            <div class="contrast-side contrast-side-relief">
-                                <div class="contrast-badge-relief">
-                                    <i data-lucide="check-circle-2" class="contrast-icon"></i>
-                                    <span>A Realidade Sem Fricção do Onira.fly:</span>
-                                </div>
-                                <blockquote class="contrast-quote">
-                                    “Com o Onira.fly, você não muda absolutamente NADA para trás do balcão. O preparo, as comandas e a expedição seguem o mesmo fluxo que sua equipe já domina. E na hora do despacho: seja com motoboy próprio, grupo de WhatsApp dos entregadores ou despacho em app de entrega, a comanda já está pronta num copia e cola instantâneo com endereço, taxa e itens prontos para mandar em 3 segundos.”
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bloco de Contraste 3: Tecnologia Invisível & Serviço White Glove -->
-                    <div class="contrast-block-card">
-                        <div class="contrast-block-header">
-                            <span class="contrast-block-tag">CENÁRIO 03</span>
-                            <h3 class="contrast-block-title">Tecnologia Invisível & Serviço White Glove (Sem Ilusões de SaaS)</h3>
-                        </div>
-                        <div class="contrast-split-grid">
-                            <!-- O Incômodo -->
-                            <div class="contrast-side contrast-side-pain">
-                                <div class="contrast-badge-pain">
-                                    <i data-lucide="alert-circle" class="contrast-icon"></i>
-                                    <span>O Incômodo do SaaS de Prateleira:</span>
-                                </div>
-                                <blockquote class="contrast-quote">
-                                    “'Contrate nosso SaaS milagroso que substitui tudo!' — você recebe um painel vazio para quebrar a cabeça cadastrando dezenas de itens sozinho, configurando DNS, aprendendo três telas novas e dependendo de robô no suporte.”
-                                </blockquote>
-                            </div>
-                            <!-- O Alívio -->
-                            <div class="contrast-side contrast-side-relief">
-                                <div class="contrast-badge-relief">
-                                    <i data-lucide="check-circle-2" class="contrast-icon"></i>
-                                    <span>A Entrega White Glove Onira.fly:</span>
-                                </div>
-                                <blockquote class="contrast-quote">
-                                    “Nós não somos uma plataforma impessoal de prateleira. Levamos o produto pronto na sua mão: conduzimos o projeto, desenhamos a identidade exclusiva da sua casa, cadastramos o cardápio, configuramos o servidor no seu domínio oficial e entregamos tudo rodando. E se você já usa ERP/PDV, a atendente não perde 15 minutos decifrando áudios: bate o olho na comanda limpa e lança no seu sistema em 20 segundos.”
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==========================================
-             SEÇÃO 4: SERVIÇOS & UPSELL (ACELERANDO O CANAL)
+             SEÇÃO 3: SERVIÇOS & UPSELL (ACELERANDO O CANAL)
         =========================================== -->
         <section class="services-upsell-section" id="servicos">
             <div class="section-container">
@@ -649,6 +556,11 @@
                             <span class="service-pill">TRÁFEGO & DEMANDA</span>
                         </div>
                         <h3 class="service-card-title">Aceleração de Demanda (Google Meu Negócio + Google Ads)</h3>
+                        <div class="service-quote-box">
+                            <p>
+                                “Plus: nosso time é fera em Google Ads e Google Meu Negócio. Se você quiser acelerar as vendas diretas desde o primeiro dia, nós estruturamos a captação local sob medida para a sua região.”
+                            </p>
+                        </div>
                         <p class="service-card-intro">
                             O canal próprio só fatura se as pessoas chegarem até ele. Nós cuidamos do tráfego para a sua equipe não ter trabalho:
                         </p>
@@ -1075,8 +987,7 @@
             <div class="footer-col footer-col-links">
                 <h4 class="footer-col-title">Navegação Rápida</h4>
                 <ul class="footer-menu">
-                    <li><a href="#tese">A Tese das Duas Rotas</a></li>
-                    <li><a href="#contrastes">Pensamento vs. Alívio</a></li>
+                    <li><a href="#tese">Estratégia dos Dois Canais</a></li>
                     <li><a href="#servicos">Serviços & Upsell</a></li>
                     <li><a href="#cases">Casos Reais & Demonstrações</a></li>
                     <li><a href="#simulador">Benchmark & Simulador</a></li>

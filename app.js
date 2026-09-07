@@ -66,7 +66,7 @@ let currentCaseKey = 'montecristo';
 
 // Inicialização após carregamento do DOM
 document.addEventListener('DOMContentLoaded', () => {
-    initHeroNicheSwitcher();
+    initHeroTicker();
     initCaseTabs();
     initRoiSimulator();
     initSmoothScroll();
@@ -231,36 +231,40 @@ function initSmoothScroll() {
 }
 
 /* ==========================================================================
-   HERO CASE SWITCHER — INTERFACE REAL DESENHADA & ANONIMIZADA
+   HERO TICKER AUTOMÁTICO — ALTERNA MODELOS SUAVEMENTE
    ========================================================================== */
 
-function initHeroNicheSwitcher() {
-    const pills = document.querySelectorAll('.hero-niche-pill');
+function initHeroTicker() {
     const urlEl = document.getElementById('hero-browser-url');
+    const badgeEl = document.getElementById('hero-ticker-badge');
     const imgEl = document.getElementById('hero-phone-case-img');
     const viewportEl = document.getElementById('hero-phone-scroll-viewport');
 
-    pills.forEach(pill => {
-        pill.addEventListener('click', () => {
-            const nicheKey = pill.getAttribute('data-niche');
-            const data = SHOWCASE_CASES[nicheKey];
-            if (!data) return;
+    const casesList = [
+        { key: 'montecristo', domain: 'bistrobebidasnobres.com.br', badge: '☕ Bistrô • ⚡ 0.38s', img: 'assets/screenshots/montecristo_mobile.jpg' },
+        { key: 'baitakao', domain: 'hamburgueriaserra.com.br', badge: '🍔 Burger • ⚡ 0.35s', img: 'assets/screenshots/baitakao_mobile.jpg' },
+        { key: 'panazzolo', domain: 'casadopastelforneria.com.br', badge: '🍕 Forneria • ⚡ 0.39s', img: 'assets/screenshots/panazzolo_mobile.jpg' },
+        { key: 'fafa', domain: 'ateliedocescontemporaneo.com.br', badge: '🍣 Sushi • ⚡ 0.36s', img: 'assets/screenshots/fafa_mobile.jpg' },
+        { key: 'claem', domain: 'patisseriebrunchartesanal.com.br', badge: '🥐 Pâtisserie • ⚡ 0.37s', img: 'assets/screenshots/claem_mobile.jpg' }
+    ];
 
-            pills.forEach(p => {
-                p.classList.remove('active');
-                p.setAttribute('aria-selected', 'false');
-            });
-            pill.classList.add('active');
-            pill.setAttribute('aria-selected', 'true');
+    let currentIdx = 0;
+    if (!imgEl) return;
 
-            if (urlEl) urlEl.textContent = data.domain;
-            if (imgEl) {
-                imgEl.src = data.screenshotMobile;
-                imgEl.alt = `Canal Próprio - ${data.title}`;
-            }
-            if (viewportEl) {
-                viewportEl.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        });
-    });
+    setInterval(() => {
+        currentIdx = (currentIdx + 1) % casesList.length;
+        const item = casesList[currentIdx];
+
+        imgEl.style.opacity = '0.35';
+        imgEl.style.transition = 'opacity 0.35s ease';
+
+        setTimeout(() => {
+            imgEl.src = item.img;
+            imgEl.alt = `Canal Próprio - ${item.badge}`;
+            if (urlEl) urlEl.textContent = item.domain;
+            if (badgeEl) badgeEl.textContent = item.badge;
+            if (viewportEl) viewportEl.scrollTop = 0;
+            imgEl.style.opacity = '1';
+        }, 350);
+    }, 3200);
 }
