@@ -4652,77 +4652,69 @@ img, svg {
 }
 
 /* ==========================================================================
-   ABERTURA DA SEÇÃO 2: SHADER ATMOSFÉRICO & ESPAÇAMENTO EQUIDISTANTE
-   Simbologia: Distância (Linha Topo -> Frase) == Distância (Frase -> Badge)
+   FAIXA DA TESE FULL-WIDTH EM BAIXO-RELEVO (INNER SHADOW & SEM CONTORNO)
    ========================================================================== */
-.thesis-opening-statement {
+.thesis-fullwidth-recessed {
+    width: 100%;
+    position: relative;
+    border: none;
+    border-radius: 0;
+    /* Fundo escuro com iluminação âmbar difusa centrada */
+    background: 
+        radial-gradient(ellipse 70% 65% at 50% 50%, rgba(255, 199, 0, 0.08) 0%, rgba(245, 158, 11, 0.02) 45%, transparent 75%),
+        linear-gradient(180deg, #050608 0%, #08090C 50%, #050608 100%);
+    /* Sombra interna profunda criando o efeito de baixo-relevo/fenda em relação ao restante da página */
+    box-shadow: 
+        inset 0 24px 36px -10px rgba(0, 0, 0, 0.95),
+        inset 0 -24px 36px -10px rgba(0, 0, 0, 0.95),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.025);
+    padding: clamp(52px, 6.5vw, 78px) 0;
+    margin: 0 0 clamp(48px, 6vw, 64px) 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.thesis-fullwidth-recessed .thesis-opening-statement {
     position: relative;
     text-align: center;
-    max-width: 1020px;
-    margin: clamp(40px, 5.5vw, 56px) auto;
-    padding: clamp(34px, 4.5vw, 46px) clamp(24px, 4vw, 50px);
-    box-sizing: border-box;
-    border-radius: 22px;
-    /* Shader atmosférico de alta fidelidade: luz âmbar difusa sobre superfície obsidiana */
-    background: 
-        radial-gradient(ellipse 70% 60% at 50% 50%, rgba(255, 199, 0, 0.09) 0%, rgba(245, 158, 11, 0.025) 45%, transparent 75%),
-        radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.04) 0%, transparent 60%),
-        linear-gradient(180deg, rgba(22, 26, 35, 0.65) 0%, rgba(12, 14, 19, 0.85) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 
-        0 24px 56px -12px rgba(0, 0, 0, 0.7),
-        0 0 42px rgba(255, 199, 0, 0.04),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    overflow: hidden;
-    z-index: 1;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 24px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
-/* Auréola de luz difusa em background do shader */
-.thesis-opening-statement::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
-    height: 80%;
-    background: radial-gradient(ellipse at center, rgba(255, 199, 0, 0.08) 0%, transparent 70%);
-    filter: blur(36px);
-    pointer-events: none;
-    z-index: 0;
+.thesis-fullwidth-recessed .thesis-opening-statement::before,
+.thesis-fullwidth-recessed .thesis-opening-statement::after {
+    display: none;
 }
 
-/* Filete luminoso de acabamento óptico no topo do card */
-.thesis-opening-statement::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 15%;
-    right: 15%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent 0%, rgba(255, 199, 0, 0.5) 50%, transparent 100%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.thesis-opening-text {
+.thesis-fullwidth-recessed .thesis-opening-text {
     position: relative;
     z-index: 2;
     font-family: var(--font-heading);
-    font-size: clamp(1.5rem, 3.2vw, 2.35rem);
+    font-size: clamp(1.6rem, 3.4vw, 2.45rem);
     font-weight: 800;
-    line-height: 1.3;
+    line-height: 1.32;
     letter-spacing: -0.025em;
     color: #FFFFFF;
     margin: 0;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
+    /* Leve e sutil sombra projetada sobre o fundo rebaixado */
+    text-shadow: 
+        0 4px 18px rgba(0, 0, 0, 0.95),
+        0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-.thesis-opening-text .text-orange {
+.thesis-fullwidth-recessed .thesis-opening-text .text-orange {
     color: var(--color-primary);
-    text-shadow: 0 0 28px rgba(255, 199, 0, 0.35);
+    text-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.95),
+        0 0 28px rgba(255, 199, 0, 0.4);
 }
 
 /* ==========================================================================
@@ -5273,9 +5265,13 @@ img, svg {
         padding: 24px 20px;
     }
     
-    .thesis-opening-statement {
-        margin: 36px auto;
-        padding: 28px 18px;
+    .thesis-fullwidth-recessed {
+        padding: 42px 0;
+        margin-bottom: 36px;
+    }
+    
+    .thesis-fullwidth-recessed .thesis-opening-statement {
+        padding: 0 16px;
     }
 }
 
