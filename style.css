@@ -3771,6 +3771,7 @@ img, svg {
     padding: 100px 0;
     background-color: var(--color-bg-base);
     position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .services-upsell-grid {
@@ -4654,28 +4655,20 @@ img, svg {
 }
 
 /* ==========================================================================
-   FAIXA DA TESE FULL-WIDTH EM BAIXO-RELEVO (INNER SHADOW EM CINZA & SUPERFÍCIE PERCEBIDA)
+   FAIXA DA TESE FULL-WIDTH EM BAIXO-RELEVO (INNER SHADOW & SEM CONTORNO)
    ========================================================================== */
 .thesis-fullwidth-recessed {
     width: 100%;
     position: relative;
     border: none;
     border-radius: 0;
-    /* Superfície grafite acetinada com iluminação âmbar difusa centrada */
-    background: 
-        radial-gradient(ellipse 75% 65% at 50% 50%, rgba(255, 199, 0, 0.05) 0%, rgba(245, 158, 11, 0.015) 45%, transparent 75%),
-        linear-gradient(180deg, #0C0F17 0%, #151926 50%, #0C0F17 100%);
-    /* Sombra interna em tons de cinza precisos (sem preto puro) e spread controlado */
+    /* Fundo escuro imersivo que afunda sutilmente o bloco */
+    background: radial-gradient(circle at 50% 50%, rgba(255, 199, 0, 0.04) 0%, rgba(0, 0, 0, 0.6) 100%), #0A0B0E;
+    /* Inner shadow para efeito de baixo relevo em relação ao restante da página */
     box-shadow: 
-        inset 0 1px 0 rgba(255, 255, 255, 0.12),
-        inset 0 -1px 0 rgba(255, 255, 255, 0.08),
-        inset 0 4px 8px -1px rgba(148, 163, 184, 0.18),
-        inset 0 -4px 8px -1px rgba(148, 163, 184, 0.18),
-        inset 0 12px 22px -4px rgba(71, 85, 105, 0.45),
-        inset 0 -12px 22px -4px rgba(71, 85, 105, 0.45),
-        inset 0 24px 32px -8px rgba(30, 41, 59, 0.65),
-        inset 0 -24px 32px -8px rgba(30, 41, 59, 0.65);
-    padding: clamp(52px, 6.5vw, 78px) 0;
+        inset 0 12px 24px -6px rgba(0, 0, 0, 0.95),
+        inset 0 -12px 24px -6px rgba(0, 0, 0, 0.95);
+    padding: clamp(52px, 6.5vw, 76px) 0;
     margin: 0 0 clamp(48px, 6vw, 64px) 0;
     box-sizing: border-box;
     overflow: hidden;
@@ -5347,17 +5340,61 @@ img, svg {
 }
 
 @media (max-width: 768px) {
+    /* Ajustes refinados de espaçamento e padding entre seções */
+    .thesis-section {
+        padding: 0 0 54px 0;
+    }
+
+    .showroom-section,
+    .simulator-section,
+    .services-upsell-section {
+        padding: 56px 0;
+    }
+
+    .final-cta-section {
+        padding: 72px 0;
+    }
+
+    .master-signature-section {
+        padding: 52px 0;
+    }
+
+    /* Hierarquia Tipográfica e Títulos */
+    .section-title {
+        font-size: clamp(1.75rem, 5vw, 2.15rem);
+        margin-bottom: 12px;
+    }
+
+    .section-description {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+    }
+
+    .eyebrow-tag {
+        font-size: 0.71875rem;
+        padding: 5px 12px;
+        margin-bottom: 14px;
+    }
+
+    /* Card Executivo Jefferson Motta */
     .white-glove-executive-card {
         padding: 24px 20px;
+        margin: 0 0 24px 0;
     }
     
+    /* Faixa de Abertura da Tese */
     .thesis-fullwidth-recessed {
-        padding: 42px 0;
-        margin-bottom: 36px;
+        padding: 40px 0;
+        margin-bottom: 32px;
     }
     
     .thesis-fullwidth-recessed .thesis-opening-statement {
         padding: 0 16px;
+    }
+
+    /* Ecossistema de 3 Canais */
+    .channels-ecosystem-card {
+        margin: 0 0 28px 0;
     }
 
     .ecosystem-channels-grid {
@@ -5370,12 +5407,93 @@ img, svg {
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
+        padding: 16px;
     }
 
     .ecosystem-convergence-bar {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+        padding: 16px;
+    }
+
+    /* Solução de Ponta a Ponta */
+    .services-upsell-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 32px;
+    }
+
+    .service-upsell-card {
+        padding: 26px 20px;
+        gap: 14px;
+    }
+
+    .service-card-title {
+        font-size: 1.15rem;
+    }
+
+    /* Simulador de Impacto & Momentos */
+    .moments-grid {
+        gap: 16px;
+        margin-bottom: 36px;
+    }
+
+    .simulator-card {
+        margin-top: 32px;
+        padding: 0;
+    }
+
+    .simulator-inputs-col,
+    .simulator-result-col {
+        padding: 22px 18px;
+    }
+
+    .sim-title {
+        font-size: 1.25rem;
+    }
+
+    /* Assinatura Master */
+    .dev-profile-card {
+        padding: 26px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-container {
+        padding: 0 14px;
+    }
+
+    .thesis-fullwidth-recessed {
+        padding: 34px 0;
+        margin-bottom: 24px;
+    }
+
+    .thesis-fullwidth-recessed .thesis-opening-text {
+        font-size: 1.35rem;
+        line-height: 1.28;
+    }
+
+    .channel-stat-badge .stat-main {
+        font-size: 1.25rem;
+    }
+
+    .flow-track-steps {
+        width: 100%;
+    }
+
+    .flow-step {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+        margin: 2px auto;
+    }
+
+    .final-cta-title {
+        font-size: 1.85rem;
     }
 }
 
