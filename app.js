@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroTicker();
     initCaseTabs();
     initRoiSimulator();
+    initMomentCards();
+    initEnxovalShowcase();
     initSmoothScroll();
     if (window.lucide) {
         lucide.createIcons();
@@ -267,4 +269,190 @@ function initHeroTicker() {
             imgEl.style.opacity = '1';
         }, 350);
     }, 3200);
+}
+
+/* ==========================================================================
+   CARDS DE ESTÁGIO DA OPERAÇÃO (SELEÇÃO INTERATIVA + SINCRONIA COM O SIMULADOR)
+   ========================================================================== */
+function initMomentCards() {
+    const momentCards = document.querySelectorAll('.compact-moment-card');
+    const revenueRange = document.getElementById('sim-revenue-range');
+    const migrationRange = document.getElementById('sim-migration-range');
+
+    if (!momentCards.length) return;
+
+    momentCards.forEach((card, index) => {
+        card.style.cursor = 'pointer';
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+
+        card.addEventListener('click', () => {
+            momentCards.forEach(c => c.classList.remove('compact-moment-active'));
+            card.classList.add('compact-moment-active');
+
+            if (revenueRange && migrationRange) {
+                if (index === 0) {
+                    // Pequena Operação: ~20k, 25%
+                    revenueRange.value = 20000;
+                    migrationRange.value = 25;
+                } else if (index === 1) {
+                    // Operação Média: ~50k, 35%
+                    revenueRange.value = 50000;
+                    migrationRange.value = 35;
+                } else if (index === 2) {
+                    // Operação Consolidada: ~100k, 50%
+                    revenueRange.value = 100000;
+                    migrationRange.value = 50;
+                }
+
+                // Dispara o evento de input para atualizar o simulador visualmente
+                revenueRange.dispatchEvent(new Event('input'));
+                migrationRange.dispatchEvent(new Event('input'));
+            }
+        });
+
+        // Suporte a teclado
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.click();
+            }
+        });
+    });
+}
+
+/* ==========================================================================
+   ENXOVAL VISUAL PRONTO (POST INSTAGRAM & CARROSSEL PORNFOOD 4K)
+   ========================================================================== */
+const ENXOVAL_DATA = {
+    pastelaria: {
+        avatar: '🥟',
+        username: 'suapastelaria.oficial',
+        site: 'suapastelaria.com.br',
+        headline: '“Agora você pede direto com a gente!”',
+        caption: ' Estamos no iFood e no nosso canal oficial direto! Arraste para o lado e garanta seu brinde especial pelo link da bio 👉',
+        pornfoodImg: 'assets/enxoval/pastel_morango_chocolate.jpg',
+        giftBadge: 'PRESENTE NO CANAL PRÓPRIO',
+        giftTitle: 'Pastel de Morango com Chocolate Belga',
+        giftDesc: 'Massa crocante morena, morangos frescos selecionados e cascata generosa de chocolate belga derretendo.'
+    },
+    hamburgueria: {
+        avatar: '🍔',
+        username: 'seuburger.artesanal',
+        site: 'seuburger.com.br',
+        headline: '“Seu burger preferido com brinde no canal direto!”',
+        caption: ' Estamos no iFood, Uber Eats e no canal oficial! Faça seu pedido direto pelo link da bio e ganhe Batatas Rústicas com Fondue de Cheddar 🍟🔥',
+        pornfoodImg: 'assets/enxoval/burger_cheddar_bacon.jpg',
+        giftBadge: 'PRESENTE EXCLUSIVO NO CANAL PRÓPRIO',
+        giftTitle: 'Double Smash Burger com Cheddar & Bacon',
+        giftDesc: 'Duplo smash com crosta crocante caramelizada, cheddar derretendo em profusão e tiras de bacon artesanal defumado.'
+    },
+    pizzaria: {
+        avatar: '🍕',
+        username: 'suapizzaria.forneria',
+        site: 'suapizzaria.com.br',
+        headline: '“Forno a lenha de verdade e presente no canal oficial!”',
+        caption: ' A clássica pizza da serra agora com pedidos diretos sem taxas de app! Peça pelo nosso site e ganhe uma sobremesa artesanal da casa 🍕🍷',
+        pornfoodImg: 'assets/enxoval/pizza_cheese_pull.jpg',
+        giftBadge: 'PRESENTE NO CANAL PRÓPRIO',
+        giftTitle: 'Pizza Napolitana Fior di Latte no Forno a Lenha',
+        giftDesc: 'Fermentação natural de 48h, molho de tomate San Marzano e queijo fior di latte puxando fios irresistíveis.'
+    }
+};
+
+function initEnxovalShowcase() {
+    let currentNiche = 'pastelaria';
+    let currentSlide = 1;
+
+    const tabs = document.querySelectorAll('.niche-tab');
+    const avatarEl = document.getElementById('enxoval-avatar');
+    const usernameEl = document.getElementById('enxoval-username');
+    const captionUsernameEl = document.getElementById('enxoval-caption-username');
+    const sitePillEl = document.getElementById('enxoval-site-pill');
+    const headlineEl = document.getElementById('enxoval-headline');
+    const captionTextEl = document.getElementById('enxoval-caption-text');
+
+    const pornfoodImgEl = document.getElementById('enxoval-pornfood-img');
+    const giftBadgeEl = document.getElementById('enxoval-gift-badge-text');
+    const giftTitleEl = document.getElementById('enxoval-gift-title');
+    const giftDescEl = document.getElementById('enxoval-gift-desc');
+
+    const slide1El = document.getElementById('enxoval-slide-1');
+    const slide2El = document.getElementById('enxoval-slide-2');
+    const prevBtn = document.getElementById('enxoval-prev-btn');
+    const nextBtn = document.getElementById('enxoval-next-btn');
+    const counterEl = document.getElementById('enxoval-counter');
+    const dots = document.querySelectorAll('.insta-dot');
+
+    function renderNiche(nicheKey) {
+        const data = ENXOVAL_DATA[nicheKey];
+        if (!data) return;
+
+        currentNiche = nicheKey;
+
+        if (avatarEl) avatarEl.textContent = data.avatar;
+        if (usernameEl) usernameEl.textContent = data.username;
+        if (captionUsernameEl) captionUsernameEl.textContent = data.username;
+        if (sitePillEl) sitePillEl.innerHTML = `<i data-lucide="star"></i> ${data.site}`;
+        if (headlineEl) headlineEl.textContent = data.headline;
+        if (captionTextEl) captionTextEl.textContent = data.caption;
+
+        if (pornfoodImgEl) {
+            pornfoodImgEl.src = data.pornfoodImg;
+            pornfoodImgEl.alt = `${data.giftTitle} - Fotografia Gastronômica 4K`;
+        }
+        if (giftBadgeEl) giftBadgeEl.textContent = data.giftBadge;
+        if (giftTitleEl) giftTitleEl.textContent = data.giftTitle;
+        if (giftDescEl) giftDescEl.textContent = data.giftDesc;
+
+        if (window.lucide) lucide.createIcons();
+    }
+
+    function setSlide(slideNum) {
+        currentSlide = slideNum;
+
+        if (slideNum === 1) {
+            if (slide1El) slide1El.classList.add('active');
+            if (slide2El) slide2El.classList.remove('active');
+            if (prevBtn) prevBtn.disabled = true;
+            if (nextBtn) nextBtn.disabled = false;
+            if (counterEl) counterEl.textContent = '1/2';
+            dots.forEach((dot, idx) => dot.classList.toggle('active', idx === 0));
+        } else {
+            if (slide1El) slide1El.classList.remove('active');
+            if (slide2El) slide2El.classList.add('active');
+            if (prevBtn) prevBtn.disabled = false;
+            if (nextBtn) nextBtn.disabled = true;
+            if (counterEl) counterEl.textContent = '2/2';
+            dots.forEach((dot, idx) => dot.classList.toggle('active', idx === 1));
+        }
+    }
+
+    // Tabs de Nicho
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const niche = tab.getAttribute('data-niche');
+            if (niche && ENXOVAL_DATA[niche]) {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                renderNiche(niche);
+            }
+        });
+    });
+
+    // Navegação de slides
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => setSlide(1));
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => setSlide(2));
+    }
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            const slideNum = parseInt(dot.getAttribute('data-slide'), 10) || 1;
+            setSlide(slideNum);
+        });
+    });
 }

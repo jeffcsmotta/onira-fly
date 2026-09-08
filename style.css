@@ -5142,6 +5142,611 @@ img, svg {
     color: var(--color-primary);
 }
 
+/* --------------------------------------------------------------------------
+   ENXOVAL VISUAL PRONTO (POST INSTAGRAM & CARROSSEL PORNFOOD 4K)
+   -------------------------------------------------------------------------- */
+.enxoval-showcase-block {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.enxoval-block-head {
+    margin-bottom: 24px;
+}
+
+.enxoval-block-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--color-primary);
+    background: rgba(255, 199, 0, 0.12);
+    border: 1px solid rgba(255, 199, 0, 0.25);
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 10px;
+}
+
+.enxoval-block-tag svg {
+    width: 14px;
+    height: 14px;
+}
+
+.enxoval-block-title {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0 0 8px 0;
+}
+
+.enxoval-block-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #A1A1AA;
+    max-width: 680px;
+    margin: 0;
+}
+
+/* Tabs de Nicho Gastronômico */
+.enxoval-niche-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.niche-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading);
+    font-size: 0.84375rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #D4D4D8;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.niche-tab:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 199, 0, 0.3);
+    color: #FFFFFF;
+}
+
+.niche-tab.active {
+    background: var(--color-primary);
+    color: #0A0A0A;
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 14px rgba(255, 199, 0, 0.25);
+}
+
+.niche-tab-emoji {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+/* Layout Split: Mockup do Instagram + Benefícios */
+.enxoval-post-container {
+    display: grid;
+    grid-template-columns: 410px 1fr;
+    gap: 28px;
+    align-items: center;
+}
+
+/* Mockup de Post do Instagram */
+.insta-post-frame {
+    background: #0E0F12;
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+.insta-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: #141518;
+}
+
+.insta-user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.insta-avatar-ring {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.insta-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #18181B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.insta-user-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.insta-username-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.insta-username {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.insta-verified {
+    width: 14px;
+    height: 14px;
+    color: #38BDF8;
+    fill: #38BDF8;
+}
+
+.insta-location {
+    font-size: 0.6875rem;
+    color: #A1A1AA;
+}
+
+.insta-more-btn {
+    color: #71717A;
+    cursor: pointer;
+}
+
+.insta-more-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Viewport do Carrossel */
+.insta-carousel-viewport {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #000000;
+    overflow: hidden;
+}
+
+.insta-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    transform: scale(0.97);
+}
+
+.insta-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    z-index: 2;
+}
+
+/* Slide 1: Anúncio Multi-Canal */
+.slide-announcement-card {
+    width: 100%;
+    height: 100%;
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: radial-gradient(circle at top right, rgba(255, 199, 0, 0.12) 0%, #111215 65%);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-sizing: border-box;
+}
+
+.slide-badge-top {
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 0.65625rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+    background: rgba(255, 199, 0, 0.14);
+    border: 1px solid rgba(255, 199, 0, 0.28);
+    padding: 3px 8px;
+    border-radius: var(--radius-pill);
+}
+
+.slide-announcement-headline {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #FFFFFF;
+    margin: 4px 0 0 0;
+}
+
+.slide-announcement-text {
+    font-size: 0.8125rem;
+    line-height: 1.45;
+    color: #D4D4D8;
+    margin: 0;
+}
+
+.slide-announcement-text strong {
+    color: var(--color-primary);
+}
+
+.slide-channels-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.slide-chan-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78125rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.slide-chan-pill.chan-ifood {
+    background: rgba(234, 29, 44, 0.12);
+    color: #FF5A5F;
+    border: 1px solid rgba(234, 29, 44, 0.25);
+}
+
+.slide-chan-pill.chan-uber {
+    background: rgba(6, 193, 103, 0.12);
+    color: #10B981;
+    border: 1px solid rgba(6, 193, 103, 0.25);
+}
+
+.slide-chan-pill.chan-main {
+    background: var(--color-primary);
+    color: #0A0A0A;
+    font-weight: 800;
+    box-shadow: 0 4px 12px rgba(255, 199, 0, 0.25);
+}
+
+.slide-chan-pill svg {
+    width: 14px;
+    height: 14px;
+}
+
+.slide-swipe-prompt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.71875rem;
+    font-weight: 600;
+    color: #A1A1AA;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.slide-swipe-prompt svg {
+    width: 14px;
+    height: 14px;
+    color: var(--color-primary);
+    animation: bounceRight 1.5s infinite;
+}
+
+@keyframes bounceRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+/* Slide 2: Foto Pornfood 4K */
+.slide-pornfood-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-pornfood-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.slide-pornfood-wrapper:hover .slide-pornfood-img {
+    transform: scale(1.04);
+}
+
+.slide-pornfood-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 34px 16px 14px 16px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.88) 45%, #000000 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pornfood-gift-badge {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 800;
+    color: #0A0A0A;
+    background: var(--color-primary);
+    padding: 2px 8px;
+    border-radius: var(--radius-pill);
+    letter-spacing: 0.04em;
+}
+
+.pornfood-gift-badge svg {
+    width: 12px;
+    height: 12px;
+}
+
+.pornfood-gift-title {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    margin: 2px 0 0 0;
+    line-height: 1.2;
+}
+
+.pornfood-gift-desc {
+    font-size: 0.71875rem;
+    line-height: 1.35;
+    color: #D4D4D8;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pornfood-cta-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-top: 4px;
+}
+
+.pornfood-btn-arrow {
+    color: var(--color-primary);
+    font-weight: 900;
+}
+
+/* Controles do Carrossel */
+.insta-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(4px);
+}
+
+.insta-nav-btn:hover:not(:disabled) {
+    background: rgba(0, 0, 0, 0.85);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.insta-nav-btn:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+}
+
+.insta-nav-btn.nav-prev {
+    left: 8px;
+}
+
+.insta-nav-btn.nav-next {
+    right: 8px;
+}
+
+.insta-nav-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.insta-counter-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #FFFFFF;
+    font-family: var(--font-mono);
+    font-size: 0.65625rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: var(--radius-pill);
+    z-index: 10;
+    backdrop-filter: blur(4px);
+}
+
+/* Dots e Barra de Ações */
+.insta-dots-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 0 4px 0;
+}
+
+.insta-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.insta-dot.active {
+    background: #38BDF8;
+    transform: scale(1.25);
+}
+
+.insta-actions-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 14px 8px 14px;
+}
+
+.insta-actions-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.action-icon {
+    width: 20px;
+    height: 20px;
+    color: #E4E4E7;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.action-icon:hover {
+    transform: scale(1.15);
+}
+
+.action-icon.liked {
+    color: #EF4444;
+    fill: #EF4444;
+}
+
+.insta-caption-box {
+    padding: 0 14px 14px 14px;
+    font-size: 0.78125rem;
+    line-height: 1.4;
+    color: #D4D4D8;
+}
+
+.insta-caption-box strong {
+    color: #FFFFFF;
+}
+
+/* Lista Lateral de Vantagens do Enxoval */
+.enxoval-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.enxoval-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 14px 16px;
+    transition: var(--transition-smooth);
+}
+
+.enxoval-feature-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 199, 0, 0.2);
+    transform: translateX(4px);
+}
+
+.feat-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(255, 199, 0, 0.12);
+    border: 1px solid rgba(255, 199, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.feat-icon-box svg {
+    width: 18px;
+    height: 18px;
+}
+
+.feat-info strong {
+    display: block;
+    font-size: 0.90625rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 2px;
+}
+
+.feat-info p {
+    font-size: 0.78125rem;
+    line-height: 1.45;
+    color: #A1A1AA;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .enxoval-post-container {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+}
+
 /* ==========================================================================
    O CAMINHO DA RENTABILIDADE (FLUXO PARALELO & CONVERGÊNCIA)
    ========================================================================== */
@@ -5378,10 +5983,76 @@ img, svg {
     transform: translateY(-2px);
 }
 
-.compact-moment-active {
-    background: linear-gradient(180deg, #1A1A1E 0%, #141416 100%);
-    border: 1.5px solid rgba(255, 199, 0, 0.45);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+/* Card Selecionado (Operação Média - Mais Frequente): Amarelo Sólido com Alto Contraste UX/UI */
+.compact-moment-card.compact-moment-active {
+    background: #FFC700;
+    border: 2px solid #FFC700;
+    box-shadow: 0 16px 36px rgba(255, 199, 0, 0.28), 0 4px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+    color: #0A0A0A;
+}
+
+.compact-moment-card.compact-moment-active:hover {
+    border-color: #FFD43A;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 44px rgba(255, 199, 0, 0.36), 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+.compact-moment-card.compact-moment-active .compact-featured-pill {
+    background: #0A0A0A;
+    color: #FFC700;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.compact-moment-card.compact-moment-active .compact-badge.badge-gold {
+    background: #0A0A0A;
+    color: #FFFFFF;
+    border: 1px solid #0A0A0A;
+}
+
+.compact-moment-card.compact-moment-active .compact-revenue.revenue-gold {
+    color: #0A0A0A;
+    font-weight: 700;
+}
+
+.compact-moment-card.compact-moment-active .compact-title {
+    color: #0A0A0A;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+}
+
+.compact-moment-card.compact-moment-active .compact-savings-box {
+    background: #0A0A0A;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+.compact-moment-card.compact-moment-active .compact-savings-label {
+    color: #A1A1AA;
+}
+
+.compact-moment-card.compact-moment-active .compact-savings-val,
+.compact-moment-card.compact-moment-active .compact-savings-val.text-orange {
+    color: #FFC700 !important;
+}
+
+.compact-moment-card.compact-moment-active .compact-savings-val small {
+    color: #E4E4E7;
+}
+
+.compact-moment-card.compact-moment-active .compact-savings-sub {
+    color: #D4D4D8;
+}
+
+.compact-moment-card.compact-moment-active .compact-benefit {
+    color: #0A0A0A;
+    font-weight: 600;
+}
+
+.compact-moment-card.compact-moment-active .compact-benefit svg {
+    color: #0A0A0A;
+    stroke-width: 2.6;
 }
 
 .compact-featured-pill {
@@ -5826,21 +6497,23 @@ img, svg {
     transform: translateY(-2px);
 }
 
-/* Accordion de Detalhes do Upsell */
+/* Accordion de Detalhes do Upsell (Tema Roxo/Lilás de Aceleração de Demanda) */
 .upsell-accordion-wrapper {
     margin-top: 36px;
 }
 
 .upsell-details-accordion {
-    background: #111215;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.06) 0%, #111215 100%);
+    border: 1.5px solid rgba(168, 85, 247, 0.38);
     border-radius: var(--radius-md);
     overflow: hidden;
     transition: var(--transition-smooth);
+    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.08);
 }
 
 .upsell-details-accordion[open] {
-    border-color: rgba(255, 199, 0, 0.3);
+    border-color: rgba(168, 85, 247, 0.65);
+    box-shadow: 0 8px 32px rgba(168, 85, 247, 0.2);
 }
 
 .upsell-accordion-trigger {
@@ -5851,8 +6524,8 @@ img, svg {
     justify-content: space-between;
     gap: 16px;
     user-select: none;
-    background: rgba(255, 255, 255, 0.02);
-    transition: background 0.2s;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.14) 0%, rgba(20, 11, 28, 0.75) 100%);
+    transition: background 0.25s ease, border-color 0.25s ease;
     list-style: none;
 }
 
@@ -5861,35 +6534,36 @@ img, svg {
 }
 
 .upsell-accordion-trigger:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.24) 0%, rgba(30, 15, 42, 0.9) 100%);
 }
 
 .trigger-label-group {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: #F4F4F5;
+    gap: 12px;
+    color: #F5EEFD;
     font-weight: 700;
-    font-size: 0.90625rem;
+    font-size: 0.9375rem;
 }
 
 .trigger-icon {
-    width: 20px;
-    height: 20px;
-    color: var(--color-primary);
+    width: 22px;
+    height: 22px;
+    color: #C084FC;
     flex-shrink: 0;
 }
 
 .trigger-chevron-badge {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(168, 85, 247, 0.22);
+    border: 1px solid rgba(168, 85, 247, 0.35);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #A1A1AA;
-    transition: transform 0.25s ease;
+    color: #E9D5FF;
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
     flex-shrink: 0;
 }
 
@@ -5900,13 +6574,15 @@ img, svg {
 
 .upsell-details-accordion[open] .trigger-chevron-badge {
     transform: rotate(180deg);
-    color: var(--color-primary);
-    background: rgba(255, 199, 0, 0.12);
+    color: #FFFFFF;
+    background: #A855F7;
+    border-color: #A855F7;
+    box-shadow: 0 2px 10px rgba(168, 85, 247, 0.4);
 }
 
 .upsell-accordion-content {
     padding: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 1px solid rgba(168, 85, 247, 0.2);
 }
 
 .services-upsell-grid {
