@@ -657,30 +657,63 @@
                                 Operação conceituada de cafeteria bistrô com grande volume de bebidas nobres e combos executivos. Eliminou o confisco de 23% em taxas sobre clientes recorrentes ao migrar encomendas para o canal próprio.
                             </p>
 
-                            <!-- Grid de Métricas XL -->
+                            <!-- Grid de Métricas com Memória de Cálculo Transparente -->
                             <div class="metrics-xl-grid">
                                 <div class="metric-xl-card">
                                     <span class="metric-xl-value text-orange" id="metric-orders">+290</span>
                                     <span class="metric-xl-label">pedidos mensais no canal</span>
-                                    <span class="metric-xl-sub">direto no domínio oficial</span>
+                                    <span class="metric-xl-sub">volume migrado de recompra</span>
+                                </div>
+
+                                <div class="metric-xl-card">
+                                    <span class="metric-xl-value" id="metric-ticket">R$ 85,00</span>
+                                    <span class="metric-xl-label">ticket médio por pedido</span>
+                                    <span class="metric-xl-sub">valor médio da comanda</span>
                                 </div>
 
                                 <div class="metric-xl-card">
                                     <span class="metric-xl-value text-amber" id="metric-savings">R$ 4.820</span>
                                     <span class="metric-xl-label">margem resgatada/mês</span>
-                                    <span class="metric-xl-sub">sem comissões de 23%</span>
+                                    <span class="metric-xl-sub">sem taxas de 23% do marketplace</span>
                                 </div>
 
                                 <div class="metric-xl-card">
                                     <span class="metric-xl-value" id="metric-speed">32s</span>
-                                    <span class="metric-xl-label">tempo médio de pedido</span>
-                                    <span class="metric-xl-sub">da escolha ao WhatsApp</span>
+                                    <span class="metric-xl-label">tempo de atendimento</span>
+                                    <span class="metric-xl-sub">pedido pronto no WhatsApp</span>
                                 </div>
+                            </div>
 
-                                <div class="metric-xl-card">
-                                    <span class="metric-xl-value" id="metric-ticket">R$ 85,00</span>
-                                    <span class="metric-xl-label">ticket médio consolidado</span>
-                                    <span class="metric-xl-sub">combos de alta margem</span>
+                            <!-- Memória de Cálculo / Relação Direta dos Indicadores (Print 3) -->
+                            <div class="case-calculation-bridge" id="case-calc-bridge">
+                                <div class="calc-bridge-header">
+                                    <i data-lucide="calculator"></i>
+                                    <span>COMO ESTES 4 INDICADORES SE RELACIONAM NA OPERAÇÃO:</span>
+                                </div>
+                                <div class="calc-bridge-formula">
+                                    <div class="calc-step">
+                                        <span class="calc-step-val text-orange" id="calc-step-orders">+290 pedidos</span>
+                                        <span class="calc-step-sub">Volume no canal</span>
+                                    </div>
+                                    <span class="calc-bridge-op">×</span>
+                                    <div class="calc-step">
+                                        <span class="calc-step-val" id="calc-step-ticket">R$ 85,00</span>
+                                        <span class="calc-step-sub">Ticket médio</span>
+                                    </div>
+                                    <span class="calc-bridge-op">=</span>
+                                    <div class="calc-step">
+                                        <span class="calc-step-val text-gold" id="calc-step-revenue">R$ 24.650</span>
+                                        <span class="calc-step-sub">Faturamento direto</span>
+                                    </div>
+                                    <span class="calc-bridge-arrow">➔</span>
+                                    <div class="calc-step calc-step-result">
+                                        <span class="calc-step-val text-emerald" id="calc-step-savings">R$ 4.820</span>
+                                        <span class="calc-step-sub">Sobra no caixa (taxa 23%)</span>
+                                    </div>
+                                </div>
+                                <div class="calc-bridge-rationale" id="calc-bridge-rationale">
+                                    <i data-lucide="zap"></i>
+                                    <span id="calc-rationale-text"><strong>Por que 32s de atendimento?</strong> O cliente monta o combo sozinho no cardápio online e despacha para o WhatsApp em 32 segundos. Sua equipe não perde 10 minutos digitando opções e a margem de 23% fica limpa na sua conta.</span>
                                 </div>
                             </div>
 
@@ -717,7 +750,8 @@
                     <!-- COLUNA ESQUERDA: PEQUENA, MÉDIA E OPERAÇÃO CONSOLIDADA -->
                     <div class="moments-col-left">
                         <!-- Card 1: Pequena Operação -->
-                        <div class="compact-moment-card">
+                        <div class="compact-moment-card" data-stage="small" role="button" tabindex="0" aria-pressed="false">
+                            <div class="compact-featured-pill">ESTÁGIO INICIAL</div>
                             <div class="compact-moment-top">
                                 <span class="compact-badge">ESTÁGIO INICIAL</span>
                                 <span class="compact-revenue">Faturamento ~R$ 20.000 / mês</span>
@@ -735,16 +769,16 @@
                         </div>
 
                         <!-- Card 2: Operação Média (Destaque) -->
-                        <div class="compact-moment-card compact-moment-active">
+                        <div class="compact-moment-card compact-moment-active" data-stage="medium" role="button" tabindex="0" aria-pressed="true">
                             <div class="compact-featured-pill">MAIS FREQUENTE</div>
                             <div class="compact-moment-top">
-                                <span class="compact-badge badge-gold">ESTÁGIO EM ESCALA</span>
-                                <span class="compact-revenue revenue-gold">Faturamento ~R$ 50.000 / mês</span>
+                                <span class="compact-badge">ESTÁGIO EM ESCALA</span>
+                                <span class="compact-revenue">Faturamento ~R$ 50.000 / mês</span>
                             </div>
                             <h3 class="compact-title">Operação Média</h3>
                             <div class="compact-savings-box">
                                 <span class="compact-savings-label">Sobra limpa no caixa:</span>
-                                <div class="compact-savings-val text-orange">+ R$ 3.450 a R$ 4.600 <small>/ mês</small></div>
+                                <div class="compact-savings-val">+ R$ 3.450 a R$ 4.600 <small>/ mês</small></div>
                                 <span class="compact-savings-sub">Migrando 30% a 40% da clientela habitual</span>
                             </div>
                             <div class="compact-benefit">
@@ -754,7 +788,8 @@
                         </div>
 
                         <!-- Card 3: Operação Consolidada -->
-                        <div class="compact-moment-card">
+                        <div class="compact-moment-card" data-stage="consolidated" role="button" tabindex="0" aria-pressed="false">
+                            <div class="compact-featured-pill">ALTA ESCALA</div>
                             <div class="compact-moment-top">
                                 <span class="compact-badge">ESTÁGIO CONSOLIDADO</span>
                                 <span class="compact-revenue">Faturamento R$ 100.000+ / mês</span>
@@ -932,7 +967,6 @@
                             <ul class="plan-features-list purple">
                                 <li><i data-lucide="check"></i> Otimização completa da ficha do Google Perfil de Empresas</li>
                                 <li><i data-lucide="check"></i> Ranqueamento para pratos e buscas gastronômicas locais</li>
-                                <li><i data-lucide="check"></i> Botão direto de pedido levando ao WhatsApp oficial</li>
                                 <li><i data-lucide="check"></i> Relatório mensal de visualizações e rotas traçadas</li>
                             </ul>
                         </div>
@@ -978,14 +1012,14 @@
                                     <div class="service-items-list">
                                         <div class="service-item">
                                             <div class="service-item-head">
-                                                <i data-lucide="map-pin" class="item-lucide text-orange"></i>
+                                                <i data-lucide="map-pin" class="item-lucide text-purple"></i>
                                                 <strong>Google Perfil de Empresas Otimizado:</strong>
                                             </div>
                                             <p>Quem pesquisa <em>"hambúrguer artesanal perto de mim"</em> ou <em>"encomenda de torta fina"</em> encontra o seu link oficial direto no topo da busca local, antes dos marketplaces.</p>
                                         </div>
                                         <div class="service-item">
                                             <div class="service-item-head">
-                                                <i data-lucide="crosshair" class="item-lucide text-orange"></i>
+                                                <i data-lucide="crosshair" class="item-lucide text-purple"></i>
                                                 <strong>Campanhas de Google Ads Locais:</strong>
                                             </div>
                                             <p>Anúncios focados no raio exato de entrega da sua cozinha. O clique leva para o Onira.fly sem intermediários.</p>
@@ -1010,14 +1044,14 @@
                                     <div class="service-items-list">
                                         <div class="service-item">
                                             <div class="service-item-head">
-                                                <i data-lucide="printer" class="item-lucide text-orange"></i>
+                                                <i data-lucide="printer" class="item-lucide text-purple"></i>
                                                 <strong>Comandas Formatadas para Impressão:</strong>
                                             </div>
                                             <p>Impressão limpa e rápida na cozinha ou visualização clara em tablet simples, sem complexidade de ERP caro.</p>
                                         </div>
                                         <div class="service-item">
                                             <div class="service-item-head">
-                                                <i data-lucide="check-check" class="item-lucide text-orange"></i>
+                                                <i data-lucide="check-check" class="item-lucide text-purple"></i>
                                                 <strong>Ajuste Presencial no Balcão:</strong>
                                             </div>
                                             <p>Configuramos a esteira no ritmo real da sua equipe para eliminar erros de expedição desde o primeiro pedido.</p>
@@ -1125,7 +1159,7 @@
             <div class="footer-col footer-col-links">
                 <h4 class="footer-col-title">Navegação Rápida</h4>
                 <ul class="footer-menu">
-                    <li><a href="#tese">Estratégia dos Dois Canais</a></li>
+                    <li><a href="#tese">Estratégia dos Canais</a></li>
                     <li><a href="#servicos">Serviços & Upsell</a></li>
                     <li><a href="#cases">Casos Reais & Demonstrações</a></li>
                     <li><a href="#simulador">Benchmark & Simulador</a></li>

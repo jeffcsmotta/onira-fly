@@ -14,6 +14,11 @@ const SHOWCASE_CASES = {
         savings: "R$ 4.820",
         speed: "32s",
         ticket: "R$ 85,00",
+        calcOrders: "+290 pedidos",
+        calcTicket: "R$ 85,00",
+        calcRevenue: "R$ 24.650",
+        calcSavings: "R$ 4.820",
+        calcRationale: "<strong>Por que 32s de atendimento?</strong> O cliente monta o combo de bistrô sozinho no cardápio online e despacha para o WhatsApp em 32 segundos. Sua equipe não perde 10 minutos digitando opções e a margem de 23% fica limpa na sua conta.",
         screenshotMobile: "assets/screenshots/montecristo_mobile.jpg"
     },
     baitakao: {
@@ -25,6 +30,11 @@ const SHOWCASE_CASES = {
         savings: "R$ 6.380",
         speed: "28s",
         ticket: "R$ 68,00",
+        calcOrders: "+450 pedidos",
+        calcTicket: "R$ 68,00",
+        calcRevenue: "R$ 30.600",
+        calcSavings: "R$ 6.380",
+        calcRationale: "<strong>Por que 28s de atendimento?</strong> Em noites de pico, 450 pedidos entram com comanda mastigada em 28s cada. 450 pedidos × R$ 68 = R$ 30.600 direto no caixa, economizando mais de R$ 6.300 em taxas de aplicativo.",
         screenshotMobile: "assets/screenshots/baitakao_mobile.jpg"
     },
     panazzolo: {
@@ -36,6 +46,11 @@ const SHOWCASE_CASES = {
         savings: "R$ 5.120",
         speed: "35s",
         ticket: "R$ 72,00",
+        calcOrders: "+380 pedidos",
+        calcTicket: "R$ 72,00",
+        calcRevenue: "R$ 27.360",
+        calcSavings: "R$ 5.120",
+        calcRationale: "<strong>Por que 35s de atendimento?</strong> As opções de borda recheada e sabores são marcadas no cardápio digital sem erro de anotação. 380 pedidos × R$ 72 = R$ 27.360 transacionados com R$ 5.120 de comissão preservada.",
         screenshotMobile: "assets/screenshots/panazzolo_mobile.jpg"
     },
     fafa: {
@@ -47,6 +62,11 @@ const SHOWCASE_CASES = {
         savings: "R$ 4.250",
         speed: "40s",
         ticket: "R$ 94,00",
+        calcOrders: "+240 pedidos",
+        calcTicket: "R$ 94,00",
+        calcRevenue: "R$ 22.560",
+        calcSavings: "R$ 4.250",
+        calcRationale: "<strong>Por que 40s de atendimento?</strong> Pratos nobres de sushi e sobremesas finas. Com 240 pedidos de ticket alto (R$ 94), a casa resgata R$ 4.250 que antes eram consumidos pelas taxas de aplicativo.",
         screenshotMobile: "assets/screenshots/fafa_mobile.jpg"
     },
     claem: {
@@ -58,6 +78,11 @@ const SHOWCASE_CASES = {
         savings: "R$ 4.960",
         speed: "25s",
         ticket: "R$ 58,00",
+        calcOrders: "+310 pedidos",
+        calcTicket: "R$ 58,00",
+        calcRevenue: "R$ 17.980",
+        calcSavings: "R$ 4.960",
+        calcRationale: "<strong>Por que 25s de atendimento?</strong> Fechamento instantâneo para doces e salgados rápidos. 310 pedidos habituais × R$ 58 = R$ 17.980 direto no canal próprio, devolvendo quase R$ 5.000 limpos ao fluxo da pastelaria.",
         screenshotMobile: "assets/screenshots/claem_mobile.jpg"
     }
 };
@@ -118,6 +143,13 @@ function renderCase(caseKey) {
     const speedEl = document.getElementById('metric-speed');
     const ticketEl = document.getElementById('metric-ticket');
 
+    // Elementos da Memória de Cálculo (Print 3)
+    const calcOrdersEl = document.getElementById('calc-step-orders');
+    const calcTicketEl = document.getElementById('calc-step-ticket');
+    const calcRevenueEl = document.getElementById('calc-step-revenue');
+    const calcSavingsEl = document.getElementById('calc-step-savings');
+    const calcRationaleEl = document.getElementById('calc-rationale-text');
+
     const phoneUrlEl = document.getElementById('phone-case-url');
     const deskUrlEl = document.getElementById('desktop-case-url');
 
@@ -131,6 +163,12 @@ function renderCase(caseKey) {
     if (speedEl) speedEl.textContent = data.speed;
     if (ticketEl) ticketEl.textContent = data.ticket;
 
+    if (calcOrdersEl) calcOrdersEl.textContent = data.calcOrders;
+    if (calcTicketEl) calcTicketEl.textContent = data.calcTicket;
+    if (calcRevenueEl) calcRevenueEl.textContent = data.calcRevenue;
+    if (calcSavingsEl) calcSavingsEl.textContent = data.calcSavings;
+    if (calcRationaleEl) calcRationaleEl.innerHTML = data.calcRationale;
+
     if (phoneUrlEl) phoneUrlEl.textContent = data.domain;
     if (deskUrlEl) deskUrlEl.textContent = `https://${data.domain}`;
 
@@ -142,6 +180,8 @@ function renderCase(caseKey) {
         const phoneViewport = document.getElementById('phone-case-scroll-viewport');
         if (phoneViewport) phoneViewport.scrollTop = 0;
     }
+
+    if (window.lucide) lucide.createIcons();
 }
 
 /**
