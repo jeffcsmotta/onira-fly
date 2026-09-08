@@ -29,7 +29,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css?v=3.3.0">
+    <link rel="stylesheet" href="style.css?v=2.2">
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -375,24 +375,33 @@
 
                                     <!-- Viewport do Carrossel (Slide 1: Comunicado Oficial | Slide 2: Pornfood 4K Irresistível) -->
                                     <div class="insta-carousel-viewport">
-                                        <!-- Slide 1: Anúncio Multi-Canal -->
+                                        <!-- Slide 1: Anúncio Multi-Canal com Foto do Mundo Real + Overlay Tipográfico -->
                                         <div class="insta-slide active" id="enxoval-slide-1">
-                                            <div class="slide-announcement-card">
-                                                <div class="slide-badge-top">CANAL OFICIAL DIRETO</div>
-                                                <h5 class="slide-announcement-headline" id="enxoval-headline">
-                                                    “Agora você pede direto com a gente!”
-                                                </h5>
-                                                <p class="slide-announcement-text">
-                                                    Continuamos no iFood e no Uber Eats para você nos encontrar, mas no nosso canal principal você ganha <strong>presente especial</strong> em todo pedido:
-                                                </p>
-                                                <div class="slide-channels-pills">
-                                                    <span class="slide-chan-pill chan-ifood"><i data-lucide="check"></i> iFood</span>
-                                                    <span class="slide-chan-pill chan-uber"><i data-lucide="check"></i> Uber Eats</span>
-                                                    <span class="slide-chan-pill chan-main" id="enxoval-site-pill"><i data-lucide="star"></i> suapastelaria.com.br</span>
-                                                </div>
-                                                <div class="slide-swipe-prompt">
-                                                    <span>Arraste para o lado e veja o presente de hoje</span>
-                                                    <i data-lucide="arrow-right"></i>
+                                            <div class="slide-real-bg-wrapper">
+                                                <img src="assets/enxoval/pastel_anuncio_real.jpg" 
+                                                     alt="Ambiente Gastronômico Real" 
+                                                     class="slide-real-bg-img" 
+                                                     id="enxoval-announcement-bg-img" 
+                                                     loading="lazy" />
+                                                <div class="slide-real-overlay">
+                                                    <div class="slide-announcement-glass">
+                                                        <div class="slide-badge-top">CANAL OFICIAL DIRETO</div>
+                                                        <h5 class="slide-announcement-headline" id="enxoval-headline">
+                                                            “Agora você pede direto com a gente!”
+                                                        </h5>
+                                                        <p class="slide-announcement-text">
+                                                            Continuamos no iFood e no Uber Eats para você nos encontrar, mas no nosso canal principal você ganha <strong>presente especial</strong> em todo pedido:
+                                                        </p>
+                                                        <div class="slide-channels-pills">
+                                                            <span class="slide-chan-pill chan-ifood"><i data-lucide="check"></i> iFood</span>
+                                                            <span class="slide-chan-pill chan-uber"><i data-lucide="check"></i> Uber Eats</span>
+                                                            <span class="slide-chan-pill chan-main" id="enxoval-site-pill"><i data-lucide="star"></i> suapastelaria.com.br</span>
+                                                        </div>
+                                                        <div class="slide-swipe-prompt">
+                                                            <span>Arraste para o lado e veja o presente de hoje</span>
+                                                            <i data-lucide="arrow-right"></i>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -657,63 +666,44 @@
                                 Operação conceituada de cafeteria bistrô com grande volume de bebidas nobres e combos executivos. Eliminou o confisco de 23% em taxas sobre clientes recorrentes ao migrar encomendas para o canal próprio.
                             </p>
 
-                            <!-- Grid de Métricas com Memória de Cálculo Transparente -->
-                            <div class="metrics-xl-grid">
-                                <div class="metric-xl-card">
-                                    <span class="metric-xl-value text-orange" id="metric-orders">+290</span>
-                                    <span class="metric-xl-label">pedidos mensais no canal</span>
-                                    <span class="metric-xl-sub">volume migrado de recompra</span>
+                            <!-- Pilares de Fluidez e Experiência do Pedido (Print 5: Foco na Experiência do Produto) -->
+                            <div class="showroom-experience-pillars">
+                                <div class="pillar-item">
+                                    <div class="pillar-icon"><i data-lucide="zap"></i></div>
+                                    <div class="pillar-content">
+                                        <strong>Abertura Imediata no Celular</strong>
+                                        <p>Carrega em 0.38s no navegador. Seu cliente não precisa baixar aplicativo na loja nem criar conta com senha.</p>
+                                    </div>
                                 </div>
-
-                                <div class="metric-xl-card">
-                                    <span class="metric-xl-value" id="metric-ticket">R$ 85,00</span>
-                                    <span class="metric-xl-label">ticket médio por pedido</span>
-                                    <span class="metric-xl-sub">valor médio da comanda</span>
+                                <div class="pillar-item">
+                                    <div class="pillar-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <div class="pillar-content">
+                                        <strong>Escolha e Fechamento em 30 Segundos</strong>
+                                        <p>Fotos que valorizam os pratos, seleção rápida de adicionais e endereço pré-preenchido. Menos cliques, zero atrito.</p>
+                                    </div>
                                 </div>
-
-                                <div class="metric-xl-card">
-                                    <span class="metric-xl-value text-amber" id="metric-savings">R$ 4.820</span>
-                                    <span class="metric-xl-label">margem resgatada/mês</span>
-                                    <span class="metric-xl-sub">sem taxas de 23% do marketplace</span>
-                                </div>
-
-                                <div class="metric-xl-card">
-                                    <span class="metric-xl-value" id="metric-speed">32s</span>
-                                    <span class="metric-xl-label">tempo de atendimento</span>
-                                    <span class="metric-xl-sub">pedido pronto no WhatsApp</span>
+                                <div class="pillar-item">
+                                    <div class="pillar-icon"><i data-lucide="message-square"></i></div>
+                                    <div class="pillar-content">
+                                        <strong>Comanda Limpa e Mastigada no WhatsApp</strong>
+                                        <p>O pedido entra pronto na esteira da sua cozinha. Sua equipe não perde 10 minutos digitando mensagens.</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Memória de Cálculo / Relação Direta dos Indicadores (Print 3) -->
-                            <div class="case-calculation-bridge" id="case-calc-bridge">
-                                <div class="calc-bridge-header">
-                                    <i data-lucide="calculator"></i>
-                                    <span>COMO ESTES 4 INDICADORES SE RELACIONAM NA OPERAÇÃO:</span>
+                            <!-- Destaques Rápidos da Operação -->
+                            <div class="showroom-quick-metrics">
+                                <div class="quick-metric-badge">
+                                    <span class="quick-metric-val text-orange" id="metric-speed">32s</span>
+                                    <span class="quick-metric-lbl">tempo médio de pedido</span>
                                 </div>
-                                <div class="calc-bridge-formula">
-                                    <div class="calc-step">
-                                        <span class="calc-step-val text-orange" id="calc-step-orders">+290 pedidos</span>
-                                        <span class="calc-step-sub">Volume no canal</span>
-                                    </div>
-                                    <span class="calc-bridge-op">×</span>
-                                    <div class="calc-step">
-                                        <span class="calc-step-val" id="calc-step-ticket">R$ 85,00</span>
-                                        <span class="calc-step-sub">Ticket médio</span>
-                                    </div>
-                                    <span class="calc-bridge-op">=</span>
-                                    <div class="calc-step">
-                                        <span class="calc-step-val text-gold" id="calc-step-revenue">R$ 24.650</span>
-                                        <span class="calc-step-sub">Faturamento direto</span>
-                                    </div>
-                                    <span class="calc-bridge-arrow">➔</span>
-                                    <div class="calc-step calc-step-result">
-                                        <span class="calc-step-val text-emerald" id="calc-step-savings">R$ 4.820</span>
-                                        <span class="calc-step-sub">Sobra no caixa (taxa 23%)</span>
-                                    </div>
+                                <div class="quick-metric-badge">
+                                    <span class="quick-metric-val text-emerald">0%</span>
+                                    <span class="quick-metric-lbl">taxa de marketplace</span>
                                 </div>
-                                <div class="calc-bridge-rationale" id="calc-bridge-rationale">
-                                    <i data-lucide="zap"></i>
-                                    <span id="calc-rationale-text"><strong>Por que 32s de atendimento?</strong> O cliente monta o combo sozinho no cardápio online e despacha para o WhatsApp em 32 segundos. Sua equipe não perde 10 minutos digitando opções e a margem de 23% fica limpa na sua conta.</span>
+                                <div class="quick-metric-badge">
+                                    <span class="quick-metric-val text-gold">100%</span>
+                                    <span class="quick-metric-lbl">da margem no seu caixa</span>
                                 </div>
                             </div>
 
@@ -753,8 +743,8 @@
                         <div class="compact-moment-card" data-stage="small" role="button" tabindex="0" aria-pressed="false">
                             <div class="compact-featured-pill">ESTÁGIO INICIAL</div>
                             <div class="compact-moment-top">
-                                <span class="compact-badge">ESTÁGIO INICIAL</span>
-                                <span class="compact-revenue">Faturamento ~R$ 20.000 / mês</span>
+                                <span class="compact-badge badge-gold">ESTÁGIO INICIAL</span>
+                                <span class="compact-revenue revenue-gold">Faturamento ~R$ 20.000 / mês</span>
                             </div>
                             <h3 class="compact-title">Pequena Operação</h3>
                             <div class="compact-savings-box">
@@ -772,8 +762,8 @@
                         <div class="compact-moment-card compact-moment-active" data-stage="medium" role="button" tabindex="0" aria-pressed="true">
                             <div class="compact-featured-pill">MAIS FREQUENTE</div>
                             <div class="compact-moment-top">
-                                <span class="compact-badge">ESTÁGIO EM ESCALA</span>
-                                <span class="compact-revenue">Faturamento ~R$ 50.000 / mês</span>
+                                <span class="compact-badge badge-gold">ESTÁGIO EM ESCALA</span>
+                                <span class="compact-revenue revenue-gold">Faturamento ~R$ 50.000 / mês</span>
                             </div>
                             <h3 class="compact-title">Operação Média</h3>
                             <div class="compact-savings-box">
@@ -791,8 +781,8 @@
                         <div class="compact-moment-card" data-stage="consolidated" role="button" tabindex="0" aria-pressed="false">
                             <div class="compact-featured-pill">ALTA ESCALA</div>
                             <div class="compact-moment-top">
-                                <span class="compact-badge">ESTÁGIO CONSOLIDADO</span>
-                                <span class="compact-revenue">Faturamento R$ 100.000+ / mês</span>
+                                <span class="compact-badge badge-gold">ESTÁGIO CONSOLIDADO</span>
+                                <span class="compact-revenue revenue-gold">Faturamento R$ 100.000+ / mês</span>
                             </div>
                             <h3 class="compact-title">Operação Consolidada</h3>
                             <div class="compact-savings-box">
@@ -811,10 +801,16 @@
                     <div class="simulator-col-right">
                         <div class="simulator-panel-card">
                             <div class="panel-card-head">
-                                <span class="panel-eyebrow">RETORNO LIMPO NO CAIXA</span>
-                                <h3 class="panel-title">Quanto retorna limpo migrando 30-40%</h3>
+                                <div class="sim-header-meta">
+                                    <span class="panel-eyebrow">RETORNO LIMPO NO CAIXA</span>
+                                    <div class="sim-scenario-badge" id="sim-scenario-badge">
+                                        <i data-lucide="sparkles"></i>
+                                        <span id="sim-scenario-name">Cenário: <strong>Operação Média (R$ 50k)</strong></span>
+                                    </div>
+                                </div>
+                                <h3 class="panel-title">Simule o Retorno Limpo da Sua Casa</h3>
                                 <p class="panel-desc">
-                                    A meta natural da casa é iniciar retendo 30% a 40% dos pedidos fiéis no primeiro trimestre e chegar naturalmente a <strong>70% a 80%</strong> com o canal próprio consolidado.
+                                    Veja quanto dinheiro vivo deixa de ser confiscado em taxas de marketplace e passa a sobrar líquido no seu caixa todo mês:
                                 </p>
                             </div>
 
@@ -869,11 +865,11 @@
 
                                 <div class="panel-calc-note">
                                     <i data-lucide="shield-check"></i>
-                                    <span>Cálculo transparente sobre a comissão padrão poupada a cada pedido de cliente fiel no canal próprio.</span>
+                                    <span>Base de cálculo: média de 23% de taxas de intermediação que retornam 100% limpas ao seu fluxo.</span>
                                 </div>
 
                                 <a href="https://wa.me/5554996862169?text=Ol%C3%A1%21+Simulei+minha+economia+no+Onira.fly+e+quero+solicitar+um+prot%C3%B3tipo+para+minha+loja."
-                                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block btn-lg">
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block btn-lg" id="sim-cta-whatsapp-btn">
                                     <span>Garantir Esta Margem no Meu Caixa ➔</span>
                                 </a>
                             </div>

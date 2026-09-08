@@ -2092,130 +2092,102 @@ img, svg {
 }
 
 /* --------------------------------------------------------------------------
-   MEMÓRIA DE CÁLCULO E RELAÇÃO DE INDICADORES DO SHOWROOM (PRINT 3)
+   PILARES DE EXPERIÊNCIA E CONVERSÃO DO SHOWROOM (PRINT 5: FOCO NO PRODUTO)
    -------------------------------------------------------------------------- */
-.case-calculation-bridge {
-    margin-top: -12px;
-    margin-bottom: 28px;
-    background: #0E0F12;
-    border: 1.5px solid rgba(255, 199, 0, 0.25);
-    border-radius: var(--radius-md);
-    padding: 18px 20px;
+.showroom-experience-pillars {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    margin: 20px 0 24px 0;
 }
 
-.calc-bridge-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    font-weight: 800;
-    color: var(--color-primary);
-    letter-spacing: 0.06em;
-}
-
-.calc-bridge-header svg {
-    width: 14px;
-    height: 14px;
-}
-
-.calc-bridge-formula {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    background: rgba(0, 0, 0, 0.55);
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.calc-step {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.calc-step-val {
-    font-family: var(--font-heading);
-    font-size: 1.05rem;
-    font-weight: 900;
-    color: #FFFFFF;
-    line-height: 1.15;
-}
-
-.calc-step-sub {
-    font-size: 0.6875rem;
-    color: #A1A1AA;
-}
-
-.calc-bridge-op {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #71717A;
-    padding: 0 4px;
-}
-
-.calc-bridge-arrow {
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: var(--color-primary);
-    padding: 0 4px;
-}
-
-.calc-step.calc-step-result {
-    background: rgba(16, 185, 129, 0.12);
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    padding: 6px 12px;
-    border-radius: 8px;
-}
-
-.calc-step.calc-step-result .calc-step-val {
-    color: #10B981;
-}
-
-.calc-step.calc-step-result .calc-step-sub {
-    color: #A7F3D0;
-    font-weight: 600;
-}
-
-.calc-bridge-rationale {
+.pillar-item {
     display: flex;
     align-items: flex-start;
-    gap: 8px;
-    font-size: 0.78125rem;
-    line-height: 1.45;
-    color: #D4D4D8;
+    gap: 12px;
     background: rgba(255, 255, 255, 0.02);
-    padding: 10px 12px;
-    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 12px 14px;
+    transition: var(--transition-smooth);
 }
 
-.calc-bridge-rationale svg {
-    width: 15px;
-    height: 15px;
+.pillar-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 199, 0, 0.2);
+    transform: translateX(3px);
+}
+
+.pillar-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(255, 199, 0, 0.12);
+    border: 1px solid rgba(255, 199, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--color-primary);
     flex-shrink: 0;
+}
+
+.pillar-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.pillar-content strong {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 2px;
+}
+
+.pillar-content p {
+    font-size: 0.78125rem;
+    line-height: 1.45;
+    color: #A1A1AA;
+    margin: 0;
+}
+
+/* Destaques Rápidos da Operação */
+.showroom-quick-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.quick-metric-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 10px 8px;
+}
+
+.quick-metric-val {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.quick-metric-lbl {
+    font-size: 0.65625rem;
+    font-weight: 600;
+    color: #A1A1AA;
     margin-top: 2px;
 }
 
-.calc-bridge-rationale strong {
-    color: #FFFFFF;
-}
-
 @media (max-width: 600px) {
-    .calc-bridge-formula {
-        flex-direction: column;
-        align-items: flex-start;
+    .showroom-quick-metrics {
+        grid-template-columns: 1fr;
         gap: 8px;
-    }
-    .calc-bridge-op, .calc-bridge-arrow {
-        display: none;
     }
 }
 
@@ -5362,30 +5334,32 @@ img, svg {
     line-height: 1;
 }
 
-/* Layout Split: Mockup do Instagram + Benefícios */
+/* Layout Split: Mockup do Instagram + Benefícios (Print 4: Mockup Ampliado e Realista) */
 .enxoval-post-container {
     display: grid;
-    grid-template-columns: 410px 1fr;
-    gap: 28px;
+    grid-template-columns: minmax(460px, 520px) 1fr;
+    gap: 36px;
     align-items: center;
 }
 
-/* Mockup de Post do Instagram */
+/* Mockup de Post do Instagram (Print 4: Aumentado e com Alta Presença) */
 .insta-post-frame {
     background: #0E0F12;
-    border: 1.5px solid rgba(255, 255, 255, 0.1);
-    border-radius: 18px;
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 199, 0, 0.08);
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 520px;
 }
 
 .insta-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 14px;
+    padding: 14px 16px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     background: #141518;
 }
@@ -5397,8 +5371,8 @@ img, svg {
 }
 
 .insta-avatar-ring {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     padding: 2px;
     background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
@@ -5415,7 +5389,7 @@ img, svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
 .insta-user-meta {
@@ -5431,7 +5405,7 @@ img, svg {
 }
 
 .insta-username {
-    font-size: 0.8125rem;
+    font-size: 0.84375rem;
     font-weight: 700;
     color: #FFFFFF;
 }
@@ -5444,7 +5418,7 @@ img, svg {
 }
 
 .insta-location {
-    font-size: 0.6875rem;
+    font-size: 0.71875rem;
     color: #A1A1AA;
 }
 
@@ -5483,17 +5457,48 @@ img, svg {
     z-index: 2;
 }
 
-/* Slide 1: Anúncio Multi-Canal */
-.slide-announcement-card {
+/* Slide 1: Foto do Mundo Real + Overlay de Anúncio (Print 4) */
+.slide-real-bg-wrapper {
+    position: relative;
     width: 100%;
     height: 100%;
-    padding: 24px 22px;
+    overflow: hidden;
+}
+
+.slide-real-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.68) contrast(1.05);
+    transition: transform 0.6s ease;
+}
+
+.slide-real-bg-wrapper:hover .slide-real-bg-img {
+    transform: scale(1.04);
+}
+
+.slide-real-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 16px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background: radial-gradient(circle at top right, rgba(255, 199, 0, 0.12) 0%, #111215 65%);
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    box-sizing: border-box;
+    justify-content: flex-end;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.45) 45%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.slide-announcement-glass {
+    background: rgba(14, 15, 18, 0.86);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 14px;
+    padding: 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
 }
 
 .slide-badge-top {
@@ -6113,48 +6118,59 @@ img, svg {
 
 /* Card Selecionado (Operação Média - Mais Frequente): Amarelo Sólido com Alto Contraste UX/UI */
 .compact-moment-card.compact-moment-active {
-    background: #FFC700;
-    border: 2px solid #FFC700;
-    box-shadow: 0 16px 36px rgba(255, 199, 0, 0.28), 0 4px 12px rgba(0, 0, 0, 0.4);
+    background: #FFC700 !important;
+    border: 2px solid #FFC700 !important;
+    box-shadow: 0 16px 36px rgba(255, 199, 0, 0.28), 0 4px 12px rgba(0, 0, 0, 0.4) !important;
     transform: translateY(-2px);
-    color: #0A0A0A;
+    color: #000000 !important;
 }
 
 .compact-moment-card.compact-moment-active:hover {
-    border-color: #FFD43A;
+    border-color: #FFD43A !important;
     transform: translateY(-4px);
-    box-shadow: 0 20px 44px rgba(255, 199, 0, 0.36), 0 6px 16px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 20px 44px rgba(255, 199, 0, 0.36), 0 6px 16px rgba(0, 0, 0, 0.45) !important;
 }
 
 .compact-moment-card.compact-moment-active .compact-featured-pill {
     display: block !important;
-    background: #0A0A0A !important;
+    background: #000000 !important;
     color: #FFC700 !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(0, 0, 0, 0.5) !important;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+    font-weight: 900 !important;
 }
 
-.compact-moment-card.compact-moment-active .compact-badge {
-    background: #0A0A0A !important;
+/* Badge interna: preto sólido com texto branco puro (Alto Contraste) */
+.compact-moment-card.compact-moment-active .compact-badge,
+.compact-moment-card.compact-moment-active .compact-badge.badge-gold,
+.compact-moment-card.compact-moment-active span.compact-badge {
+    background: #000000 !important;
     color: #FFFFFF !important;
-    border: 1px solid #0A0A0A !important;
+    border: 1px solid #000000 !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.05em !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
 }
 
-.compact-moment-card.compact-moment-active .compact-revenue {
-    color: #0A0A0A !important;
-    font-weight: 700 !important;
+/* Faturamento: preto puro em negrito de alta legibilidade */
+.compact-moment-card.compact-moment-active .compact-revenue,
+.compact-moment-card.compact-moment-active .compact-revenue.revenue-gold,
+.compact-moment-card.compact-moment-active span.compact-revenue {
+    color: #000000 !important;
+    font-weight: 900 !important;
+    font-size: 0.8125rem !important;
 }
 
 .compact-moment-card.compact-moment-active .compact-title {
-    color: #0A0A0A !important;
+    color: #000000 !important;
     font-weight: 900 !important;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.02em !important;
 }
 
 .compact-moment-card.compact-moment-active .compact-savings-box {
-    background: #0A0A0A !important;
-    border: 1px solid rgba(0, 0, 0, 0.35) !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22) !important;
+    background: #000000 !important;
+    border: 1px solid rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25) !important;
 }
 
 .compact-moment-card.compact-moment-active .compact-savings-label {
@@ -6164,6 +6180,7 @@ img, svg {
 .compact-moment-card.compact-moment-active .compact-savings-val,
 .compact-moment-card.compact-moment-active .compact-savings-val.text-orange {
     color: #FFC700 !important;
+    font-weight: 900 !important;
 }
 
 .compact-moment-card.compact-moment-active .compact-savings-val small {
@@ -6175,13 +6192,42 @@ img, svg {
 }
 
 .compact-moment-card.compact-moment-active .compact-benefit {
-    color: #0A0A0A !important;
-    font-weight: 600 !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
 }
 
 .compact-moment-card.compact-moment-active .compact-benefit svg {
-    color: #0A0A0A !important;
-    stroke-width: 2.6 !important;
+    color: #000000 !important;
+    stroke-width: 2.8 !important;
+}
+
+/* Meta e Badge de Cenário Sincronizado do Simulador */
+.sim-header-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.sim-scenario-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--color-primary);
+    background: rgba(255, 199, 0, 0.12);
+    border: 1px solid rgba(255, 199, 0, 0.25);
+    padding: 3px 8px;
+    border-radius: var(--radius-pill);
+    letter-spacing: 0.04em;
+}
+
+.sim-scenario-badge svg {
+    width: 12px;
+    height: 12px;
 }
 
 .compact-featured-pill {

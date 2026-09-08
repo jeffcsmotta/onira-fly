@@ -137,18 +137,7 @@ function renderCase(caseKey) {
     const domainTagEl = document.getElementById('case-domain-tag');
     const titleEl = document.getElementById('case-intel-title');
     const descEl = document.getElementById('case-intel-desc');
-
-    const ordersEl = document.getElementById('metric-orders');
-    const savingsEl = document.getElementById('metric-savings');
     const speedEl = document.getElementById('metric-speed');
-    const ticketEl = document.getElementById('metric-ticket');
-
-    // Elementos da Memória de Cálculo (Print 3)
-    const calcOrdersEl = document.getElementById('calc-step-orders');
-    const calcTicketEl = document.getElementById('calc-step-ticket');
-    const calcRevenueEl = document.getElementById('calc-step-revenue');
-    const calcSavingsEl = document.getElementById('calc-step-savings');
-    const calcRationaleEl = document.getElementById('calc-rationale-text');
 
     const phoneUrlEl = document.getElementById('phone-case-url');
     const deskUrlEl = document.getElementById('desktop-case-url');
@@ -157,17 +146,7 @@ function renderCase(caseKey) {
     if (domainTagEl) domainTagEl.textContent = data.domain;
     if (titleEl) titleEl.textContent = data.title;
     if (descEl) descEl.textContent = data.desc;
-
-    if (ordersEl) ordersEl.textContent = data.orders;
-    if (savingsEl) savingsEl.textContent = data.savings;
     if (speedEl) speedEl.textContent = data.speed;
-    if (ticketEl) ticketEl.textContent = data.ticket;
-
-    if (calcOrdersEl) calcOrdersEl.textContent = data.calcOrders;
-    if (calcTicketEl) calcTicketEl.textContent = data.calcTicket;
-    if (calcRevenueEl) calcRevenueEl.textContent = data.calcRevenue;
-    if (calcSavingsEl) calcSavingsEl.textContent = data.calcSavings;
-    if (calcRationaleEl) calcRationaleEl.innerHTML = data.calcRationale;
 
     if (phoneUrlEl) phoneUrlEl.textContent = data.domain;
     if (deskUrlEl) deskUrlEl.textContent = `https://${data.domain}`;
@@ -203,6 +182,9 @@ function initRoiSimulator() {
 
     const monthlyCalcEl = document.getElementById('result-monthly-calc');
     const annualCalcEl = document.getElementById('result-annual-calc');
+    const scenarioNameEl = document.getElementById('sim-scenario-name');
+    const ctaBtn = document.getElementById('sim-cta-whatsapp-btn');
+    const momentCards = document.querySelectorAll('.compact-moment-card');
 
     function calculate() {
         if (!revenueRange || !migrationRange) return;
@@ -230,6 +212,39 @@ function initRoiSimulator() {
 
         if (annualCalcEl) {
             annualCalcEl.textContent = formatCurrency(Math.round(annualSavings));
+        }
+
+        // Atualiza o indicador de cenário sincronizado
+        if (scenarioNameEl) {
+            if (revenue <= 25000) {
+                scenarioNameEl.innerHTML = 'Cenário: <strong>Pequena Operação (~R$ 20k)</strong>';
+            } else if (revenue >= 75000) {
+                scenarioNameEl.innerHTML = 'Cenário: <strong>Operação Consolidada (~R$ 100k)</strong>';
+            } else {
+                scenarioNameEl.innerHTML = 'Cenário: <strong>Operação Média (~R$ 50k)</strong>';
+            }
+        }
+
+        // Sincroniza o destaque visual dos cards da esquerda quando a régua é movida
+        if (momentCards.length === 3) {
+            let targetIdx = 1;
+            if (revenue <= 25000) targetIdx = 0;
+            else if (revenue >= 75000) targetIdx = 2;
+            else targetIdx = 1;
+
+            momentCards.forEach((c, idx) => {
+                const isActive = (idx === targetIdx);
+                c.classList.toggle('compact-moment-active', isActive);
+                c.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
+        }
+
+        // Atualiza a mensagem personalizada do WhatsApp no botão do simulador
+        if (ctaBtn) {
+            const formattedRev = formatCurrency(revenue);
+            const formattedSav = formatCurrency(Math.round(monthlySavings));
+            const msg = encodeURIComponent(`Olá Jefferson! Simulei meu delivery no Onira.fly com faturamento de ${formattedRev} e ${migrationPercent}% no canal próprio. Quero garantir os ${formattedSav}/mês de margem limpa no meu caixa!`);
+            ctaBtn.href = `https://wa.me/5554996862169?text=${msg}`;
         }
     }
 
@@ -371,6 +386,7 @@ const ENXOVAL_DATA = {
         site: 'suapastelaria.com.br',
         headline: '“Agora você pede direto com a gente!”',
         caption: ' Estamos no iFood e no nosso canal oficial direto! Arraste para o lado e garanta seu brinde especial pelo link da bio 👉',
+        announcementImg: 'assets/enxoval/pastel_anuncio_real.jpg',
         pornfoodImg: 'assets/enxoval/pastel_morango_chocolate.jpg',
         giftBadge: 'PRESENTE NO CANAL PRÓPRIO',
         giftTitle: 'Pastel de Morango com Chocolate Belga',
@@ -382,6 +398,7 @@ const ENXOVAL_DATA = {
         site: 'seuburger.com.br',
         headline: '“Seu burger preferido com brinde no canal direto!”',
         caption: ' Estamos no iFood, Uber Eats e no canal oficial! Faça seu pedido direto pelo link da bio e ganhe Batatas Rústicas com Fondue de Cheddar 🍟🔥',
+        announcementImg: 'assets/enxoval/burger_anuncio_real.jpg',
         pornfoodImg: 'assets/enxoval/burger_cheddar_bacon.jpg',
         giftBadge: 'PRESENTE EXCLUSIVO NO CANAL PRÓPRIO',
         giftTitle: 'Double Smash Burger com Cheddar & Bacon',
@@ -393,6 +410,7 @@ const ENXOVAL_DATA = {
         site: 'suapizzaria.com.br',
         headline: '“Forno a lenha de verdade e presente no canal oficial!”',
         caption: ' A clássica pizza da serra agora com pedidos diretos sem taxas de app! Peça pelo nosso site e ganhe uma sobremesa artesanal da casa 🍕🍷',
+        announcementImg: 'assets/enxoval/pizza_anuncio_real.jpg',
         pornfoodImg: 'assets/enxoval/pizza_cheese_pull.jpg',
         giftBadge: 'PRESENTE NO CANAL PRÓPRIO',
         giftTitle: 'Pizza Napolitana Fior di Latte no Forno a Lenha',
@@ -412,6 +430,7 @@ function initEnxovalShowcase() {
     const headlineEl = document.getElementById('enxoval-headline');
     const captionTextEl = document.getElementById('enxoval-caption-text');
 
+    const announcementBgImgEl = document.getElementById('enxoval-announcement-bg-img');
     const pornfoodImgEl = document.getElementById('enxoval-pornfood-img');
     const giftBadgeEl = document.getElementById('enxoval-gift-badge-text');
     const giftTitleEl = document.getElementById('enxoval-gift-title');
@@ -436,6 +455,11 @@ function initEnxovalShowcase() {
         if (sitePillEl) sitePillEl.innerHTML = `<i data-lucide="star"></i> ${data.site}`;
         if (headlineEl) headlineEl.textContent = data.headline;
         if (captionTextEl) captionTextEl.textContent = data.caption;
+
+        if (announcementBgImgEl && data.announcementImg) {
+            announcementBgImgEl.src = data.announcementImg;
+            announcementBgImgEl.alt = `${data.username} - Ambiente Gastronômico Real`;
+        }
 
         if (pornfoodImgEl) {
             pornfoodImgEl.src = data.pornfoodImg;
