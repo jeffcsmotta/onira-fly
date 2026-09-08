@@ -1480,7 +1480,7 @@ img, svg {
    8. SEÇÃO 2: A TESE CENTRAL (AQUISIÇÃO VS. RETENÇÃO)
    -------------------------------------------------------------------------- */
 .thesis-section {
-    padding: 0 0 100px 0;
+    padding: 0 0 56px 0;
     background-color: var(--color-bg-base);
     position: relative;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -1838,7 +1838,7 @@ img, svg {
    10. SEÇÃO 4: SHOWROOM INTERATIVO (CASOS REAIS)
    -------------------------------------------------------------------------- */
 .showroom-section {
-    padding: 100px 0;
+    padding: 72px 0;
     background-color: var(--color-bg-base);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -2195,7 +2195,7 @@ img, svg {
    11. SEÇÃO 5: SIMULADOR DE IMPACTO FINANCEIRO
    -------------------------------------------------------------------------- */
 .simulator-section {
-    padding: 100px 0;
+    padding: 72px 0;
     background-color: var(--color-bg-base);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -2370,7 +2370,7 @@ img, svg {
    12. SEÇÃO 6: CTA FINAL (FECHAMENTO)
    -------------------------------------------------------------------------- */
 .final-cta-section {
-    padding: 130px 0;
+    padding: 56px 0;
     position: relative;
     background-image: url('assets/delivery-moment.jpg');
     background-size: cover;
@@ -2409,7 +2409,7 @@ img, svg {
     font-size: 1.125rem;
     color: var(--text-muted);
     line-height: 1.7;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
 }
 
 .final-cta-action {
@@ -2434,7 +2434,7 @@ img, svg {
    13. ASSINATURA MASTER INSTITUCIONAL
    -------------------------------------------------------------------------- */
 .master-signature-section {
-    padding: 80px 0;
+    padding: 56px 0;
     background-color: var(--color-bg-base);
     border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -4825,7 +4825,7 @@ img, svg {
     box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 28px rgba(10, 102, 194, 0.15);
     border-radius: var(--radius-lg);
     padding: 36px 40px;
-    margin: 48px 0;
+    margin: 36px 0 0 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -6487,7 +6487,7 @@ img, svg {
    INVESTIMENTO & CONDIÇÕES COMERCIAIS (3 CARDS LA ONDA + ACCORDION)
    ========================================================================== */
 .pricing-section {
-    padding: 80px 0;
+    padding: 72px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -6940,22 +6940,22 @@ img, svg {
 @media (max-width: 768px) {
     /* Ajustes refinados de espaçamento e padding entre seções */
     .thesis-section {
-        padding: 0 0 54px 0;
+        padding: 0 0 44px 0;
     }
 
     .showroom-section,
     .simulator-section,
     .pricing-section,
     .services-upsell-section {
-        padding: 56px 0;
+        padding: 52px 0;
     }
 
     .final-cta-section {
-        padding: 72px 0;
+        padding: 48px 0;
     }
 
     .master-signature-section {
-        padding: 52px 0;
+        padding: 44px 0;
     }
 
     /* Hierarquia Tipográfica e Títulos */
@@ -6978,7 +6978,7 @@ img, svg {
     /* Card Executivo Jefferson Motta */
     .white-glove-executive-card {
         padding: 24px 20px;
-        margin: 0 0 24px 0;
+        margin: 24px 0 0 0;
     }
     
     /* Faixa de Abertura da Tese */
@@ -7049,6 +7049,24 @@ img, svg {
 @media (max-width: 480px) {
     .section-container {
         padding: 0 14px;
+    }
+
+    .thesis-section {
+        padding: 0 0 36px 0;
+    }
+
+    .showroom-section,
+    .simulator-section,
+    .pricing-section {
+        padding: 40px 0;
+    }
+
+    .final-cta-section {
+        padding: 40px 0;
+    }
+
+    .master-signature-section {
+        padding: 36px 0;
     }
 
     .thesis-fullwidth-recessed {
