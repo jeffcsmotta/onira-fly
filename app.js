@@ -3,91 +3,176 @@
  * Interactive Engine: Case Switcher, Device Toggle & Margin ROI Simulator v3.0
  */
 
-// Casos Reais Anonymizados com métricas e capturas HD
+// Casos Reais Anonymizados com diferenciais de interface (Design, Vitrine, Carrinho) e capturas HD
 const SHOWCASE_CASES = {
-    montecristo: {
-        title: "Bistrô & Bebidas Nobres",
-        niche: "CAFETERIA & BISTRÔ PREMIUM",
-        domain: "bistrobebidasnobres.com.br",
-        desc: "Operação conceituada de cafeteria bistrô com grande volume de bebidas nobres e encomendas. Canalizou a recompra dos clientes habituais para o canal próprio oficial, retendo a margem líquida com pedidos mastigados no WhatsApp.",
-        orders: "+290",
-        savings: "R$ 4.820",
+    bebidas: {
+        title: "Adega, Cervejas Especiais & Destilados",
+        niche: "BEBIDAS & ADEGA EXPRESS",
+        domain: "adegabebidasexpress.com.br",
+        desc: "Operação de adega e conveniência rápida com foco em reposição de bebidas geladas, packs e destilados nobres. Elimina taxas de aplicativos em compras rotineiras de finais de semana e confraternizações.",
+        orders: "+340",
+        savings: "R$ 4.650",
+        speed: "22s",
+        ticket: "R$ 92,00",
+        calcOrders: "+340 pedidos",
+        calcTicket: "R$ 92,00",
+        calcRevenue: "R$ 31.280",
+        calcSavings: "R$ 4.650",
+        calcRationale: "<strong>Por que 22s de atendimento?</strong> O cliente seleciona o pack ou garrafa em 1 toque na vitrine limpa e envia para o WhatsApp. Sem telas de login ou cadastros lentos.",
+        screenshotMobile: "assets/screenshots/montecristo_mobile.jpg",
+        pillars: [
+            {
+                icon: "layout-grid",
+                title: "Design Escuro & Foco no Rótulo",
+                desc: "Layout limpo que valoriza garrafas e bebidas nobres com foto nítida, volume (mL/L), temperatura e preço imediato."
+            },
+            {
+                icon: "layers",
+                title: "Filtros Rápidos & Compra por Pack",
+                desc: "Navegação por categorias essenciais (Vinhos, Cervejas, Destilados, Mixers) com alternância rápida entre garrafa avulsa e caixa com desconto."
+            },
+            {
+                icon: "shopping-cart",
+                title: "Adição Direta sem Modais Lentos",
+                desc: "O cliente adiciona múltiplos itens direto na vitrine em 1 clique. O fechamento envia endereço e pedido mastigado no WhatsApp."
+            }
+        ]
+    },
+    delicatessen: {
+        title: "Delicatessen, Tortas & Pâtisserie Fina",
+        niche: "DELICATESSEN & PÂTISSERIE ARTESANAL",
+        domain: "delicatessenedocesnobres.com.br",
+        desc: "Ateliê de confeitaria fina, doces artesanais e presentes gourmets. Combina pronta-entrega diária com encomendas antecipadas, preservando a margem integral em produtos de alto valor.",
+        orders: "+280",
+        savings: "R$ 4.980",
         speed: "32s",
-        ticket: "R$ 85,00",
-        calcOrders: "+290 pedidos",
-        calcTicket: "R$ 85,00",
-        calcRevenue: "R$ 24.650",
-        calcSavings: "R$ 4.820",
-        calcRationale: "<strong>Por que 32s de atendimento?</strong> O cliente monta o combo de bistrô sozinho no cardápio online e despacha para o WhatsApp em 32 segundos. Sua equipe não perde 10 minutos digitando opções e a margem de 23% fica limpa na sua conta.",
-        screenshotMobile: "assets/screenshots/montecristo_mobile.jpg"
+        ticket: "R$ 88,00",
+        calcOrders: "+280 pedidos",
+        calcTicket: "R$ 88,00",
+        calcRevenue: "R$ 24.640",
+        calcSavings: "R$ 4.980",
+        calcRationale: "<strong>Por que 32s de atendimento?</strong> Vitrine com fotos grandes que despertam desejo imediato. A escolha de caixas de presente e doces finos flui sem atrito até a comanda pronta no WhatsApp.",
+        screenshotMobile: "assets/screenshots/fafa_mobile.jpg",
+        pillars: [
+            {
+                icon: "sparkles",
+                title: "Design Editorial & Apelo Visual Alto",
+                desc: "Tipografia refinada e fotografia de alta resolução que destacam acabamentos artesanais, camadas e recheios, aguçando o desejo imediato."
+            },
+            {
+                icon: "gift",
+                title: "Seleção de Caixas & Porcionamento",
+                desc: "Interface intuitiva para escolher fatia avulsa, torta inteira ou montar caixas personalizadas de doces finos para presente sem confusão."
+            },
+            {
+                icon: "calendar-clock",
+                title: "Carrinho com Agendamento & Dedicatória",
+                desc: "Campos dedicados no fechamento para agendar data e horário de retirada/entrega, além de campo para mensagem de cartão de presente."
+            }
+        ]
     },
-    baitakao: {
-        title: "Hamburgueria & Lanches da Serra",
-        niche: "HAMBURGUERIA ARTESANAL",
-        domain: "hamburgueriaserra.com.br",
-        desc: "Hamburgueria com alta frequência de pedidos noturnos e finais de semana. Converteu a base de recompra para canal direto, reduzindo atrito e gerando pedidos automáticos no WhatsApp.",
-        orders: "+450",
-        savings: "R$ 6.380",
-        speed: "28s",
-        ticket: "R$ 68,00",
-        calcOrders: "+450 pedidos",
-        calcTicket: "R$ 68,00",
-        calcRevenue: "R$ 30.600",
-        calcSavings: "R$ 6.380",
-        calcRationale: "<strong>Por que 28s de atendimento?</strong> Em noites de pico, 450 pedidos entram com comanda mastigada em 28s cada. 450 pedidos × R$ 68 = R$ 30.600 direto no caixa, economizando mais de R$ 6.300 em taxas de aplicativo.",
-        screenshotMobile: "assets/screenshots/baitakao_mobile.jpg"
+    hamburgueria: {
+        title: "Hamburgueria, Smash & Lanches Artesanais",
+        niche: "HAMBURGUERIA ARTESANAL & SMASH",
+        domain: "hamburgueriaburgershop.com.br",
+        desc: "Operação de alto giro para noites e finais de semana. A comanda entra mastigada com ponto da carne, queijo e adicionais, eliminando 10 minutos de digitação por cliente no balcão.",
+        orders: "+460",
+        savings: "R$ 6.420",
+        speed: "26s",
+        ticket: "R$ 65,00",
+        calcOrders: "+460 pedidos",
+        calcTicket: "R$ 65,00",
+        calcRevenue: "R$ 29.900",
+        calcSavings: "R$ 6.420",
+        calcRationale: "<strong>Por que 26s de atendimento?</strong> Montagem sequencial com ponto da carne, queijo e adicionais. Em noites de pico, 460 pedidos entram mastigados sem erro de chapa.",
+        screenshotMobile: "assets/screenshots/baitakao_mobile.jpg",
+        pillars: [
+            {
+                icon: "flame",
+                title: "Layout Compacto & Foco no Produto",
+                desc: "Zero banners pesados que empurram o conteúdo para baixo. O cliente já visualiza os hambúrgueres mais pedidos nos primeiros segundos."
+            },
+            {
+                icon: "layers",
+                title: "Customização Sequencial sem Confusão",
+                desc: "Seleção direta de ponto da carne, molho especial e adicionais (bacon em dobro, queijo extra) com atualização de preço em tempo real."
+            },
+            {
+                icon: "trending-up",
+                title: "Upsell Inteligente de Batata & Bebida",
+                desc: "Sugestão de porção crocante e refrigerante antes de finalizar, elevando o ticket médio de cada lanche sem sobrecarregar a tela."
+            }
+        ]
     },
-    panazzolo: {
-        title: "Casa do Pastel & Forneria",
-        niche: "FORNERIA & PIZZARIA",
-        domain: "casadopastelforneria.com.br",
-        desc: "Forneria e pastelaria tradicional que eliminou ruídos em pedidos customizados por WhatsApp, imprimindo comandas prontas diretamente na cozinha com margem integral.",
-        orders: "+380",
-        savings: "R$ 5.120",
-        speed: "35s",
-        ticket: "R$ 72,00",
-        calcOrders: "+380 pedidos",
-        calcTicket: "R$ 72,00",
-        calcRevenue: "R$ 27.360",
-        calcSavings: "R$ 5.120",
-        calcRationale: "<strong>Por que 35s de atendimento?</strong> As opções de borda recheada e sabores são marcadas no cardápio digital sem erro de anotação. 380 pedidos × R$ 72 = R$ 27.360 transacionados com R$ 5.120 de comissão preservada.",
-        screenshotMobile: "assets/screenshots/panazzolo_mobile.jpg"
+    pizzaria: {
+        title: "Forneria, Pizzas Artesanais & Calzones",
+        niche: "FORNERIA & PIZZAS NO FORNO A LENHA",
+        domain: "forneriapizzasartesanais.com.br",
+        desc: "Padrão veloz e direto inspirado na fluidez de hamburguerias: sem banners gigantes ocupando a tela. O cliente escolhe tamanho, divide sabores e adiciona borda no próprio card.",
+        orders: "+390",
+        savings: "R$ 5.850",
+        speed: "30s",
+        ticket: "R$ 78,00",
+        calcOrders: "+390 pedidos",
+        calcTicket: "R$ 78,00",
+        calcRevenue: "R$ 30.420",
+        calcSavings: "R$ 5.850",
+        calcRationale: "<strong>Por que 30s de atendimento?</strong> Meio a meio e bordas selecionados em poucos toques. A comanda chega com os 2 sabores e adicionais prontos para a esteira do forno.",
+        screenshotMobile: "assets/screenshots/pizzaria_mobile.jpg",
+        pillars: [
+            {
+                icon: "zap",
+                title: "Abertura Direta no Cardápio (Sem Hero Gigante)",
+                desc: "Elimina vídeos e banners institucionais pesados: o cliente já cai visualizando as pizzas, carrossel de categorias e botões rápidos."
+            },
+            {
+                icon: "pie-chart",
+                title: "Divisão Meio a Meio & Bordas no Card",
+                desc: "Seletor fluido de tamanho (M, G, GG), divisão de até 2 sabores sem recarregar e escolha de borda recheada (Catupiry, Cheddar, Vulcão)."
+            },
+            {
+                icon: "receipt",
+                title: "Comanda Pronta para a Esteira do Forno",
+                desc: "Ao despachar para o WhatsApp, a mensagem chega com a divisão exata dos sabores, borda e adicionais formatados para impressão direta."
+            }
+        ]
     },
-    fafa: {
-        title: "Ateliê de Doces & Contemporâneo",
-        niche: "CULINÁRIA JAPONESA & CONTEMPORÂNEA",
-        domain: "ateliedocescontemporaneo.com.br",
-        desc: "Culinária japonesa e ateliê contemporâneo com alto ticket em datas comemorativas e encomendas semanais, preservando a margem integral em pratos nobres.",
-        orders: "+240",
-        savings: "R$ 4.250",
-        speed: "40s",
-        ticket: "R$ 94,00",
-        calcOrders: "+240 pedidos",
-        calcTicket: "R$ 94,00",
-        calcRevenue: "R$ 22.560",
-        calcSavings: "R$ 4.250",
-        calcRationale: "<strong>Por que 40s de atendimento?</strong> Pratos nobres de sushi e sobremesas finas. Com 240 pedidos de ticket alto (R$ 94), a casa resgata R$ 4.250 que antes eram consumidos pelas taxas de aplicativo.",
-        screenshotMobile: "assets/screenshots/fafa_mobile.jpg"
-    },
-    claem: {
-        title: "Pastelaria & Pâtisserie Artesanal",
-        niche: "BRUNCH & PÂTISSERIE",
-        domain: "patisseriebrunchartesanal.com.br",
-        desc: "Operação dinâmica de brunch e pâtisserie artesanal que combina alta margem e pedidos rápidos no WhatsApp sem fricção de download ou senhas esquecidas.",
-        orders: "+310",
-        savings: "R$ 4.960",
-        speed: "25s",
-        ticket: "R$ 58,00",
-        calcOrders: "+310 pedidos",
-        calcTicket: "R$ 58,00",
-        calcRevenue: "R$ 17.980",
-        calcSavings: "R$ 4.960",
-        calcRationale: "<strong>Por que 25s de atendimento?</strong> Fechamento instantâneo para doces e salgados rápidos. 310 pedidos habituais × R$ 58 = R$ 17.980 direto no canal próprio, devolvendo quase R$ 5.000 limpos ao fluxo da pastelaria.",
-        screenshotMobile: "assets/screenshots/claem_mobile.jpg"
+    pastelaria: {
+        title: "Pastelaria Artesanal & Crocâncias",
+        niche: "PASTELARIA ARTESANAL & TRADIÇÃO",
+        domain: "pastelariatradicaocaseira.com.br",
+        desc: "Operação tradicional de pastéis doces e salgados com alta recorrência. O cliente escolhe recheios tradicionais ou especiais, tamanho ou combos de mini pastéis sem atrito de cadastro.",
+        orders: "+360",
+        savings: "R$ 4.750",
+        speed: "22s",
+        ticket: "R$ 52,00",
+        calcOrders: "+360 pedidos",
+        calcTicket: "R$ 52,00",
+        calcRevenue: "R$ 18.720",
+        calcSavings: "R$ 4.750",
+        calcRationale: "<strong>Por que 22s de atendimento?</strong> Pills de tamanho e porção no próprio card. O cliente fecha o pedido em 2 toques com endereço pré-salvo no WhatsApp.",
+        screenshotMobile: "assets/screenshots/claem_mobile.jpg",
+        pillars: [
+            {
+                icon: "badge-check",
+                title: "Identidade Confiável & Tags de Destaque",
+                desc: "Visual acolhedor com tags claras (Mais Vendido, Clássico da Casa), foto nítida da crocância da massa e busca rápida por sabor."
+            },
+            {
+                icon: "tag",
+                title: "Pills de Tamanho & Porção (P, G, 10un)",
+                desc: "Botões de tamanho e quantidade no próprio card, facilitando pedidos individuais de lanche ou caixas com 10 unidades para a família."
+            },
+            {
+                icon: "send",
+                title: "Fechamento Instantâneo para WhatsApp",
+                desc: "Menos cliques e zero atrito: o pedido entra no WhatsApp com dados de entrega e forma de pagamento já organizados para o balcão."
+            }
+        ]
     }
 };
 
-let currentCaseKey = 'montecristo';
+let currentCaseKey = 'bebidas';
 
 // Inicialização após carregamento do DOM
 document.addEventListener('DOMContentLoaded', () => {
@@ -95,8 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initCaseTabs();
     initRoiSimulator();
     initMomentCards();
-    initEnxovalShowcase();
     initSmoothScroll();
+    renderCase('bebidas');
     if (window.lucide) {
         lucide.createIcons();
     }
@@ -150,6 +235,20 @@ function renderCase(caseKey) {
 
     if (phoneUrlEl) phoneUrlEl.textContent = data.domain;
     if (deskUrlEl) deskUrlEl.textContent = `https://${data.domain}`;
+
+    // Atualiza Pilares de Experiência e Diferenciais de Interface (Design, Vitrine, Carrinho)
+    const pillarsContainer = document.getElementById('case-pillars-container');
+    if (pillarsContainer && Array.isArray(data.pillars)) {
+        pillarsContainer.innerHTML = data.pillars.map(p => `
+            <div class="pillar-item">
+                <div class="pillar-icon"><i data-lucide="${p.icon}"></i></div>
+                <div class="pillar-content">
+                    <strong>${p.title}</strong>
+                    <p>${p.desc}</p>
+                </div>
+            </div>
+        `).join('');
+    }
 
     // Atualiza Imagens dos Screenshots
     const imgMobile = document.getElementById('img-case-mobile');
@@ -298,11 +397,11 @@ function initHeroTicker() {
     const viewportEl = document.getElementById('hero-phone-scroll-viewport');
 
     const casesList = [
-        { key: 'montecristo', domain: 'bistrobebidasnobres.com.br', badge: '☕ Bistrô • ⚡ 0.38s', img: 'assets/screenshots/montecristo_mobile.jpg' },
-        { key: 'baitakao', domain: 'hamburgueriaserra.com.br', badge: '🍔 Burger • ⚡ 0.35s', img: 'assets/screenshots/baitakao_mobile.jpg' },
-        { key: 'panazzolo', domain: 'casadopastelforneria.com.br', badge: '🍕 Forneria • ⚡ 0.39s', img: 'assets/screenshots/panazzolo_mobile.jpg' },
-        { key: 'fafa', domain: 'ateliedocescontemporaneo.com.br', badge: '🍣 Sushi • ⚡ 0.36s', img: 'assets/screenshots/fafa_mobile.jpg' },
-        { key: 'claem', domain: 'patisseriebrunchartesanal.com.br', badge: '🥐 Pâtisserie • ⚡ 0.37s', img: 'assets/screenshots/claem_mobile.jpg' }
+        { key: 'bebidas', domain: 'adegabebidasexpress.com.br', badge: '🍷 Bebidas • ⚡ 0.38s', img: 'assets/screenshots/montecristo_mobile.jpg' },
+        { key: 'delicatessen', domain: 'delicatessenedocesnobres.com.br', badge: '🥐 Delicatessen • ⚡ 0.36s', img: 'assets/screenshots/fafa_mobile.jpg' },
+        { key: 'hamburgueria', domain: 'hamburgueriaburgershop.com.br', badge: '🍔 Burger • ⚡ 0.35s', img: 'assets/screenshots/baitakao_mobile.jpg' },
+        { key: 'pizzaria', domain: 'forneriapizzasartesanais.com.br', badge: '🍕 Forneria & Pizzas • ⚡ 0.39s', img: 'assets/screenshots/pizzaria_mobile.jpg' },
+        { key: 'pastelaria', domain: 'pastelariatradicaocaseira.com.br', badge: '🥟 Pastelarias • ⚡ 0.37s', img: 'assets/screenshots/claem_mobile.jpg' }
     ];
 
     let currentIdx = 0;
@@ -376,147 +475,4 @@ function initMomentCards() {
     });
 }
 
-/* ==========================================================================
-   ENXOVAL VISUAL PRONTO (POST INSTAGRAM & CARROSSEL PORNFOOD 4K)
-   ========================================================================== */
-const ENXOVAL_DATA = {
-    pastelaria: {
-        avatar: '🥟',
-        username: 'suapastelaria.oficial',
-        site: 'suapastelaria.com.br',
-        headline: '“Agora você pede direto com a gente!”',
-        caption: ' Estamos no iFood e no nosso canal oficial direto! Arraste para o lado e garanta seu brinde especial pelo link da bio 👉',
-        announcementImg: 'assets/enxoval/pastel_anuncio_real.jpg',
-        pornfoodImg: 'assets/enxoval/pastel_morango_chocolate.jpg',
-        giftBadge: 'PRESENTE NO CANAL PRÓPRIO',
-        giftTitle: 'Pastel de Morango com Chocolate Belga',
-        giftDesc: 'Massa crocante morena, morangos frescos selecionados e cascata generosa de chocolate belga derretendo.'
-    },
-    hamburgueria: {
-        avatar: '🍔',
-        username: 'seuburger.artesanal',
-        site: 'seuburger.com.br',
-        headline: '“Seu burger preferido com brinde no canal direto!”',
-        caption: ' Estamos no iFood, Uber Eats e no canal oficial! Faça seu pedido direto pelo link da bio e ganhe Batatas Rústicas com Fondue de Cheddar 🍟🔥',
-        announcementImg: 'assets/enxoval/burger_anuncio_real.jpg',
-        pornfoodImg: 'assets/enxoval/burger_cheddar_bacon.jpg',
-        giftBadge: 'PRESENTE EXCLUSIVO NO CANAL PRÓPRIO',
-        giftTitle: 'Double Smash Burger com Cheddar & Bacon',
-        giftDesc: 'Duplo smash com crosta crocante caramelizada, cheddar derretendo em profusão e tiras de bacon artesanal defumado.'
-    },
-    pizzaria: {
-        avatar: '🍕',
-        username: 'suapizzaria.forneria',
-        site: 'suapizzaria.com.br',
-        headline: '“Forno a lenha de verdade e presente no canal oficial!”',
-        caption: ' A clássica pizza da serra agora com pedidos diretos sem taxas de app! Peça pelo nosso site e ganhe uma sobremesa artesanal da casa 🍕🍷',
-        announcementImg: 'assets/enxoval/pizza_anuncio_real.jpg',
-        pornfoodImg: 'assets/enxoval/pizza_cheese_pull.jpg',
-        giftBadge: 'PRESENTE NO CANAL PRÓPRIO',
-        giftTitle: 'Pizza Napolitana Fior di Latte no Forno a Lenha',
-        giftDesc: 'Fermentação natural de 48h, molho de tomate San Marzano e queijo fior di latte puxando fios irresistíveis.'
-    }
-};
 
-function initEnxovalShowcase() {
-    let currentNiche = 'pastelaria';
-    let currentSlide = 1;
-
-    const tabs = document.querySelectorAll('.niche-tab');
-    const avatarEl = document.getElementById('enxoval-avatar');
-    const usernameEl = document.getElementById('enxoval-username');
-    const captionUsernameEl = document.getElementById('enxoval-caption-username');
-    const sitePillEl = document.getElementById('enxoval-site-pill');
-    const headlineEl = document.getElementById('enxoval-headline');
-    const captionTextEl = document.getElementById('enxoval-caption-text');
-
-    const announcementBgImgEl = document.getElementById('enxoval-announcement-bg-img');
-    const pornfoodImgEl = document.getElementById('enxoval-pornfood-img');
-    const giftBadgeEl = document.getElementById('enxoval-gift-badge-text');
-    const giftTitleEl = document.getElementById('enxoval-gift-title');
-    const giftDescEl = document.getElementById('enxoval-gift-desc');
-
-    const slide1El = document.getElementById('enxoval-slide-1');
-    const slide2El = document.getElementById('enxoval-slide-2');
-    const prevBtn = document.getElementById('enxoval-prev-btn');
-    const nextBtn = document.getElementById('enxoval-next-btn');
-    const counterEl = document.getElementById('enxoval-counter');
-    const dots = document.querySelectorAll('.insta-dot');
-
-    function renderNiche(nicheKey) {
-        const data = ENXOVAL_DATA[nicheKey];
-        if (!data) return;
-
-        currentNiche = nicheKey;
-
-        if (avatarEl) avatarEl.textContent = data.avatar;
-        if (usernameEl) usernameEl.textContent = data.username;
-        if (captionUsernameEl) captionUsernameEl.textContent = data.username;
-        if (sitePillEl) sitePillEl.innerHTML = `<i data-lucide="star"></i> ${data.site}`;
-        if (headlineEl) headlineEl.textContent = data.headline;
-        if (captionTextEl) captionTextEl.textContent = data.caption;
-
-        if (announcementBgImgEl && data.announcementImg) {
-            announcementBgImgEl.src = data.announcementImg;
-            announcementBgImgEl.alt = `${data.username} - Ambiente Gastronômico Real`;
-        }
-
-        if (pornfoodImgEl) {
-            pornfoodImgEl.src = data.pornfoodImg;
-            pornfoodImgEl.alt = `${data.giftTitle} - Fotografia Gastronômica 4K`;
-        }
-        if (giftBadgeEl) giftBadgeEl.textContent = data.giftBadge;
-        if (giftTitleEl) giftTitleEl.textContent = data.giftTitle;
-        if (giftDescEl) giftDescEl.textContent = data.giftDesc;
-
-        if (window.lucide) lucide.createIcons();
-    }
-
-    function setSlide(slideNum) {
-        currentSlide = slideNum;
-
-        if (slideNum === 1) {
-            if (slide1El) slide1El.classList.add('active');
-            if (slide2El) slide2El.classList.remove('active');
-            if (prevBtn) prevBtn.disabled = true;
-            if (nextBtn) nextBtn.disabled = false;
-            if (counterEl) counterEl.textContent = '1/2';
-            dots.forEach((dot, idx) => dot.classList.toggle('active', idx === 0));
-        } else {
-            if (slide1El) slide1El.classList.remove('active');
-            if (slide2El) slide2El.classList.add('active');
-            if (prevBtn) prevBtn.disabled = false;
-            if (nextBtn) nextBtn.disabled = true;
-            if (counterEl) counterEl.textContent = '2/2';
-            dots.forEach((dot, idx) => dot.classList.toggle('active', idx === 1));
-        }
-    }
-
-    // Tabs de Nicho
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const niche = tab.getAttribute('data-niche');
-            if (niche && ENXOVAL_DATA[niche]) {
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                renderNiche(niche);
-            }
-        });
-    });
-
-    // Navegação de slides
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => setSlide(1));
-    }
-
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => setSlide(2));
-    }
-
-    dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-            const slideNum = parseInt(dot.getAttribute('data-slide'), 10) || 1;
-            setSlide(slideNum);
-        });
-    });
-}
