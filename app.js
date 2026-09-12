@@ -6,10 +6,10 @@
 // Casos Reais Anonymizados com diferenciais de interface (Design, Vitrine, Carrinho) e capturas HD
 const SHOWCASE_CASES = {
     bebidas: {
-        title: "Adega, Cervejas Especiais & Destilados",
+        title: "Adega & Conveniência Express",
         niche: "BEBIDAS & ADEGA EXPRESS",
         domain: "adegabebidasexpress.com.br",
-        desc: "Operação de adega e conveniência rápida com foco em reposição de bebidas geladas, packs e destilados nobres. Elimina taxas de aplicativos em compras rotineiras de finais de semana e confraternizações.",
+        desc: "Vitrine noturna em fundo escuro que destaca rótulos nobres e reposição de cervejas geladas. O cliente seleciona garrafa avulsa ou caixa fechada com desconto em 1 clique, sem modais lentos.",
         orders: "+340",
         savings: "R$ 4.650",
         speed: "22s",
@@ -18,23 +18,23 @@ const SHOWCASE_CASES = {
         calcTicket: "R$ 92,00",
         calcRevenue: "R$ 31.280",
         calcSavings: "R$ 4.650",
-        calcRationale: "<strong>Por que 22s de atendimento?</strong> O cliente seleciona o pack ou garrafa em 1 toque na vitrine limpa e envia para o WhatsApp. Sem telas de login ou cadastros lentos.",
+        calcRationale: "<strong>Por que 22s de atendimento?</strong> O cliente escolhe garrafa ou pack na vitrine limpa e envia para o WhatsApp. Sem login ou cadastros lentos.",
         screenshotMobile: "assets/screenshots/montecristo_mobile.jpg",
         pillars: [
             {
                 icon: "layout-grid",
-                title: "Design Escuro & Foco no Rótulo",
-                desc: "Layout limpo que valoriza garrafas e bebidas nobres com foto nítida, volume (mL/L), temperatura e preço imediato."
+                title: "Dark Mode & Rótulos em Alta Resolução",
+                desc: "Fundo contrastante que valoriza garrafas de whisky, vinhos e destilados nobres com teor alcoólico, volume (mL/L) e preço unitário visíveis de imediato."
             },
             {
                 icon: "layers",
-                title: "Filtros Rápidos & Compra por Pack",
-                desc: "Navegação por categorias essenciais (Vinhos, Cervejas, Destilados, Mixers) com alternância rápida entre garrafa avulsa e caixa com desconto."
+                title: "Alternância Rápida: Garrafa vs. Caixa",
+                desc: "Seletor instantâneo no próprio produto entre compra avulsa ou pack de 6/12 unidades com valor por garrafa recalculado na hora."
             },
             {
                 icon: "shopping-cart",
-                title: "Adição Direta sem Modais Lentos",
-                desc: "O cliente adiciona múltiplos itens direto na vitrine em 1 clique. O fechamento envia endereço e pedido mastigado no WhatsApp."
+                title: "Adição em 1 Toque Direto na Vitrine",
+                desc: "Sem modais intermediários travando a rolagem: adiciona múltiplos itens ao pedido e finaliza com endereço no WhatsApp."
             }
         ]
     },
@@ -42,7 +42,7 @@ const SHOWCASE_CASES = {
         title: "Delicatessen, Tortas & Pâtisserie Fina",
         niche: "DELICATESSEN & PÂTISSERIE ARTESANAL",
         domain: "delicatessenedocesnobres.com.br",
-        desc: "Ateliê de confeitaria fina, doces artesanais e presentes gourmets. Combina pronta-entrega diária com encomendas antecipadas, preservando a margem integral em produtos de alto valor.",
+        desc: "Visual editorial com fotografia de alto apetite para doces finos, tortas e presentes artesanais. Integração de pronta-entrega com encomendas programadas preservando a margem de itens nobres.",
         orders: "+280",
         savings: "R$ 4.980",
         speed: "32s",
@@ -51,31 +51,31 @@ const SHOWCASE_CASES = {
         calcTicket: "R$ 88,00",
         calcRevenue: "R$ 24.640",
         calcSavings: "R$ 4.980",
-        calcRationale: "<strong>Por que 32s de atendimento?</strong> Vitrine com fotos grandes que despertam desejo imediato. A escolha de caixas de presente e doces finos flui sem atrito até a comanda pronta no WhatsApp.",
+        calcRationale: "<strong>Por que 32s de atendimento?</strong> Vitrine com fotos grandes que despertam desejo imediato. A escolha de caixas de presente e doces finos flui sem atrito até o WhatsApp.",
         screenshotMobile: "assets/screenshots/fafa_mobile.jpg",
         pillars: [
             {
                 icon: "sparkles",
-                title: "Design Editorial & Apelo Visual Alto",
-                desc: "Tipografia refinada e fotografia de alta resolução que destacam acabamentos artesanais, camadas e recheios, aguçando o desejo imediato."
+                title: "Design Editorial & Apelo Gastronômico",
+                desc: "Tipografia clássica e fotografia nítida destacando camadas, recheios e acabamentos artesanais para despertar desejo antes do clique."
             },
             {
                 icon: "gift",
-                title: "Seleção de Caixas & Porcionamento",
-                desc: "Interface intuitiva para escolher fatia avulsa, torta inteira ou montar caixas personalizadas de doces finos para presente sem confusão."
+                title: "Seleção por Fatias ou Caixas de Presente",
+                desc: "Botões de escolha rápida entre porção individual, torta inteira ou montagem de caixas para presente sem formulários confusos."
             },
             {
                 icon: "calendar-clock",
-                title: "Carrinho com Agendamento & Dedicatória",
-                desc: "Campos dedicados no fechamento para agendar data e horário de retirada/entrega, além de campo para mensagem de cartão de presente."
+                title: "Agendamento & Dedicatória no WhatsApp",
+                desc: "Ao finalizar, o cliente já envia a data desejada para entrega ou retirada no balcão e a mensagem personalizada do cartão de presente."
             }
         ]
     },
     hamburgueria: {
-        title: "Hamburgueria, Smash & Lanches Artesanais",
+        title: "Burger Shop & Grelhados Artesanais",
         niche: "HAMBURGUERIA ARTESANAL & SMASH",
-        domain: "hamburgueriaburgershop.com.br",
-        desc: "Operação de alto giro para noites e finais de semana. A comanda entra mastigada com ponto da carne, queijo e adicionais, eliminando 10 minutos de digitação por cliente no balcão.",
+        domain: "burgershopartesanal.com.br",
+        desc: "Cardápio aberto e dinâmico feito para noites de alto giro. O cliente escolhe smash ou burger artesanal, ponto da carne e adicionais sem modais pesados, despachando a comanda mastigada pro chapeiro.",
         orders: "+460",
         savings: "R$ 6.420",
         speed: "26s",
@@ -84,31 +84,31 @@ const SHOWCASE_CASES = {
         calcTicket: "R$ 65,00",
         calcRevenue: "R$ 29.900",
         calcSavings: "R$ 6.420",
-        calcRationale: "<strong>Por que 26s de atendimento?</strong> Montagem sequencial com ponto da carne, queijo e adicionais. Em noites de pico, 460 pedidos entram mastigados sem erro de chapa.",
-        screenshotMobile: "assets/screenshots/baitakao_mobile.jpg",
+        calcRationale: "<strong>Por que 26s de atendimento?</strong> Montagem com ponto da carne, queijo e adicionais no fluxo rápido. A comanda cai mastigada no WhatsApp sem erro de preparo na chapa.",
+        screenshotMobile: "assets/screenshots/hamburgueria_mobile.jpg",
         pillars: [
             {
                 icon: "flame",
-                title: "Layout Compacto & Foco no Produto",
-                desc: "Zero banners pesados que empurram o conteúdo para baixo. O cliente já visualiza os hambúrgueres mais pedidos nos primeiros segundos."
+                title: "Cards Abertos & Foco no Hambúrguer",
+                desc: "Sem banners ocupando meia tela: o cliente já vê a foto do hambúrguer, ingredientes originais e botão de montagem rápida."
             },
             {
                 icon: "layers",
-                title: "Customização Sequencial sem Confusão",
-                desc: "Seleção direta de ponto da carne, molho especial e adicionais (bacon em dobro, queijo extra) com atualização de preço em tempo real."
+                title: "Ponto da Carne & Queijo em 1 Toque",
+                desc: "Opções de ponto (Ao ponto, Bem passado) e tipo de pão escolhidos direto, com adicionais de bacon e molho somando no preço na hora."
             },
             {
                 icon: "trending-up",
-                title: "Upsell Inteligente de Batata & Bebida",
-                desc: "Sugestão de porção crocante e refrigerante antes de finalizar, elevando o ticket médio de cada lanche sem sobrecarregar a tela."
+                title: "Upsell Natural de Fritas & Bebida",
+                desc: "Sugestão imediata de batata rústica e refrigerante antes de fechar a comanda, elevando o ticket médio em mais de 25%."
             }
         ]
     },
     pizzaria: {
-        title: "Forneria, Pizzas Artesanais & Calzones",
-        niche: "FORNERIA & PIZZAS NO FORNO A LENHA",
-        domain: "forneriapizzasartesanais.com.br",
-        desc: "Padrão veloz e direto inspirado na fluidez de hamburguerias: sem banners gigantes ocupando a tela. O cliente escolhe tamanho, divide sabores e adiciona borda no próprio card.",
+        title: "Forneria D'guste — Pizzas no Forno a Lenha",
+        niche: "FORNERIA & PIZZAS ARTESANAIS",
+        domain: "forneriadguste.com.br",
+        desc: "Case real D'guste: arquitetura veloz pensada para quem pede pizza. O cliente seleciona o tamanho, divide em 2 sabores (meio a meio) e adiciona borda recheada no próprio card, sem banners poluídos.",
         orders: "+390",
         savings: "R$ 5.850",
         speed: "30s",
@@ -117,31 +117,31 @@ const SHOWCASE_CASES = {
         calcTicket: "R$ 78,00",
         calcRevenue: "R$ 30.420",
         calcSavings: "R$ 5.850",
-        calcRationale: "<strong>Por que 30s de atendimento?</strong> Meio a meio e bordas selecionados em poucos toques. A comanda chega com os 2 sabores e adicionais prontos para a esteira do forno.",
-        screenshotMobile: "assets/screenshots/pizzaria_mobile.jpg",
+        calcRationale: "<strong>Por que 30s de atendimento?</strong> Seleção de tamanho (P/M/G/GG) e divisão meio a meio no próprio card. A comanda chega com sabores e borda prontos para a esteira do forno.",
+        screenshotMobile: "assets/screenshots/pizzaria_dguste_mobile.jpg",
         pillars: [
             {
-                icon: "zap",
-                title: "Abertura Direta no Cardápio (Sem Hero Gigante)",
-                desc: "Elimina vídeos e banners institucionais pesados: o cliente já cai visualizando as pizzas, carrossel de categorias e botões rápidos."
+                icon: "pie-chart",
+                title: "Seletor de Tamanho & Meio a Meio no Card",
+                desc: "Pills de tamanho (P, M, G, GG) no card da pizza e divisão intuitiva de 2 sabores sem exigir que o cliente recarregue a página."
             },
             {
-                icon: "pie-chart",
-                title: "Divisão Meio a Meio & Bordas no Card",
-                desc: "Seletor fluido de tamanho (M, G, GG), divisão de até 2 sabores sem recarregar e escolha de borda recheada (Catupiry, Cheddar, Vulcão)."
+                icon: "flame",
+                title: "Bordas Recheadas com Adição Direta",
+                desc: "Opção de Borda Catupiry, Cheddar ou Vulcão com o acréscimo calculado automaticamente no total do pedido antes do despacho."
             },
             {
                 icon: "receipt",
-                title: "Comanda Pronta para a Esteira do Forno",
-                desc: "Ao despachar para o WhatsApp, a mensagem chega com a divisão exata dos sabores, borda e adicionais formatados para impressão direta."
+                title: "Comanda Pronta para Impressão no Forno",
+                desc: "Mensagem no WhatsApp formatada com tamanho, 1º sabor, 2º sabor, borda, endereço e troco prontos para impressão térmica na cozinha."
             }
         ]
     },
     pastelaria: {
         title: "Pastelaria Artesanal & Crocâncias",
         niche: "PASTELARIA ARTESANAL & TRADIÇÃO",
-        domain: "pastelariatradicaocaseira.com.br",
-        desc: "Operação tradicional de pastéis doces e salgados com alta recorrência. O cliente escolhe recheios tradicionais ou especiais, tamanho ou combos de mini pastéis sem atrito de cadastro.",
+        domain: "pastelariatradicao.com.br",
+        desc: "Operação tradicional de pastéis salgados, doces e porções. O cliente escolhe tamanhos (P, G ou Porção com 10 unidades) e recheios especiais diretamente nas pills de cada produto.",
         orders: "+360",
         savings: "R$ 4.750",
         speed: "22s",
@@ -150,23 +150,23 @@ const SHOWCASE_CASES = {
         calcTicket: "R$ 52,00",
         calcRevenue: "R$ 18.720",
         calcSavings: "R$ 4.750",
-        calcRationale: "<strong>Por que 22s de atendimento?</strong> Pills de tamanho e porção no próprio card. O cliente fecha o pedido em 2 toques com endereço pré-salvo no WhatsApp.",
+        calcRationale: "<strong>Por que 22s de atendimento?</strong> Pills de tamanho e porção no próprio card. O cliente fecha o pedido em 2 toques com endereço pronto no WhatsApp.",
         screenshotMobile: "assets/screenshots/claem_mobile.jpg",
         pillars: [
             {
-                icon: "badge-check",
-                title: "Identidade Confiável & Tags de Destaque",
-                desc: "Visual acolhedor com tags claras (Mais Vendido, Clássico da Casa), foto nítida da crocância da massa e busca rápida por sabor."
+                icon: "tag",
+                title: "Pills de Tamanho no Próprio Card (P, G, 10un)",
+                desc: "Alternância imediata entre pastel individual P, tamanho G ou porção família de 10 mini pastéis sem modais que travam a tela."
             },
             {
-                icon: "tag",
-                title: "Pills de Tamanho & Porção (P, G, 10un)",
-                desc: "Botões de tamanho e quantidade no próprio card, facilitando pedidos individuais de lanche ou caixas com 10 unidades para a família."
+                icon: "badge-check",
+                title: "Divisão Clara entre Salgados, Doces & Bebidas",
+                desc: "Navegação por abas horizontais permitindo adicionar pastéis de queijo, carne e doce de leite em sequência rápida."
             },
             {
                 icon: "send",
-                title: "Fechamento Instantâneo para WhatsApp",
-                desc: "Menos cliques e zero atrito: o pedido entra no WhatsApp com dados de entrega e forma de pagamento já organizados para o balcão."
+                title: "Comanda Formatada sem Retrabalho no Balcão",
+                desc: "O pedido chega no WhatsApp da pastelaria com sabores identificados, endereço de entrega e opção de pagamento via Pix ou cartão."
             }
         ]
     }
@@ -398,11 +398,11 @@ function initHeroTicker() {
     const viewportEl = document.getElementById('hero-phone-scroll-viewport');
 
     const casesList = [
-        { key: 'bebidas', domain: 'adegabebidasexpress.com.br', badge: '🍷 Bebidas • ⚡ 0.38s', img: 'assets/screenshots/montecristo_mobile.jpg' },
-        { key: 'delicatessen', domain: 'delicatessenedocesnobres.com.br', badge: '🥐 Delicatessen • ⚡ 0.36s', img: 'assets/screenshots/fafa_mobile.jpg' },
-        { key: 'hamburgueria', domain: 'hamburgueriaburgershop.com.br', badge: '🍔 Burger • ⚡ 0.35s', img: 'assets/screenshots/baitakao_mobile.jpg' },
-        { key: 'pizzaria', domain: 'forneriapizzasartesanais.com.br', badge: '🍕 Forneria & Pizzas • ⚡ 0.39s', img: 'assets/screenshots/pizzaria_mobile.jpg' },
-        { key: 'pastelaria', domain: 'pastelariatradicaocaseira.com.br', badge: '🥟 Pastelarias • ⚡ 0.37s', img: 'assets/screenshots/claem_mobile.jpg' }
+        { key: 'bebidas', domain: 'adegabebidasexpress.com.br', badge: '🍷 Adega Express • Canal Próprio', img: 'assets/screenshots/montecristo_mobile.jpg' },
+        { key: 'delicatessen', domain: 'delicatessenedocesnobres.com.br', badge: '🥐 Pâtisserie Fina • Canal Próprio', img: 'assets/screenshots/fafa_mobile.jpg' },
+        { key: 'hamburgueria', domain: 'burgershopartesanal.com.br', badge: '🍔 Burger Shop • Canal Próprio', img: 'assets/screenshots/hamburgueria_mobile.jpg' },
+        { key: 'pizzaria', domain: 'forneriadguste.com.br', badge: '🍕 Forneria D\'guste • Canal Próprio', img: 'assets/screenshots/pizzaria_dguste_mobile.jpg' },
+        { key: 'pastelaria', domain: 'pastelariatradicao.com.br', badge: '🥟 Pastelaria Artesanal • Canal Próprio', img: 'assets/screenshots/claem_mobile.jpg' }
     ];
 
     let currentIdx = 0;
