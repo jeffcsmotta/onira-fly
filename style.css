@@ -6164,69 +6164,10 @@ img, svg {
 
 /* ==========================================================================
    SPELL UI COMPONENTS REPOSITORY (NATIVE VANILLA PORT)
-   1. HighlightedText (@/registry/spell-ui/highlighted-text)
-   2. BlurReveal (@/registry/spell-ui/blur-reveal)
+   - BlurReveal (@/registry/spell-ui/blur-reveal)
    ========================================================================== */
 
-/* 1. HighlightedText */
-.hero-hl-wrapper {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    letter-spacing: -0.03em;
-}
-
-.spell-highlighted-text {
-    position: relative;
-    display: inline-block;
-    isolation: isolate;
-    padding: 0 4px;
-    margin: 0 -2px;
-    border-radius: 4px;
-    z-index: 1;
-}
-
-.spell-highlighted-text::before {
-    content: '';
-    position: absolute;
-    inset: 4% -6px 2% -6px;
-    background: linear-gradient(90deg, rgba(255, 199, 0, 0.45) 0%, rgba(255, 199, 0, 0.22) 100%);
-    border-bottom: 3px solid var(--color-primary);
-    box-shadow: 0 0 14px rgba(255, 199, 0, 0.35);
-    border-radius: 4px;
-    z-index: -1;
-    transform-origin: left center;
-    transform: scaleX(0);
-    animation: spellHighlightSlide 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.spell-highlighted-text[data-hl-from="right"]::before {
-    transform-origin: right center;
-}
-
-.spell-highlighted-text.spell-hl-first::before {
-    animation-delay: 0.15s;
-}
-
-.spell-highlighted-text.spell-hl-second::before {
-    animation-delay: 0.45s;
-}
-
-@keyframes spellHighlightSlide {
-    0% {
-        transform: scaleX(0);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    100% {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-}
-
-/* 2. BlurReveal */
+/* BlurReveal */
 .spell-blur-reveal {
     opacity: 0;
     filter: blur(14px);
@@ -6262,10 +6203,6 @@ img, svg {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .spell-highlighted-text::before {
-        transform: scaleX(1) !important;
-        animation: none !important;
-    }
     .spell-blur-reveal,
     .spell-blur-reveal .spell-word {
         opacity: 1 !important;
@@ -6274,6 +6211,7 @@ img, svg {
         transition: none !important;
     }
 }
+
 
 
 
