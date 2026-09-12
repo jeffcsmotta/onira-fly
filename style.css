@@ -6189,9 +6189,10 @@ img, svg {
 .spell-highlighted-text::before {
     content: '';
     position: absolute;
-    inset: 10% -2px 6% -2px;
-    background: linear-gradient(90deg, rgba(255, 199, 0, 0.28) 0%, rgba(255, 199, 0, 0.12) 100%);
-    border-bottom: 2px solid var(--color-primary);
+    inset: 4% -6px 2% -6px;
+    background: linear-gradient(90deg, rgba(255, 199, 0, 0.45) 0%, rgba(255, 199, 0, 0.22) 100%);
+    border-bottom: 3px solid var(--color-primary);
+    box-shadow: 0 0 14px rgba(255, 199, 0, 0.35);
     border-radius: 4px;
     z-index: -1;
     transform-origin: left center;
