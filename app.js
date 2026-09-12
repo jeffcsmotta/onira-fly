@@ -181,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initRoiSimulator();
     initMomentCards();
     initSmoothScroll();
+    initSpellUIEffects();
     renderCase('bebidas');
     if (window.lucide) {
         lucide.createIcons();
@@ -473,6 +474,31 @@ function initMomentCards() {
             }
         });
     });
+}
+
+/* ==========================================================================
+   SPELL UI EFFECTS INITIALIZER (BLUR-REVEAL & HIGHLIGHTED-TEXT OBSERVER)
+   ========================================================================== */
+function initSpellUIEffects() {
+    const blurRevealEl = document.getElementById('thesis-blur-reveal');
+    if (blurRevealEl) {
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('spell-revealed');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -40px 0px'
+            });
+            observer.observe(blurRevealEl);
+        } else {
+            blurRevealEl.classList.add('spell-revealed');
+        }
+    }
 }
 
 
